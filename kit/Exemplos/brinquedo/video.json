@@ -1,0 +1,14 @@
+{
+ "id": "demo-brinquedo",
+ "titulo": "Demo Brinquedo",
+ "tema": "Trilho de trem",
+ "versao": 1,
+ "etapa": 4,
+ "estilo": "brinquedo",
+ "musica": "grande_obra",
+ "assinatura": false,
+ "exemplo": true,
+ "batida_final": "dormentes",
+ "nota": "Demo de 10 s do estilo (galeria de estilos).",
+ "velocidade_cta": 1.12
+}

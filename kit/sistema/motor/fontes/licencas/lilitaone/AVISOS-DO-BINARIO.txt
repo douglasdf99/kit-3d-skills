@@ -1,0 +1,9 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Lilita One
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+lilita-one-latin-400-normal.woff2
+SHA-256: d2575d4fa3632580aafcbcdf6978b3b57e144b90cf5bd9c2c98194f28b869704
+Copyright: Copyright (c) 2011 Juan Montoreano (juan@remolacha.biz), with Reserved Font Names "Lilita One"
+URL de licença: http://scripts.sil.org/OFL

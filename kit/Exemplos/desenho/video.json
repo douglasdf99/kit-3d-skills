@@ -1,0 +1,14 @@
+{
+ "id": "demo-desenho",
+ "titulo": "Demo Desenho",
+ "tema": "Cesta de basquete",
+ "versao": 1,
+ "etapa": 4,
+ "estilo": "desenho",
+ "musica": "desenho_animado",
+ "assinatura": false,
+ "exemplo": true,
+ "batida_final": "cesta",
+ "nota": "Demo de 10 s do estilo (galeria de estilos).",
+ "velocidade_cta": 1.12
+}

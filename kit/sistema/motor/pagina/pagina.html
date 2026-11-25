@@ -1,0 +1,49 @@
+<main>
+  <header>
+    <h1 id="titulo">Carregando…</h1>
+    <p class="sub" id="info"></p>
+  </header>
+  <section class="erro" id="erro" hidden aria-live="assertive">
+    <b id="erro-t">Deu um erro na cena</b>
+    <span>Copie o texto abaixo e mande pro Claude (ou tire um print desta caixa).</span>
+    <pre id="erro-d"></pre>
+    <div class="linha"><button id="erro-copiar">Copiar o erro</button></div>
+  </section>
+  <section class="tela" aria-label="Prévia do vídeo">
+    <canvas id="prev" width="540" height="960"></canvas>
+    <div class="barra">
+      <button id="play" aria-label="Assistir">▶</button>
+      <input id="pos" type="range" min="0" max="1000" value="0" step="1" aria-label="Posição no vídeo">
+      <span id="tempo">0:00 / 0:00</span>
+    </div>
+    <label class="ck"><input type="checkbox" id="leve"> Prévia leve (se a prévia estiver travando)</label>
+  </section>
+  <section class="painel">
+    <div class="card">
+      <h2><span class="passo">1</span>Assista à prévia</h2>
+      <p>Clique em ▶ pra ver o vídeo com som. A prévia pode engasgar um pouco num computador mais simples — o vídeo final não engasga.</p>
+    </div>
+    <div class="card">
+      <h2><span class="passo">2</span>Gerar o vídeo final</h2>
+      <p>Clique no botão e espere a barra encher. O vídeo (com som) vai pra sua pasta <b>Downloads</b>. Deixe esta aba aberta enquanto renderiza.</p>
+      <div class="linha"><button class="pri" id="go" disabled>🎬 Renderizar vídeo final</button><button id="save" hidden>Baixar de novo</button></div>
+      <div id="track"><div id="bar"></div></div>
+      <div id="status">Carregando a cena…</div>
+    </div>
+    <div class="card">
+      <h2><span class="passo">3</span>Quer mudar alguma coisa?</h2>
+      <p>Diga pro Claude o que mudar, com o segundo do vídeo (ex.: “aos 0:42 o letreiro tampa o boneco”). Se ajudar, mande também uma destas imagens:</p>
+      <div class="linha"><button id="folha" disabled>🖼️ Folha de revisão</button><button id="quadro" disabled>📷 Foto deste momento</button></div>
+    </div>
+    <details>
+      <summary>Avançado</summary>
+      <div class="linha">
+        <label class="num">Começar em (s)<input id="t0" value="0"></label>
+        <label class="num">Terminar em (s)<input id="t1" value=""></label>
+        <label class="num">Qualidade (Mbps)<input id="mbps" value="16"></label>
+      </div>
+      <pre id="log"></pre>
+    </details>
+  </section>
+</main>
+<div id="webgl" aria-hidden="true"></div>

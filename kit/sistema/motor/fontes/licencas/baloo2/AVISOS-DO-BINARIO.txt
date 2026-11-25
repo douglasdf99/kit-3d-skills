@@ -1,0 +1,14 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Baloo 2
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+baloo-2-latin-700-normal.woff2
+SHA-256: 8e7ffc9b993aa8caa89bcab81e103c9eb2da4e3e042f37b7a5115d0ddbff12c0
+Copyright: Copyright 2019 The Baloo 2 Project Authors (https://github.com/EkType/Baloo2)
+URL de licença: http://scripts.sil.org/OFL
+
+baloo-2-latin-800-normal.woff2
+SHA-256: 3e36c57e37bda5b5f28cf10636d6d3aed4de5250df923f1b203b64ad857c79a7
+Copyright: Copyright 2019 The Baloo 2 Project Authors (https://github.com/EkType/Baloo2)
+URL de licença: http://scripts.sil.org/OFL

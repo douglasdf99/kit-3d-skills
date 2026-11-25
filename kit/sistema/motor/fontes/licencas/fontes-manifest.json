@@ -1,0 +1,1651 @@
+{
+  "schema": 1,
+  "created": "2026-10-31T06:15:25-0300",
+  "source_catalog": "sistema/motor/fontes/fontes.json",
+  "source_catalog_sha256": "c67cb3d3eb154a1d432c87477128d9d85efb91a07fff155c72bcecc73138c872",
+  "official_repository": "https://github.com/google/fonts",
+  "official_commit": "6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec",
+  "families_count": 16,
+  "binaries_count": 28,
+  "all_woff2_covered": true,
+  "licensing_classification_corrections": [
+    {
+      "family": "Luckiest Guy",
+      "catalog_claim": "SIL OFL",
+      "official_metadata": "Apache-2.0",
+      "action": "Correct only the delivery copy documentation; original was not modified."
+    },
+    {
+      "family": "Chewy",
+      "catalog_claim": "SIL OFL",
+      "official_metadata": "Apache-2.0",
+      "action": "Correct only the delivery copy documentation; original was not modified."
+    }
+  ],
+  "families": [
+    {
+      "family": "Montserrat",
+      "official_family_name": "Montserrat",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/montserrat",
+      "notices": [
+        {
+          "file": "montserrat/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/montserrat/METADATA.pb",
+          "bytes": 6727,
+          "sha256": "c48dbcaee013b8f6a33e7e6a79191adbf098a36839367d9750598594ff664e5f",
+          "role": "metadata"
+        },
+        {
+          "file": "montserrat/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/montserrat/OFL.txt",
+          "bytes": 4400,
+          "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "montserrat/AVISOS-DO-BINARIO.txt",
+        "bytes": 957,
+        "sha256": "6d934f661df70a14275a70bbf2e12ac971c126013f31866a5ddbd8cffd36df9b",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "montserrat-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 15240,
+          "sha256": "a60b1ba9daa11468bf1b846e8515e51b97023f341f2962a9623b9d8aaa7904ad",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
+            ],
+            "1": [
+              "Montserrat Thin"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "8.000;ULA;MontserratThin-Bold"
+            ],
+            "4": [
+              "Montserrat Thin Bold"
+            ],
+            "5": [
+              "Version 8.000"
+            ],
+            "6": [
+              "MontserratThin-Bold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "montserrat-latin-800-normal.woff2",
+          "declared_weight": "800",
+          "embedded_weight_class": 800,
+          "variation_axes": [],
+          "bytes": 15332,
+          "sha256": "5b29b79dd01adcb93488636b8f0c85014d788a3e2e9ce12715c434123f552d24",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
+            ],
+            "1": [
+              "Montserrat Thin ExtraBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "8.000;ULA;MontserratThin-ExtraBold"
+            ],
+            "4": [
+              "Montserrat Thin ExtraBold"
+            ],
+            "5": [
+              "Version 8.000"
+            ],
+            "6": [
+              "MontserratThin-ExtraBold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Montserrat Thin"
+            ],
+            "17": [
+              "ExtraBold"
+            ]
+          }
+        },
+        {
+          "file": "montserrat-latin-900-normal.woff2",
+          "declared_weight": "900",
+          "embedded_weight_class": 900,
+          "variation_axes": [],
+          "bytes": 14504,
+          "sha256": "09d39f49d4cdbed981f59d7c21ce058f68777b7b25f6d60e2f07a0ad1d8b68ac",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)"
+            ],
+            "1": [
+              "Montserrat Thin Black"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "8.000;ULA;MontserratThin-Black"
+            ],
+            "4": [
+              "Montserrat Thin Black"
+            ],
+            "5": [
+              "Version 8.000"
+            ],
+            "6": [
+              "MontserratThin-Black"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Montserrat Thin"
+            ],
+            "17": [
+              "Black"
+            ]
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Fredoka",
+      "official_family_name": "Fredoka",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/fredoka",
+      "notices": [
+        {
+          "file": "fredoka/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/fredoka/METADATA.pb",
+          "bytes": 933,
+          "sha256": "17f260d0faf7c588c9331a9a1b720b55c2b871563423f42704c8cbb0953a574a",
+          "role": "metadata"
+        },
+        {
+          "file": "fredoka/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/fredoka/OFL.txt",
+          "bytes": 4388,
+          "sha256": "5c9e7eee5c6b25f4b05b8d53b2e470ea4962f9ced742d044a98f7d95d1375bab",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "fredoka/AVISOS-DO-BINARIO.txt",
+        "bytes": 682,
+        "sha256": "5968f214a4982619c5d3450b7c39cceb165889b4f6e192e8deac353720539734",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "fredoka-latin-600-normal.woff2",
+          "declared_weight": "600",
+          "embedded_weight_class": 600,
+          "variation_axes": [],
+          "bytes": 16468,
+          "sha256": "b62f2898de150f019961f4884a49f83dcd2ce74375be5e0992c594ebb8f30294",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2016 The Fredoka Project Authors (https://github.com/hafontia/Fredoka-One)"
+            ],
+            "1": [
+              "Fredoka Light SemiBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.001;ssde;FredokaLight-SemiBold"
+            ],
+            "4": [
+              "Fredoka Light SemiBold"
+            ],
+            "5": [
+              "Version 2.001"
+            ],
+            "6": [
+              "FredokaLight-SemiBold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Fredoka Light"
+            ],
+            "17": [
+              "SemiBold"
+            ]
+          }
+        },
+        {
+          "file": "fredoka-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 15900,
+          "sha256": "ee61b48acab42fcfee4e1c398b03bbae7e09d1be8471779c440a97dc85118c16",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2016 The Fredoka Project Authors (https://github.com/hafontia/Fredoka-One)"
+            ],
+            "1": [
+              "Fredoka Light"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "2.001;ssde;FredokaLight-Bold"
+            ],
+            "4": [
+              "Fredoka Light Bold"
+            ],
+            "5": [
+              "Version 2.001"
+            ],
+            "6": [
+              "FredokaLight-Bold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Baloo 2",
+      "official_family_name": "Baloo 2",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/baloo2",
+      "notices": [
+        {
+          "file": "baloo2/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/baloo2/METADATA.pb",
+          "bytes": 1021,
+          "sha256": "75ee7c6bd15a6981db588fa89f74eebe0c7fa292843e3f1263905118da2a0caf",
+          "role": "metadata"
+        },
+        {
+          "file": "baloo2/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/baloo2/OFL.txt",
+          "bytes": 4384,
+          "sha256": "ad09b05dc8bc678c9daf7c4c5f7ef1f55e5726127f4330b2e98e40b9dffcb860",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "baloo2/AVISOS-DO-BINARIO.txt",
+        "bytes": 668,
+        "sha256": "44b3ce0375ff2ee66af501ca78b2f701f5a971e732feb4832c627cd4d0a21752",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "baloo-2-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 19436,
+          "sha256": "8e7ffc9b993aa8caa89bcab81e103c9eb2da4e3e042f37b7a5115d0ddbff12c0",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2019 The Baloo 2 Project Authors (https://github.com/EkType/Baloo2)"
+            ],
+            "1": [
+              "Baloo 2"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "1.700;EKTF;Baloo2-Bold"
+            ],
+            "4": [
+              "Baloo 2 Bold"
+            ],
+            "5": [
+              "Version 1.700"
+            ],
+            "6": [
+              "Baloo2-Bold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "baloo-2-latin-800-normal.woff2",
+          "declared_weight": "800",
+          "embedded_weight_class": 800,
+          "variation_axes": [],
+          "bytes": 18632,
+          "sha256": "3e36c57e37bda5b5f28cf10636d6d3aed4de5250df923f1b203b64ad857c79a7",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2019 The Baloo 2 Project Authors (https://github.com/EkType/Baloo2)"
+            ],
+            "1": [
+              "Baloo 2 ExtraBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "1.700;EKTF;Baloo2-ExtraBold"
+            ],
+            "4": [
+              "Baloo 2 ExtraBold"
+            ],
+            "5": [
+              "Version 1.700"
+            ],
+            "6": [
+              "Baloo2-ExtraBold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Baloo 2"
+            ],
+            "17": [
+              "ExtraBold"
+            ]
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Poppins",
+      "official_family_name": "Poppins",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/poppins",
+      "notices": [
+        {
+          "file": "poppins/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/poppins/METADATA.pb",
+          "bytes": 5157,
+          "sha256": "8121646e47a90cbcd2f4664e0df036944880035522b4f25ec51cb9465428b346",
+          "role": "metadata"
+        },
+        {
+          "file": "poppins/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/poppins/OFL.txt",
+          "bytes": 4385,
+          "sha256": "6be04893d770899a015649c7aa3b582f871b272f8747a92b78b17c3e5c8b2573",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "poppins/AVISOS-DO-BINARIO.txt",
+        "bytes": 927,
+        "sha256": "934e08eddf75bf2003bc0e0adf11b82385f919ff02a9600254d3467bcb249c1c",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "poppins-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 7816,
+          "sha256": "9338e65fc077355c7a87ae0d64cc101e23b9bf8ad78ae65f0f319c857311b526",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)"
+            ],
+            "1": [
+              "Poppins"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "ITFO; Poppins Bold; 4.004b8"
+            ],
+            "4": [
+              "Poppins Bold"
+            ],
+            "5": [
+              "4.004"
+            ],
+            "6": [
+              "Poppins-Bold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "poppins-latin-800-normal.woff2",
+          "declared_weight": "800",
+          "embedded_weight_class": 800,
+          "variation_axes": [],
+          "bytes": 7824,
+          "sha256": "60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)"
+            ],
+            "1": [
+              "Poppins ExtraBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "ITFO; Poppins ExtraBold; 4.004b8"
+            ],
+            "4": [
+              "Poppins ExtraBold"
+            ],
+            "5": [
+              "4.004"
+            ],
+            "6": [
+              "Poppins-ExtraBold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "poppins-latin-900-normal.woff2",
+          "declared_weight": "900",
+          "embedded_weight_class": 900,
+          "variation_axes": [],
+          "bytes": 7632,
+          "sha256": "17ea10196a490a8d3b8da162c7d4af9c301c5229f70af90dad6fa33eb951d83f",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)"
+            ],
+            "1": [
+              "Poppins Black"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "ITFO; Poppins Black; 4.004b8"
+            ],
+            "4": [
+              "Poppins Black"
+            ],
+            "5": [
+              "4.004"
+            ],
+            "6": [
+              "Poppins-Black"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Nunito",
+      "official_family_name": "Nunito",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/nunito",
+      "notices": [
+        {
+          "file": "nunito/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/nunito/METADATA.pb",
+          "bytes": 1306,
+          "sha256": "3e20743c7ddab54c6ac57d79a6be522d4bae795223855ce90a1b13c4132f0754",
+          "role": "metadata"
+        },
+        {
+          "file": "nunito/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/nunito/OFL.txt",
+          "bytes": 4385,
+          "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "nunito/AVISOS-DO-BINARIO.txt",
+        "bytes": 675,
+        "sha256": "55854b6b94550f9fce8ff530689d0711c264cbed05e3bb01f69964a957f35ea8",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "nunito-latin-800-normal.woff2",
+          "declared_weight": "800",
+          "embedded_weight_class": 800,
+          "variation_axes": [],
+          "bytes": 16520,
+          "sha256": "2363d3ed037283ebb961e8c4b4917e40a8bc8853cf9965cf1ea7b4daa1df630a",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)"
+            ],
+            "1": [
+              "Nunito ExtraLight ExtraBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "3.602;NONE;NunitoExtraLight-ExtraBold"
+            ],
+            "4": [
+              "Nunito ExtraLight ExtraBold"
+            ],
+            "5": [
+              "Version 3.602"
+            ],
+            "6": [
+              "NunitoExtraLight-ExtraBold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Nunito ExtraLight"
+            ],
+            "17": [
+              "ExtraBold"
+            ]
+          }
+        },
+        {
+          "file": "nunito-latin-900-normal.woff2",
+          "declared_weight": "900",
+          "embedded_weight_class": 900,
+          "variation_axes": [],
+          "bytes": 16676,
+          "sha256": "9ca32f5d8334579387361096944286df451272a557bb09bd906254a623aba99e",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)"
+            ],
+            "1": [
+              "Nunito ExtraLight Black"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "3.602;NONE;NunitoExtraLight-Black"
+            ],
+            "4": [
+              "Nunito ExtraLight Black"
+            ],
+            "5": [
+              "Version 3.602"
+            ],
+            "6": [
+              "NunitoExtraLight-Black"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Nunito ExtraLight"
+            ],
+            "17": [
+              "Black"
+            ]
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Rubik",
+      "official_family_name": "Rubik",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/rubik",
+      "notices": [
+        {
+          "file": "rubik/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/rubik/METADATA.pb",
+          "bytes": 1310,
+          "sha256": "2e81cc9a038e89bcf9a14cd4e2d4513c1b5959e8b9189b835d4ecf4af11968a6",
+          "role": "metadata"
+        },
+        {
+          "file": "rubik/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/rubik/OFL.txt",
+          "bytes": 4384,
+          "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "rubik/AVISOS-DO-BINARIO.txt",
+        "bytes": 913,
+        "sha256": "257e20285da05654144c474155e3ab57d236d32d4c9cc7bf973f9b9d24f1af0a",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "rubik-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 19112,
+          "sha256": "e423f8ae1668156addf5e32f1056d5b22b5b113a9a23afd364df84a6fa88602d",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)"
+            ],
+            "1": [
+              "Rubik Light"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "2.300;NONE;RubikLight-Bold"
+            ],
+            "4": [
+              "Rubik Light Bold"
+            ],
+            "5": [
+              "Version 2.300;gftools[0.9.30]"
+            ],
+            "6": [
+              "RubikLight-Bold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "rubik-latin-800-normal.woff2",
+          "declared_weight": "800",
+          "embedded_weight_class": 800,
+          "variation_axes": [],
+          "bytes": 19060,
+          "sha256": "8329d791ea5bc0ec67b2a01465a751e37f6699fc14ef45baac618c0b7c0789b3",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)"
+            ],
+            "1": [
+              "Rubik Light ExtraBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.300;NONE;RubikLight-ExtraBold"
+            ],
+            "4": [
+              "Rubik Light ExtraBold"
+            ],
+            "5": [
+              "Version 2.300;gftools[0.9.30]"
+            ],
+            "6": [
+              "RubikLight-ExtraBold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Rubik Light"
+            ],
+            "17": [
+              "ExtraBold"
+            ]
+          }
+        },
+        {
+          "file": "rubik-latin-900-normal.woff2",
+          "declared_weight": "900",
+          "embedded_weight_class": 900,
+          "variation_axes": [],
+          "bytes": 17820,
+          "sha256": "9ab80489aea97335ef86ea6d7386e5ffbf57a2abeeaea8da6f84c694c87792ad",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)"
+            ],
+            "1": [
+              "Rubik Light Black"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.300;NONE;RubikLight-Black"
+            ],
+            "4": [
+              "Rubik Light Black"
+            ],
+            "5": [
+              "Version 2.300;gftools[0.9.30]"
+            ],
+            "6": [
+              "RubikLight-Black"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Rubik Light"
+            ],
+            "17": [
+              "Black"
+            ]
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Luckiest Guy",
+      "official_family_name": "Luckiest Guy",
+      "license": "Apache-2.0",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/luckiestguy",
+      "notices": [
+        {
+          "file": "luckiestguy/LICENSE.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/luckiestguy/LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "role": "upstream_notice"
+        },
+        {
+          "file": "luckiestguy/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/luckiestguy/METADATA.pb",
+          "bytes": 709,
+          "sha256": "79e13dc76e9b06b87d58f3ed018259c49f6356ec88cc831ae99200c7ac05bf16",
+          "role": "metadata"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "luckiestguy/AVISOS-DO-BINARIO.txt",
+        "bytes": 548,
+        "sha256": "9ebf5c97f14a6ee9b7cd93e6586b1ee30015229dade707c36962c46835e79ac2",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "luckiest-guy-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 17360,
+          "sha256": "3877b522181765adf66ba89bd68d288ecb9f2483b441baab3424646b0c7aaa0a",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright (c) 2010 by Brian J. Bonislawsky DBA Astigmatic (AOETI). All rights reserved. Available under the Apache 2.0 licence.\rhttp://www.apache.org/licenses/LICENSE-2.0.html"
+            ],
+            "1": [
+              "Luckiest Guy"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "1.001;AOEF;LuckiestGuy-Regular"
+            ],
+            "4": [
+              "Luckiest Guy Regular"
+            ],
+            "5": [
+              "Version 1.001"
+            ],
+            "6": [
+              "LuckiestGuy-Regular"
+            ],
+            "13": [],
+            "14": [
+              "http://www.apache.org/licenses/LICENSE-2.0"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Bebas Neue",
+      "official_family_name": "Bebas Neue",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/bebasneue",
+      "notices": [
+        {
+          "file": "bebasneue/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/bebasneue/METADATA.pb",
+          "bytes": 636,
+          "sha256": "180da4f2ee7757e589eb5cb82f32c58b64c49f015e504ccab6b21401e7f5d43a",
+          "role": "metadata"
+        },
+        {
+          "file": "bebasneue/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/bebasneue/OFL.txt",
+          "bytes": 4337,
+          "sha256": "72082f6cb4d04be2ecf7cc7d9e1e7d73787f0af8a5a278a47cade70c16b78341",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "bebasneue/AVISOS-DO-BINARIO.txt",
+        "bytes": 441,
+        "sha256": "e675a0203d1737d446d832b046b755fdacd70ff7f1a26121ec2107e227f18c60",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "bebas-neue-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 13768,
+          "sha256": "a7c90c89240c134f7fdd33d40c000ec90b79d675ea53e8cc5a6d423c073de412",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2019 The Bebas Neue Project Authors (https://github.com/dharmatype/Bebas-Neue)"
+            ],
+            "1": [
+              "Bebas Neue"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.000;DHRM;BebasNeue-Regular"
+            ],
+            "4": [
+              "Bebas Neue Regular"
+            ],
+            "5": [
+              "Version 2.000"
+            ],
+            "6": [
+              "BebasNeue-Regular"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Bangers",
+      "official_family_name": "Bangers",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/bangers",
+      "notices": [
+        {
+          "file": "bangers/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/bangers/METADATA.pb",
+          "bytes": 782,
+          "sha256": "7ba1f04a4b76f07c7e40686df10cccdb7627655b34dfe75a628873b7ba42cda3",
+          "role": "metadata"
+        },
+        {
+          "file": "bangers/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/bangers/OFL.txt",
+          "bytes": 4479,
+          "sha256": "630dd5a307c0657b094d324e069b390edf90182fe5003639e06c02a0e5769af7",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "bangers/AVISOS-DO-BINARIO.txt",
+        "bytes": 431,
+        "sha256": "9ad322ee7017ca1ec70061c91d2d43c01a7a63b530a4dea8ab271962f03cbd05",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "bangers-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 23528,
+          "sha256": "04f54ff42ea2b8fc50b4259c29c60b1e05e606b769c2fb541c98624346c9767c",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2010 The Bangers Project Authors (https://github.com/googlefonts/bangers)"
+            ],
+            "1": [
+              "Bangers"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.100;NeWT;Bangers-Regular"
+            ],
+            "4": [
+              "Bangers Regular"
+            ],
+            "5": [
+              "Version 2.100; ttfautohint (v1.8.4.7-5d5b);gftools[0.9.31]"
+            ],
+            "6": [
+              "Bangers-Regular"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Orbitron",
+      "official_family_name": "Orbitron",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/orbitron",
+      "notices": [
+        {
+          "file": "orbitron/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/orbitron/METADATA.pb",
+          "bytes": 679,
+          "sha256": "6e897c83b8fcdeccb78accb132efd7b279267b684484aa0735b78aba711d0b36",
+          "role": "metadata"
+        },
+        {
+          "file": "orbitron/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/orbitron/OFL.txt",
+          "bytes": 4426,
+          "sha256": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "orbitron/AVISOS-DO-BINARIO.txt",
+        "bytes": 763,
+        "sha256": "764b4bf2befee40b4aaaefa52105925d81e9e02c0f9d210003f6e7841e9c1483",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "orbitron-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 6528,
+          "sha256": "ee6acc5ad5349018f9ca71fab8118144160e110838931874150a1ac3f97db38d",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2018 The Orbitron Project Authors (https://github.com/theleagueof/orbitron), with Reserved Font Name: \"Orbitron\"."
+            ],
+            "1": [
+              "Orbitron"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "2.001;NONE;Orbitron-Bold"
+            ],
+            "4": [
+              "Orbitron Bold"
+            ],
+            "5": [
+              "Version 2.001"
+            ],
+            "6": [
+              "Orbitron-Bold"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "orbitron-latin-900-normal.woff2",
+          "declared_weight": "900",
+          "embedded_weight_class": 900,
+          "variation_axes": [],
+          "bytes": 6400,
+          "sha256": "ce87e6a1b1955bbc7b1d2d1c30fb5b53af5e34edb5b93a33e28068054892ef74",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2018 The Orbitron Project Authors (https://github.com/theleagueof/orbitron), with Reserved Font Name: \"Orbitron\"."
+            ],
+            "1": [
+              "Orbitron Black"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.001;NONE;Orbitron-Black"
+            ],
+            "4": [
+              "Orbitron Black"
+            ],
+            "5": [
+              "Version 2.001"
+            ],
+            "6": [
+              "Orbitron-Black"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Orbitron"
+            ],
+            "17": [
+              "Black"
+            ]
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "JetBrains Mono",
+      "official_family_name": "JetBrains Mono",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/jetbrainsmono",
+      "notices": [
+        {
+          "file": "jetbrainsmono/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/jetbrainsmono/METADATA.pb",
+          "bytes": 3203,
+          "sha256": "220f22dd4d2a3d9c77183fbbcb250779267725d90d9be673b403dc6bcfada0af",
+          "role": "metadata"
+        },
+        {
+          "file": "jetbrainsmono/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/jetbrainsmono/OFL.txt",
+          "bytes": 4399,
+          "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "jetbrainsmono/AVISOS-DO-BINARIO.txt",
+        "bytes": 725,
+        "sha256": "c636d0bb90486856721ac4bfea3e3596e82c257c245f3ddadd5909fc45a38d31",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "jetbrains-mono-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 21908,
+          "sha256": "d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)"
+            ],
+            "1": [
+              "JetBrains Mono"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "2.211;JB;JetBrainsMono-Bold"
+            ],
+            "4": [
+              "JetBrains Mono Bold"
+            ],
+            "5": [
+              "Version 2.211"
+            ],
+            "6": [
+              "JetBrainsMono-Bold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        },
+        {
+          "file": "jetbrains-mono-latin-800-normal.woff2",
+          "declared_weight": "800",
+          "embedded_weight_class": 800,
+          "variation_axes": [],
+          "bytes": 21236,
+          "sha256": "237d0cbcf1aacd607e07f610d79cbc880edbffcc99ebcf417c502f8fa873ee53",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)"
+            ],
+            "1": [
+              "JetBrains Mono ExtraBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "2.211;JB;JetBrainsMono-ExtraBold"
+            ],
+            "4": [
+              "JetBrains Mono ExtraBold"
+            ],
+            "5": [
+              "Version 2.211"
+            ],
+            "6": [
+              "JetBrainsMono-ExtraBold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "JetBrains Mono"
+            ],
+            "17": [
+              "ExtraBold"
+            ]
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Permanent Marker",
+      "official_family_name": "Permanent Marker",
+      "license": "Apache-2.0",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/permanentmarker",
+      "notices": [
+        {
+          "file": "permanentmarker/LICENSE.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/permanentmarker/LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "role": "upstream_notice"
+        },
+        {
+          "file": "permanentmarker/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/permanentmarker/METADATA.pb",
+          "bytes": 796,
+          "sha256": "e8c6f976c51817b22d458c031e1b270d05aa28685f99ed57a2d099bb1634724f",
+          "role": "metadata"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "permanentmarker/AVISOS-DO-BINARIO.txt",
+        "bytes": 440,
+        "sha256": "2ba3219df114df992964459f39cb6e19ad08799ba452183214a08885ce07ae1b",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "permanent-marker-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 29564,
+          "sha256": "4884fec2c73aa52a2461073c1b87d1ceb80f400520391b43f97ca7d3c39eeb24",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright (c) 2010 by Font Diner, Inc. All rights reserved."
+            ],
+            "1": [
+              "Permanent Marker"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "1.001;DINR;PermanentMarker-Regular"
+            ],
+            "4": [
+              "Permanent Marker Regular"
+            ],
+            "5": [
+              "Version 1.001"
+            ],
+            "6": [
+              "PermanentMarker-Regular"
+            ],
+            "13": [],
+            "14": [
+              "http://www.apache.org/licenses/LICENSE-2.0"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Pixelify Sans",
+      "official_family_name": "Pixelify Sans",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pixelifysans",
+      "notices": [
+        {
+          "file": "pixelifysans/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pixelifysans/METADATA.pb",
+          "bytes": 939,
+          "sha256": "adac079f2f599996ffa5952f8fdc66e643db2cdcd9a0bc84ad8ad4b8387567d4",
+          "role": "metadata"
+        },
+        {
+          "file": "pixelifysans/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pixelifysans/OFL.txt",
+          "bytes": 4488,
+          "sha256": "b66ba46f511a851ab09998b5a5a9fdbb102545a3864cb993095e1745996873a7",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "pixelifysans/AVISOS-DO-BINARIO.txt",
+        "bytes": 714,
+        "sha256": "e09dee6c5d9ea4e8ea19e087c31c346457da9e3d34b06941bb227a301f72e53b",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "pixelify-sans-latin-600-normal.woff2",
+          "declared_weight": "600",
+          "embedded_weight_class": 600,
+          "variation_axes": [],
+          "bytes": 8216,
+          "sha256": "9ee47c039a991caea6072eecfe03cf36debf4f70bb2566bd602b9eada1ab1112",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)"
+            ],
+            "1": [
+              "Pixelify Sans SemiBold"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "1.000;NONE;PixelifySans-SemiBold"
+            ],
+            "4": [
+              "Pixelify Sans SemiBold"
+            ],
+            "5": [
+              "Version 1.000"
+            ],
+            "6": [
+              "PixelifySans-SemiBold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [
+              "Pixelify Sans"
+            ],
+            "17": [
+              "SemiBold"
+            ]
+          }
+        },
+        {
+          "file": "pixelify-sans-latin-700-normal.woff2",
+          "declared_weight": "700",
+          "embedded_weight_class": 700,
+          "variation_axes": [],
+          "bytes": 7904,
+          "sha256": "c836cfa5c0e9d62ea9b890e0418d52a6004149090a521cd198a8c09f5d5ab893",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)"
+            ],
+            "1": [
+              "Pixelify Sans"
+            ],
+            "2": [
+              "Bold"
+            ],
+            "3": [
+              "1.000;NONE;PixelifySans-Bold"
+            ],
+            "4": [
+              "Pixelify Sans Bold"
+            ],
+            "5": [
+              "Version 1.000"
+            ],
+            "6": [
+              "PixelifySans-Bold"
+            ],
+            "13": [],
+            "14": [
+              "https://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Lilita One",
+      "official_family_name": "Lilita One",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/lilitaone",
+      "notices": [
+        {
+          "file": "lilitaone/FONTLOG.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/lilitaone/FONTLOG.txt",
+          "bytes": 939,
+          "sha256": "5e324e1bb38125eaeeea4678ec10d8ab4da0b7fa037608ec78d9096221dbae50",
+          "role": "upstream_notice"
+        },
+        {
+          "file": "lilitaone/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/lilitaone/METADATA.pb",
+          "bytes": 616,
+          "sha256": "e580e1c3c344299b94e7ac05dc578b5f7d3253b37a0bae7ff3e91c9f7a8c47bd",
+          "role": "metadata"
+        },
+        {
+          "file": "lilitaone/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/lilitaone/OFL.txt",
+          "bytes": 4392,
+          "sha256": "255d5debbb80eb2ea762644311f266a279e8778f00156655a516e2b7781a63e1",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "lilitaone/AVISOS-DO-BINARIO.txt",
+        "bytes": 447,
+        "sha256": "d0d7504aa3368151671b7479909f4f7d5fbd0d9d6a5ab46eca969c794570aaca",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "lilita-one-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 10672,
+          "sha256": "d2575d4fa3632580aafcbcdf6978b3b57e144b90cf5bd9c2c98194f28b869704",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright (c) 2011 Juan Montoreano (juan@remolacha.biz), with Reserved Font Names \"Lilita One\""
+            ],
+            "1": [
+              "Lilita One"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "JuanMontoreano: Lilita One: 2011"
+            ],
+            "4": [
+              "Lilita One"
+            ],
+            "5": [
+              "Version 1.002"
+            ],
+            "6": [
+              "LilitaOne"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Chewy",
+      "official_family_name": "Chewy",
+      "license": "Apache-2.0",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/chewy",
+      "notices": [
+        {
+          "file": "chewy/LICENSE.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/chewy/LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "role": "upstream_notice"
+        },
+        {
+          "file": "chewy/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/apache/chewy/METADATA.pb",
+          "bytes": 720,
+          "sha256": "3cad94d93966036676dba3acd10cea588cd3e1c1363a5380ba778c7a5963a38f",
+          "role": "metadata"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "chewy/AVISOS-DO-BINARIO.txt",
+        "bytes": 431,
+        "sha256": "1ed2c40abe5c5760dcff253ebab54756d6cc151df48e0b4590eeb3a067ba57b3",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "chewy-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 19920,
+          "sha256": "5fb894030e4ade4d9f76ede985bc96d468bcb923fcd4b908a5d8e38178819dc4",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright (c) 2010 by Font Diner, Inc DBA Sideshow. All rights reserved."
+            ],
+            "1": [
+              "Chewy"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "1.001;DINR;Chewy-Regular"
+            ],
+            "4": [
+              "Chewy Regular"
+            ],
+            "5": [
+              "Version 1.001"
+            ],
+            "6": [
+              "Chewy-Regular"
+            ],
+            "13": [],
+            "14": [
+              "http://www.apache.org/licenses/LICENSE-2.0"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    },
+    {
+      "family": "Press Start 2P",
+      "official_family_name": "Press Start 2P",
+      "license": "OFL-1.1",
+      "official_directory_url": "https://github.com/google/fonts/tree/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pressstart2p",
+      "notices": [
+        {
+          "file": "pressstart2p/FONTLOG.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pressstart2p/FONTLOG.txt",
+          "bytes": 3091,
+          "sha256": "0dadb567c03f885bf44fbd2d71102021afce9490dc4a921c42c6d3b3734c858d",
+          "role": "upstream_notice"
+        },
+        {
+          "file": "pressstart2p/METADATA.pb",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pressstart2p/METADATA.pb",
+          "bytes": 672,
+          "sha256": "a8bd7db72790187aaabca90e81d8cd4549d9dce9058b5725d007f1a08bc2b12c",
+          "role": "metadata"
+        },
+        {
+          "file": "pressstart2p/OFL.txt",
+          "official_url": "https://raw.githubusercontent.com/google/fonts/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/pressstart2p/OFL.txt",
+          "bytes": 4413,
+          "sha256": "705960c3281a5765ecc0b59bd4ed7ca59eed165748076bc2fc3e8fdbfeb944b0",
+          "role": "upstream_notice"
+        }
+      ],
+      "embedded_notice_file": {
+        "file": "pressstart2p/AVISOS-DO-BINARIO.txt",
+        "bytes": 470,
+        "sha256": "ce663ab32c4463c52fb4987a17051bac53f23f4488c30a08a9f2e3730244dfaf",
+        "origin": "Exact local WOFF2 name-table extraction; not an upstream download"
+      },
+      "binaries": [
+        {
+          "file": "press-start-2p-latin-400-normal.woff2",
+          "declared_weight": "400",
+          "embedded_weight_class": 400,
+          "variation_axes": [],
+          "bytes": 12512,
+          "sha256": "afec86997fdaf54af1f59358fa2c1e2a0f1d04146edad18e5cd141d0384a7548",
+          "embedded_family_confirmed": true,
+          "embedded_names": {
+            "0": [
+              "Copyright 2012 The Press Start 2P Project Authors (cody@zone38.net), with Reserved Font Name \"Press Start 2P\""
+            ],
+            "1": [
+              "Press Start 2P"
+            ],
+            "2": [
+              "Regular"
+            ],
+            "3": [
+              "3.000;CYRE;PressStart2P-Regular"
+            ],
+            "4": [
+              "Press Start 2P Regular"
+            ],
+            "5": [
+              "Version 3.000"
+            ],
+            "6": [
+              "PressStart2P-Regular"
+            ],
+            "13": [],
+            "14": [
+              "http://scripts.sil.org/OFL"
+            ],
+            "16": [],
+            "17": []
+          }
+        }
+      ],
+      "identification_limit": "Family confirmed by fontes.json, filenames and embedded family/name records. Local SHA-256 identifies the exact delivered binary; it does not establish byte-for-byte equivalence to a particular upstream release or identify who generated the Latin WOFF2 subset. Current official notices are pinned to the recorded Google Fonts commit; embedded copyright/license notices are also retained for the local version."
+    }
+  ],
+  "limitations": [
+    "No original kit files or ZIPs were modified.",
+    "No upstream font binary was substituted or downloaded.",
+    "This collection concerns font notices only; it makes no claims about audio/image/code rights.",
+    "Official license terms must accompany the distributed font files. The manifest records evidence rather than providing legal advice."
+  ]
+}

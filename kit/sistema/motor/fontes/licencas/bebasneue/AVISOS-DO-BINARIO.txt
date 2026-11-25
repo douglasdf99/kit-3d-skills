@@ -1,0 +1,9 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Bebas Neue
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+bebas-neue-latin-400-normal.woff2
+SHA-256: a7c90c89240c134f7fdd33d40c000ec90b79d675ea53e8cc5a6d423c073de412
+Copyright: Copyright 2019 The Bebas Neue Project Authors (https://github.com/dharmatype/Bebas-Neue)
+URL de licença: http://scripts.sil.org/OFL

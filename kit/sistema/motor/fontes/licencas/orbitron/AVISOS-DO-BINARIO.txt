@@ -1,0 +1,14 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Orbitron
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+orbitron-latin-700-normal.woff2
+SHA-256: ee6acc5ad5349018f9ca71fab8118144160e110838931874150a1ac3f97db38d
+Copyright: Copyright 2018 The Orbitron Project Authors (https://github.com/theleagueof/orbitron), with Reserved Font Name: "Orbitron".
+URL de licença: http://scripts.sil.org/OFL
+
+orbitron-latin-900-normal.woff2
+SHA-256: ce87e6a1b1955bbc7b1d2d1c30fb5b53af5e34edb5b93a33e28068054892ef74
+Copyright: Copyright 2018 The Orbitron Project Authors (https://github.com/theleagueof/orbitron), with Reserved Font Name: "Orbitron".
+URL de licença: http://scripts.sil.org/OFL

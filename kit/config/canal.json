@@ -1,0 +1,16 @@
+{
+  "nome": "Meu Canal",
+  "idioma": "pt",
+  "assinatura": true,
+  "voz_id": "",
+  "voz_nome": "",
+  "modelo": "eleven_v4",
+  "estabilidade": 0.3,
+  "similaridade": 0.9,
+  "velocidade": 1.12,
+  "velocidade_cta": 1.2,
+  "pausa_max": 0.3,
+  "estilo": "padrao",
+  "personagem": null,
+  "musica_padrao": "oficina_curiosa"
+}

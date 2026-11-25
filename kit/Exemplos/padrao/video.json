@@ -1,0 +1,14 @@
+{
+ "id": "demo-padrao",
+ "titulo": "Demo Padrao",
+ "tema": "Varal",
+ "versao": 1,
+ "etapa": 4,
+ "estilo": "padrao",
+ "musica": "oficina_curiosa",
+ "assinatura": false,
+ "exemplo": true,
+ "batida_final": "varal",
+ "velocidade_cta": 1.12,
+ "nota": "Demo de 10 s do estilo (galeria de estilos)."
+}

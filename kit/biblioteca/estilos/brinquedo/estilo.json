@@ -1,0 +1,100 @@
+{
+ "nome": "Brinquedo",
+ "ordem": 3,
+ "modulo": "estilo.js",
+ "tipo": "3d",
+ "descricao": "Bonequinhos 3D lisinhos e brilhantes, cabeçudos e de olhos grandes, como brinquedos de plástico, num cenário mais realista: terra com pedrinhas, plantas, cerca de arame, trilho, morros ao longe. Luz de sol macia, cara de miniatura. Legenda branca grossa com contorno, letreiros brancos limpos.",
+ "edicao": {
+  "resumo": "Câmera de cinema: aproximações lentas, giros suaves em volta do boneco, câmera lenta nos erros (tempoLento), tremor leve nos impactos; letreiro limpo e plaquinha escura.",
+  "transicao": "flash",
+  "rebobinar": "vhs",
+  "emote": "padrao",
+  "piscar": "#ffd21f"
+ },
+ "letreiro": {
+  "tipo": "contorno",
+  "fonte": "Montserrat",
+  "peso": 900,
+  "cor": "#ffffff",
+  "contorno": "#1b1b1b",
+  "espessura": 0.2,
+  "sombra": "rgba(0,0,0,0.35)",
+  "sombraY": 8,
+  "inclinacao": 0,
+  "maiusculas": true,
+  "espacamento": 0.01,
+  "escala": 0.95
+ },
+ "plaquinha": {
+  "tipo": "escura",
+  "fonte": "Montserrat",
+  "peso": 800,
+  "fundo": "rgba(25,28,34,0.85)",
+  "texto": "#ffffff",
+  "escala": 1.0
+ },
+ "legenda": {
+  "fonte": "Montserrat",
+  "peso": 800,
+  "tamanho": 82,
+  "y": 1330,
+  "cor": "#ffffff",
+  "destaque": "#ffd21f",
+  "contorno": "#1b1b1b",
+  "espessura": 13,
+  "sombra": "rgba(0,0,0,0.35)",
+  "sombraY": 6,
+  "caixa": null,
+  "maiusculas": false,
+  "pulo": 0.1,
+  "animacao": "pulo"
+ },
+ "fala": {
+  "fonte": "Montserrat",
+  "peso": 900,
+  "contorno": "#1b1b1b",
+  "alegre": {
+   "fundo": "#ffffff",
+   "texto": "#1e3361"
+  },
+  "triste": {
+   "fundo": "#dfe7f2",
+   "texto": "#3d4a5c"
+  }
+ },
+ "assinatura": {
+  "fonte": "Montserrat",
+  "peso": 800,
+  "tamanho": 70,
+  "y": 1120,
+  "fundo": "rgba(0,0,0,0.45)",
+  "cor": "#ffffff"
+ },
+ "vinheta": 0.25,
+ "ceu": {
+  "cores": [
+   "#7fb2e5",
+   "#a9cdef",
+   "#e6eef2"
+  ],
+  "sempre": false
+ },
+ "textura": null,
+ "boneco": {
+  "camiseta": "#f6f4ef",
+  "cabelo": "#17171b",
+  "penteado": "curto",
+  "pele": "#f1b98f",
+  "bermuda": "#1e3361",
+  "calca": true,
+  "tenis": "#2c2f38"
+ },
+ "custo": {
+  "nota": 55,
+  "creditos": "médio",
+  "tempo_claude": "35–45 min",
+  "render_2min": "6 min",
+  "correcoes": "2",
+  "obs": "Formas lisas montadas na hora, com brilho e sombra."
+ }
+}

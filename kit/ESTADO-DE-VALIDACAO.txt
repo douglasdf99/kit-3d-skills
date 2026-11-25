@@ -1,0 +1,27 @@
+ESTADO DE VALIDAÇÃO — 31/10/2026
+Kit recente, localizado na pasta “Desmontando o Video - Kit”, de 30/10. O piloto antigo de 23/10 não foi usado como pacote de entrega.
+
+CORRIGIDO NESTA CÓPIA
+- Incluídos 36 WAV de efeitos e a narração separada da Lâmpada que estavam na pasta original, mas haviam sido omitidos no ZIP.
+- Corrigida a gravação UTF-8 do JSON temporário de conferir.py, que falhava no Windows com alguns símbolos.
+- Instruções iniciais alinhadas às seis etapas do curso, sem prazo fixo de configuração.
+- Arquivo de chave vazio e orientação para inserir credenciais apenas no arquivo local.
+
+TESTADO LOCALMENTE
+- Cenas da Lâmpada e das sete demonstrações verificadas pelas ferramentas do kit: oito execuções concluídas.
+- Criação de novo projeto, atualização do painel e geração da página do exemplo concluídas.
+- Prévia aberta no Chrome e exportação integral da Lâmpada (120,98 s): MP4 H.264 1080×1920, 30 fps, com áudio AAC estéreo. O processo local levou aproximadamente 140 s; isso não é promessa de desempenho em outros computadores.
+- MP4 integral decodificado sem erros. Dezesseis quadros inspecionados; áudio comparado numericamente com a trilha fonte, sem alteração do sinal até o fim exportado. Transcrição automática confirma a chamada final completa.
+Esses testes foram feitos em Windows com ferramentas já instaladas, sem chamada de API paga.
+
+AINDA A VALIDAR
+- Instalação em computador limpo e percurso de um aluno iniciante.
+- Geração de nova narração com conta/chave/modelo da ElevenLabs.
+- Exportação integral dos outros projetos e revisão crítica/factual do conteúdo dos exemplos. A inspeção de imagem foi por amostragem e não houve audição crítica humana.
+- Funcionamento em Mac e no ambiente específico do Claude usado pelo aluno.
+- Comprovação de origem e direitos de redistribuição dos áudios.
+
+FONTES
+Avisos oficiais das 16 famílias/28 WOFF2 incluídos em sistema/motor/fontes/licencas, juntamente com os avisos incorporados nos binários. Luckiest Guy, Permanent Marker e Chewy são Apache-2.0; as demais famílias são OFL-1.1. Os WOFF2 não foram modificados.
+
+Status: pronto para validação do kit. Não é confirmação de prontidão comercial.

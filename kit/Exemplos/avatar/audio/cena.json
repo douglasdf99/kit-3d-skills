@@ -1,0 +1,337 @@
+{
+  "ok": true,
+  "erro": null,
+  "avisos": [],
+  "duracao": 9.973,
+  "ancoras": {
+    "tenta": 0.429,
+    "muro": 1.143,
+    "escorrega": 2.036,
+    "cai": 2.929,
+    "chao": 3.643,
+    "entao": 4.59,
+    "empilha": 5.107,
+    "blocos": 5.394,
+    "cada": 6.064,
+    "alto": 6.989,
+    "outro": 7.467,
+    "escada": 8.073,
+    "nome": 8.583,
+    "end": 9.973
+  },
+  "sons": [
+    {
+      "nome": "rewind",
+      "t": 3.84,
+      "ganho": -8,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "stepsfast",
+      "t": 0.479,
+      "ganho": -14,
+      "pan": 0,
+      "dur": 0.5,
+      "fadeIn": 0,
+      "fadeOut": 0.1
+    },
+    {
+      "nome": "pulo_aterrissagem",
+      "t": 1.043,
+      "ganho": -12,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "slide",
+      "t": 1.986,
+      "ganho": -10,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "thud",
+      "t": 3.129,
+      "ganho": -6,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "tweety",
+      "t": 3.279,
+      "ganho": -18,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 5.057,
+      "ganho": -14,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 5.341444444444445,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 5.625888888888889,
+      "ganho": -16,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 5.910333333333334,
+      "ganho": -14,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 6.194777777777778,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 6.479222222222223,
+      "ganho": -16,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 6.7636666666666665,
+      "ganho": -14,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 7.048111111111111,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 7.3325555555555555,
+      "ganho": -16,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop",
+      "t": 7.617,
+      "ganho": -14,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pulo_8bit",
+      "t": 7.073,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pulo_8bit",
+      "t": 7.333,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pulo_8bit",
+      "t": 7.593,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pulo_8bit",
+      "t": 7.853000000000001,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pulo_8bit",
+      "t": 8.113,
+      "ganho": -15,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "coins",
+      "t": 8.323,
+      "ganho": -12,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "cheer",
+      "t": 8.473,
+      "ganho": -16,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop2",
+      "t": 8.053,
+      "ganho": -19,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    }
+  ],
+  "ambientes": [
+    {
+      "nome": "birds",
+      "t0": 0,
+      "t1": 9.973,
+      "ganho": -30,
+      "pan": 0,
+      "fade": 0.5,
+      "env": null
+    }
+  ],
+  "letreiros": [
+    {
+      "texto": "MURO ALTO",
+      "t0": 1.093,
+      "t1": 2.036,
+      "tipo": "chip"
+    },
+    {
+      "texto": "ESCADA",
+      "t0": 8.073,
+      "t1": 9.823,
+      "tipo": "label"
+    }
+  ],
+  "tomadas": [
+    {
+      "t": 0,
+      "dur": 0,
+      "alvo": [
+        -1.15,
+        0.75,
+        0.3
+      ],
+      "fov": 40
+    },
+    {
+      "t": 0.893,
+      "dur": 0.9,
+      "alvo": [
+        -0.05,
+        1.05,
+        0.2
+      ],
+      "fov": 40
+    },
+    {
+      "t": 2.779,
+      "dur": 0.5,
+      "alvo": [
+        -0.3,
+        0.25,
+        0.4
+      ],
+      "fov": 40
+    },
+    {
+      "t": 4.54,
+      "dur": 0,
+      "alvo": [
+        -0.6,
+        0.9,
+        0.3
+      ],
+      "fov": 40
+    },
+    {
+      "t": 5.007000000000001,
+      "dur": 1,
+      "alvo": [
+        -0.4,
+        0.8,
+        0.2
+      ],
+      "fov": 40
+    },
+    {
+      "t": 7.073,
+      "dur": 0.9,
+      "alvo": [
+        -0.1,
+        1.3,
+        0.2
+      ],
+      "fov": 40
+    },
+    {
+      "t": 8.273,
+      "dur": 1.2,
+      "alvo": [
+        0.3,
+        1.5,
+        0.2
+      ],
+      "fov": 42
+    }
+  ]
+}

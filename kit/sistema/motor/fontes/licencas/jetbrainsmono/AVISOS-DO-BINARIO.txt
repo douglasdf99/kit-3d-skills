@@ -1,0 +1,14 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+JetBrains Mono
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+jetbrains-mono-latin-700-normal.woff2
+SHA-256: d0d4e818808f2a0ba39b2b09d1989366f63494e295f003c7ef436697378507e8
+Copyright: Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+URL de licença: https://scripts.sil.org/OFL
+
+jetbrains-mono-latin-800-normal.woff2
+SHA-256: 237d0cbcf1aacd607e07f610d79cbc880edbffcc99ebcf417c502f8fa873ee53
+Copyright: Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono)
+URL de licença: https://scripts.sil.org/OFL

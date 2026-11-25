@@ -1,0 +1,14 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Nunito
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+nunito-latin-800-normal.woff2
+SHA-256: 2363d3ed037283ebb961e8c4b4917e40a8bc8853cf9965cf1ea7b4daa1df630a
+Copyright: Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)
+URL de licença: https://scripts.sil.org/OFL
+
+nunito-latin-900-normal.woff2
+SHA-256: 9ca32f5d8334579387361096944286df451272a557bb09bd906254a623aba99e
+Copyright: Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)
+URL de licença: https://scripts.sil.org/OFL

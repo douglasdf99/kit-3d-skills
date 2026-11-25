@@ -1,0 +1,20 @@
+AVISOS DAS FONTES — MATERIAL PARA INTEGRAR À ENTREGA
+
+16 famílias e 28 binários WOFF2 conferidos pelo catálogo, nome do arquivo e
+metadados internos da fonte. Cada pasta conserva os documentos originais
+baixados do repositório oficial google/fonts (commit fixado no manifesto),
+inclusive OFL/Apache, METADATA e FONTLOG/avisos quando existentes.
+AVISOS-DO-BINARIO.txt conserva copyright e licença que já acompanham cada
+binário local, sem reescrever esses registros.
+
+CORREÇÃO NECESSÁRIA NA CÓPIA DE ENTREGA:
+Luckiest Guy e Chewy são Apache-2.0, assim como Permanent Marker.
+As outras 13 famílias deste catálogo são OFL-1.1. O texto _sobre original
+de fontes.json menciona apenas Permanent Marker como exceção; ele deve
+ser corrigido na cópia de entrega. O original não foi modificado.
+
+Copie estas pastas de avisos junto das fontes e mantenha os avisos associados
+às famílias. fontes-manifest.json contém URLs oficiais, hashes e os limites
+da identificação. Os hashes locais não provam de qual release o subconjunto
+Latin WOFF2 veio; os metadados confirmam a família e preservam seus avisos.
+Não foram avaliados direitos de áudios, imagens ou outros componentes.

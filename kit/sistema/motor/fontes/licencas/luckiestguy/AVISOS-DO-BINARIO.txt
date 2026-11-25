@@ -1,0 +1,9 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Luckiest Guy
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+luckiest-guy-latin-400-normal.woff2
+SHA-256: 3877b522181765adf66ba89bd68d288ecb9f2483b441baab3424646b0c7aaa0a
+Copyright: Copyright (c) 2010 by Brian J. Bonislawsky DBA Astigmatic (AOETI). All rights reserved. Available under the Apache 2.0 licence.http://www.apache.org/licenses/LICENSE-2.0.html
+URL de licença: http://www.apache.org/licenses/LICENSE-2.0

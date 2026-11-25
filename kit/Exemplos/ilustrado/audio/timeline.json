@@ -1,0 +1,234 @@
+{
+  "words": [
+    {
+      "w": "Se",
+      "n": "se",
+      "s": 0.0,
+      "e": 0.143,
+      "line": 0
+    },
+    {
+      "w": "você",
+      "n": "voce",
+      "s": 0.179,
+      "e": 0.357,
+      "line": 0
+    },
+    {
+      "w": "cobre",
+      "n": "cobre",
+      "s": 0.429,
+      "e": 0.643,
+      "line": 0
+    },
+    {
+      "w": "a",
+      "n": "a",
+      "s": 0.667,
+      "e": 0.707,
+      "line": 0
+    },
+    {
+      "w": "cabeça",
+      "n": "cabeca",
+      "s": 0.714,
+      "e": 1.071,
+      "line": 0
+    },
+    {
+      "w": "com",
+      "n": "com",
+      "s": 1.143,
+      "e": 1.214,
+      "line": 0
+    },
+    {
+      "w": "jornal",
+      "n": "jornal",
+      "s": 1.286,
+      "e": 1.571,
+      "line": 0
+    },
+    {
+      "w": "na",
+      "n": "na",
+      "s": 1.643,
+      "e": 1.714,
+      "line": 0
+    },
+    {
+      "w": "chuva,",
+      "n": "chuva",
+      "s": 1.786,
+      "e": 2.357,
+      "line": 0
+    },
+    {
+      "w": "o",
+      "n": "o",
+      "s": 2.393,
+      "e": 2.433,
+      "line": 0
+    },
+    {
+      "w": "papel",
+      "n": "papel",
+      "s": 2.5,
+      "e": 2.714,
+      "line": 0
+    },
+    {
+      "w": "encharca",
+      "n": "encharca",
+      "s": 2.821,
+      "e": 3.357,
+      "line": 0
+    },
+    {
+      "w": "e",
+      "n": "e",
+      "s": 3.393,
+      "e": 3.433,
+      "line": 0
+    },
+    {
+      "w": "rasga.",
+      "n": "rasga",
+      "s": 3.5,
+      "e": 4.214,
+      "line": 0
+    },
+    {
+      "w": "Então",
+      "n": "entao",
+      "s": 4.48,
+      "e": 4.698,
+      "line": 1
+    },
+    {
+      "w": "você",
+      "n": "voce",
+      "s": 4.73,
+      "e": 4.921,
+      "line": 1
+    },
+    {
+      "w": "usa",
+      "n": "usa",
+      "s": 4.985,
+      "e": 5.113,
+      "line": 1
+    },
+    {
+      "w": "um",
+      "n": "um",
+      "s": 5.177,
+      "e": 5.24,
+      "line": 1
+    },
+    {
+      "w": "pano",
+      "n": "pano",
+      "s": 5.304,
+      "e": 5.4,
+      "line": 1
+    },
+    {
+      "w": "de",
+      "n": "de",
+      "s": 5.432,
+      "e": 5.559,
+      "line": 1
+    },
+    {
+      "w": "plástico,",
+      "n": "plastico",
+      "s": 5.623,
+      "e": 6.069,
+      "line": 1
+    },
+    {
+      "w": "que",
+      "n": "que",
+      "s": 6.101,
+      "e": 6.141,
+      "line": 1
+    },
+    {
+      "w": "a",
+      "n": "a",
+      "s": 6.165,
+      "e": 6.205,
+      "line": 1
+    },
+    {
+      "w": "gota",
+      "n": "gota",
+      "s": 6.261,
+      "e": 6.452,
+      "line": 1
+    },
+    {
+      "w": "não",
+      "n": "nao",
+      "s": 6.58,
+      "e": 6.643,
+      "line": 1
+    },
+    {
+      "w": "atravessa.",
+      "n": "atravessa",
+      "s": 6.707,
+      "e": 7.536,
+      "line": 1
+    },
+    {
+      "w": "Esse",
+      "n": "esse",
+      "s": 7.632,
+      "e": 7.919,
+      "line": 1
+    },
+    {
+      "w": "é",
+      "n": "e",
+      "s": 7.951,
+      "e": 7.991,
+      "line": 1
+    },
+    {
+      "w": "o",
+      "n": "o",
+      "s": 8.015,
+      "e": 8.055,
+      "line": 1
+    },
+    {
+      "w": "tecido",
+      "n": "tecido",
+      "s": 8.142,
+      "e": 8.365,
+      "line": 1
+    },
+    {
+      "w": "impermeável.",
+      "n": "impermeavel",
+      "s": 8.429,
+      "e": 9.194,
+      "line": 1
+    }
+  ],
+  "lines": [
+    {
+      "text": "Se você cobre a cabeça com jornal na chuva, o papel encharca e rasga.",
+      "s": 0.0,
+      "e": 4.214
+    },
+    {
+      "text": "Então você usa um pano de plástico, que a gota não atravessa. Esse é o tecido impermeável.",
+      "s": 4.48,
+      "e": 9.194
+    }
+  ],
+  "duration": 9.195
+}

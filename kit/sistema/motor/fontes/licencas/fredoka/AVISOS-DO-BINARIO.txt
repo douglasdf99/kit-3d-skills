@@ -1,0 +1,14 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Fredoka
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+fredoka-latin-600-normal.woff2
+SHA-256: b62f2898de150f019961f4884a49f83dcd2ce74375be5e0992c594ebb8f30294
+Copyright: Copyright 2016 The Fredoka Project Authors (https://github.com/hafontia/Fredoka-One)
+URL de licença: http://scripts.sil.org/OFL
+
+fredoka-latin-700-normal.woff2
+SHA-256: ee61b48acab42fcfee4e1c398b03bbae7e09d1be8471779c440a97dc85118c16
+Copyright: Copyright 2016 The Fredoka Project Authors (https://github.com/hafontia/Fredoka-One)
+URL de licença: http://scripts.sil.org/OFL

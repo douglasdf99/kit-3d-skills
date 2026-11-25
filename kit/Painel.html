@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel dos vídeos</title>
+<style>
+/* layout: cabeçalho + faixa de etapas, "sua vez", busca, uma coluna por etapa; um card abre os detalhes */
+:root {
+  --bg: #f3f1ec; --panel: #fffdf9; --ink: #1f2328; --muted: #6a6f76; --line: #dcd8cf;
+  --accent: #d9481c; --you: #b7791f; --you-bg: #fff4dc; --ok: #2f855a; --shade: rgba(20, 22, 26, .55);
+  --s1: #9aa0a6; --s2: #b7791f; --s3: #3b82c4; --s4: #7c5cc4; --s5: #c4513b; --s6: #d9481c; --s7: #2f855a;
+  --display: "Segoe UI", system-ui, -apple-system, sans-serif; --body: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #15171a; --panel: #1e2125; --ink: #ecebe7; --muted: #a2a7ad; --line: #30343a;
+    --accent: #ff7a4d; --you: #f2b84b; --you-bg: #3a2f17; --ok: #5cc28b; --shade: rgba(0, 0, 0, .7);
+    --s1: #7d838a; --s2: #f2b84b; --s3: #6aa8e0; --s4: #a48ae6; --s5: #e57a63; --s6: #ff7a4d; --s7: #5cc28b; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #15171a; --panel: #1e2125; --ink: #ecebe7; --muted: #a2a7ad; --line: #30343a; --accent: #ff7a4d; --you: #f2b84b; --you-bg: #3a2f17; --ok: #5cc28b; --shade: rgba(0, 0, 0, .7); --s1: #7d838a; --s2: #f2b84b; --s3: #6aa8e0; --s4: #a48ae6; --s5: #e57a63; --s6: #ff7a4d; --s7: #5cc28b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font: 15px/1.45 var(--body); padding: 28px max(16px, 3vw) 48px; }
+.wrap { max-width: 1500px; margin: 0 auto; display: grid; gap: 22px; }
+h1 { font: 800 clamp(28px, 4vw, 44px)/1.05 var(--display); margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+h2 { font: 700 18px/1.2 var(--display); margin: 0; }
+.sub { color: var(--muted); margin: 6px 0 0; font-variant-numeric: tabular-nums; }
+.sub b { color: var(--ink); }
+.strip { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; }
+.st { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px 10px 16px; position: relative; overflow: hidden; }
+.st::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 5px; background: var(--c); }
+.st .n { font: 800 30px/1 var(--display); font-variant-numeric: tabular-nums; }
+.st .l { font-size: 12.5px; color: var(--muted); }
+.st.zero .n { color: var(--muted); }
+.you { background: var(--you-bg); border: 1px solid color-mix(in srgb, var(--you) 45%, transparent); border-radius: 14px; padding: 16px 18px; display: grid; gap: 12px; }
+.you .g { display: grid; gap: 6px; }
+.you .gh { font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font: 500 13.5px var(--body); border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.chip i { font-style: normal; color: var(--muted); margin-left: 4px; }
+.chip:hover, .chip:focus-visible { border-color: var(--you); outline: none; }
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; justify-content: space-between; }
+.tools input { font: 15px var(--body); padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); width: min(100%, 320px); }
+.tools input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 12px; align-items: start; }
+.col { display: grid; gap: 8px; min-width: 0; }
+.ch { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 3px solid var(--c); padding-bottom: 6px; }
+.ch span { font: 700 15px var(--display); }
+.ch em { font-style: normal; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.card { all: unset; box-sizing: border-box; display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 8px; cursor: pointer; min-width: 0; transition: transform .12s ease, border-color .12s ease; }
+.card:hover, .card:focus-visible { border-color: var(--c); transform: translateY(-1px); }
+.card:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.card .th { width: 46px; height: 82px; border-radius: 8px; background: var(--line) center/cover no-repeat; flex: none; display: grid; place-items: center; color: var(--muted); font: 800 18px var(--display); }
+.card .tx { min-width: 0; display: grid; gap: 2px; }
+.card b { font-weight: 600; }
+.card small { color: var(--muted); font-size: 12px; }
+.card .nx { font-size: 12.5px; color: var(--muted); overflow-wrap: anywhere; }
+.card .nx.y { color: var(--you); font-weight: 500; }
+.empty { color: var(--muted); font-size: 13px; margin: 0; }
+.rgo { display: inline-flex; align-items: center; gap: 8px; font: 600 15px var(--body); text-decoration: none; background: var(--accent); color: #fff; border-radius: 10px; padding: 9px 16px; }
+.rgo:hover { filter: brightness(1.08); }
+.rgo:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.rgo small { font-weight: 500; opacity: .85; font-size: 12px; }
+.rlist { display: flex; flex-wrap: wrap; gap: 8px; }
+.cw { display: grid; gap: 4px; min-width: 0; }
+.cw .rgo { justify-content: center; padding: 6px 10px; font-size: 13.5px; border-radius: 9px; }
+.sheet { position: fixed; inset: 0; background: var(--shade); display: grid; place-items: center; padding: 18px; z-index: 10; }
+.sheet[hidden] { display: none; }
+.box { background: var(--panel); border-radius: 18px; width: min(1200px, 100%); max-height: calc(100vh - 36px); display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+.media { background: #0d0e10; display: grid; place-items: center; min-height: 300px; }
+.media video, .media img { display: block; max-height: calc(100vh - 36px); max-width: min(46vw, 560px); width: auto; height: calc(100vh - 36px); aspect-ratio: 9 / 16; background: #000; object-fit: cover; }
+.media .none { color: #9aa0a6; padding: 40px; text-align: center; max-width: 360px; }
+.info { padding: 22px 24px; display: grid; gap: 14px; align-content: start; overflow: auto; max-height: calc(100vh - 36px); }
+.info .top { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.info h3 { font: 800 30px/1.05 var(--display); margin: 0; }
+.pill { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 3px 10px; font-size: 13px; font-weight: 600; background: color-mix(in srgb, var(--c) 18%, transparent); color: var(--ink); }
+.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--c); }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; font-size: 14px; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; }
+.kv dd.y { color: var(--you); font-weight: 600; }
+.acts { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { font: 600 14px var(--body); text-decoration: none; border: 1px solid var(--line); color: var(--ink); background: var(--bg); border-radius: 10px; padding: 8px 14px; cursor: pointer; }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.x { all: unset; cursor: pointer; font: 600 22px/1 var(--body); color: var(--muted); padding: 4px 8px; border-radius: 8px; }
+.x:focus-visible { outline: 2px solid var(--accent); }
+.rot { white-space: pre-wrap; font: 14px/1.55 var(--body); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; max-height: 46vh; overflow: auto; margin: 0; }
+.nav { display: flex; gap: 8px; }
+.hint { color: var(--muted); font-size: 12.5px; margin: 0; }
+.vazio { background: var(--panel); border: 1px dashed var(--line); border-radius: 14px; padding: 18px; color: var(--muted); }
+@media (max-width: 860px) {
+  .strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .box { grid-template-columns: 1fr; overflow: auto; }
+  .media video, .media img { max-width: 100%; height: auto; width: 100%; max-height: 70vh; }
+  .info { max-height: none; overflow: visible; }
+}
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 id="titulo">Painel dos vídeos</h1>
+    <p class="sub" id="resumo"></p>
+  </header>
+  <section class="strip" id="strip" aria-label="Vídeos por etapa"></section>
+  <section class="you" id="you" aria-labelledby="you-h">
+    <h2 id="you-h">Sua vez</h2>
+    <div id="you-list"></div>
+  </section>
+  <div class="tools">
+    <h2>Quadro de etapas</h2>
+    <input id="busca" type="search" placeholder="Buscar vídeo…" aria-label="Buscar vídeo">
+  </div>
+  <section class="board" id="board"></section>
+  <p class="hint">Clique em qualquer vídeo pra ver os detalhes. Esc fecha, ← → passa pro anterior/próximo. “▶ Renderizar” abre a página do vídeo e já começa a gerar o MP4 (vai pra pasta Downloads). Este painel é atualizado pelo Claude — se algo parecer desatualizado, peça “atualize o painel” e aperte F5.</p>
+</div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="box" role="dialog" aria-modal="true" aria-labelledby="d-t">
+    <div class="media" id="d-media"></div>
+    <div class="info">
+      <div class="top">
+        <div><h3 id="d-t"></h3></div>
+        <div class="nav"><button class="x" id="d-prev" aria-label="Anterior">‹</button><button class="x" id="d-next" aria-label="Próximo">›</button><button class="x" id="d-x" aria-label="Fechar">✕</button></div>
+      </div>
+      <div><span class="pill" id="d-etapa"></span></div>
+      <dl class="kv" id="d-kv"></dl>
+      <div class="acts" id="d-acts"></div>
+      <div id="d-rot-wrap"><h2 style="margin-bottom:8px">Roteiro</h2><pre class="rot" id="d-rot"></pre></div>
+    </div>
+  </div>
+</div>
+
+<script src="sistema/painel/dados.js"></script>
+<script>
+const STAGES = ['Ideia', 'Roteiro p/ aprovar', 'Em produção', 'Pronto p/ renderizar', 'Em revisão', 'Pronto p/ postar', 'Postado'];
+const C = (n) => `var(--s${n})`;
+const D = (window.PAINEL_DADOS || []).map((v) => ({ ...v, etapa_n: Number(v.etapa_n) }));
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const fileUrl = (rel) => rel.split('/').map(encodeURIComponent).join('/');
+function renderLink(v, text, sub, auto = true) {
+  const a = el('a', 'rgo', text); a.href = fileUrl(v.render || v.pagina) + (auto ? '#auto' : ''); a.target = '_blank'; a.rel = 'noopener';
+  a.title = auto ? 'Abre a página do vídeo e já começa a renderizar. O MP4 vai pra pasta Downloads.' : 'Abre a página do vídeo (prévia com som).';
+  if (sub) a.append(el('small', null, sub));
+  return a;
+}
+let order = [], cur = -1;
+if (window.PAINEL_CANAL) { $('titulo').textContent = 'Painel — ' + window.PAINEL_CANAL; document.title = 'Painel — ' + window.PAINEL_CANAL; }
+
+function render() {
+  const q = $('busca').value.trim().toLowerCase();
+  const posted = D.filter((v) => v.etapa_n === 7).length, mine = D.filter((v) => v.quem === 'Você'), claude = D.filter((v) => v.quem === 'Claude').length;
+  $('resumo').innerHTML = '';
+  [[posted, ' postados · '], [mine.length, ' esperando você · '], [claude, ' com o Claude · '], [D.length, ' no total']].forEach(([n, t]) => { const b = el('b', null, String(n)); $('resumo').append(b, document.createTextNode(t)); });
+  if (window.PAINEL_ATUALIZADO) $('resumo').append(document.createTextNode(' · atualizado em ' + window.PAINEL_ATUALIZADO));
+  $('strip').replaceChildren(...STAGES.map((s, i) => { const n = D.filter((v) => v.etapa_n === i + 1).length; const d = el('div', 'st' + (n ? '' : ' zero')); d.style.setProperty('--c', C(i + 1)); d.append(el('div', 'n', String(n)), el('div', 'l', s)); return d; }));
+  const groups = new Map(); mine.forEach((v) => { if (!groups.has(v.proximo)) groups.set(v.proximo, []); groups.get(v.proximo).push(v); });
+  $('you-list').replaceChildren(...(mine.length ? [...groups].map(([step, items]) => {
+    const g = el('div', 'g');
+    if (items.every((v) => v.render && v.etapa_n === 4)) {
+      g.append(el('div', 'gh', 'Renderizar: clique e a página do vídeo abre no navegador e já começa sozinha. Um de cada vez; cada vídeo vai pra pasta Downloads.'));
+      const rl = el('div', 'rlist'); items.forEach((v) => rl.append(renderLink(v, '▶ ' + v.tema, v.versao || ''))); g.append(rl); return g;
+    }
+    g.append(el('div', 'gh', step));
+    const cs = el('div', 'chips'); items.forEach((v) => { const c = el('button', 'chip', v.tema); if (v.versao) c.append(el('i', null, v.versao)); c.onclick = () => open(v.id); cs.append(c); }); g.append(cs); return g;
+  }) : [el('p', 'empty', 'Nada esperando você agora.')]));
+  $('you').hidden = !mine.length;
+  order = [];
+  if (!D.length) { $('board').replaceChildren(el('div', 'vazio', 'Nenhum vídeo ainda. Peça pro Claude: “vamos fazer o primeiro vídeo”.')); return; }
+  $('board').replaceChildren(...STAGES.map((s, i) => {
+    const n = i + 1, items = D.filter((v) => v.etapa_n === n && (!q || (v.tema + ' ' + (v.ideia || '') + ' ' + (v.nota || '')).toLowerCase().includes(q)));
+    const col = el('div', 'col'); col.style.setProperty('--c', C(n));
+    const h = el('div', 'ch'); h.append(el('span', null, s), el('em', null, String(items.length))); col.append(h);
+    if (!items.length) col.append(el('p', 'empty', q ? 'Nada com essa busca.' : 'Nenhum vídeo aqui.'));
+    items.forEach((v) => {
+      order.push(v.id);
+      const b = el('button', 'card'); b.style.setProperty('--c', C(n)); b.onclick = () => open(v.id);
+      const th = el('div', 'th'); if (v.thumb) th.style.backgroundImage = `url("${fileUrl(v.thumb)}")`; else th.textContent = (v.tema || '?')[0];
+      const tx = el('div', 'tx'); const t = el('div'); t.append(el('b', null, v.tema)); if (v.versao) t.append(el('small', null, ' ' + v.versao)); if (v.exemplo) t.append(el('small', null, ' · exemplo')); tx.append(t);
+      tx.append(el('div', 'nx' + (v.quem === 'Você' ? ' y' : ''), n === 7 ? (v.nota || 'Postado') : (v.quem === 'Você' ? 'Você: ' : 'Claude: ') + v.proximo));
+      b.append(th, tx);
+      if (v.render && n === 4) { const w = el('div', 'cw'); w.append(b, renderLink(v, '▶ Renderizar')); col.append(w); } else col.append(b);
+    });
+    return col;
+  }));
+}
+function open(id) {
+  const v = D.find((x) => x.id === id); if (!v) return;
+  cur = order.indexOf(id);
+  $('d-t').textContent = v.tema;
+  const p = $('d-etapa'); p.textContent = v.etapa; p.style.setProperty('--c', C(v.etapa_n));
+  const kv = $('d-kv'); kv.replaceChildren();
+  const row = (k, val, cls) => { if (!val) return; kv.append(el('dt', null, k)); kv.append(el('dd', cls || null, val)); };
+  row('Próximo passo', v.etapa_n === 7 ? '' : (v.quem === 'Você' ? 'Você: ' : 'Claude: ') + v.proximo, v.quem === 'Você' ? 'y' : '');
+  row('Versão', v.versao); row('Observação', v.nota); row('Ideia', v.ideia); row('Pasta', v.pasta);
+  const m = $('d-media'); m.replaceChildren();
+  if (v.video) { const vid = el('video'); vid.controls = true; vid.preload = 'metadata'; vid.src = fileUrl(v.video); if (v.thumb) vid.poster = fileUrl(v.thumb); m.append(vid); }
+  else if (v.thumb) { const im = el('img'); im.src = fileUrl(v.thumb); im.alt = ''; m.append(im); }
+  else m.append(el('div', 'none', v.pagina ? 'Abra a página do vídeo pra ver a prévia com som.' : (v.etapa_n <= 2 ? 'Ainda não tem vídeo: primeiro vem o roteiro.' : 'Ainda não tem vídeo.')));
+  const a = $('d-acts'); a.replaceChildren();
+  if (v.pagina) a.append(renderLink(v, 'Abrir página do vídeo', 'prévia + render', false));
+  if (v.render && v.etapa_n === 4) a.append(renderLink(v, '▶ Renderizar agora', '→ Downloads'));
+  if (v.video) { const l = el('a', 'btn', 'Abrir vídeo'); l.href = fileUrl(v.video); l.target = '_blank'; a.append(l); }
+  if (v.pasta) { const l = el('a', 'btn', 'Abrir pasta'); l.href = fileUrl(v.pasta) + '/'; l.target = '_blank'; a.append(l); }
+  $('d-rot-wrap').hidden = !v.roteiro_texto; $('d-rot').textContent = v.roteiro_texto || ''; $('d-rot').scrollTop = 0;
+  $('sheet').hidden = false; $('d-x').focus();
+}
+function close() { const vid = $('d-media').querySelector('video'); if (vid) vid.pause(); $('sheet').hidden = true; }
+function step(d) { if (!order.length) return; const i = (cur + d + order.length) % order.length; close(); open(order[i]); }
+$('d-x').onclick = close; $('d-prev').onclick = () => step(-1); $('d-next').onclick = () => step(1);
+$('sheet').addEventListener('click', (e) => { if (e.target === $('sheet')) close(); });
+document.addEventListener('keydown', (e) => { if ($('sheet').hidden || e.target.tagName === 'VIDEO' || e.target.tagName === 'INPUT') return; if (e.key === 'Escape') close(); if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+$('busca').addEventListener('input', render);
+render();
+</script>
+</body>
+</html>

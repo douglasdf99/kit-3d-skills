@@ -1,0 +1,14 @@
+{
+ "id": "demo-cubinhos",
+ "titulo": "Demo Cubinhos",
+ "tema": "Ponte",
+ "versao": 1,
+ "etapa": 4,
+ "estilo": "cubinhos",
+ "musica": "fase_bonus",
+ "assinatura": false,
+ "exemplo": true,
+ "batida_final": "pilares",
+ "nota": "Demo de 10 s do estilo (galeria de estilos).",
+ "velocidade_cta": 1.12
+}

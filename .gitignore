@@ -1,0 +1,11 @@
+# chave da ElevenLabs: só no computador de cada um, nunca no repositório
+kit/config/chave_elevenlabs.txt
+# vídeos de cada pessoa
+kit/Meus Videos/*
+!kit/Meus Videos/.gitkeep
+# temporários
+.baixando_*
+__pycache__/
+*.pyc
+.DS_Store
+._*

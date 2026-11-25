@@ -1,0 +1,63 @@
+{
+  "_sobre": "Fontes que já vêm no kit: SIL OFL 1.1, exceto Luckiest Guy, Permanent Marker e Chewy (Apache 2.0). Consulte os avisos em licencas/fontes-manifest.json. Família → peso → arquivo. Para usar outra fonte, coloque o .woff2 nesta pasta, adicione aqui e inclua a licença correspondente.",
+  "Montserrat": {
+    "700": "montserrat-latin-700-normal.woff2",
+    "800": "montserrat-latin-800-normal.woff2",
+    "900": "montserrat-latin-900-normal.woff2"
+  },
+  "Fredoka": {
+    "600": "fredoka-latin-600-normal.woff2",
+    "700": "fredoka-latin-700-normal.woff2"
+  },
+  "Baloo 2": {
+    "700": "baloo-2-latin-700-normal.woff2",
+    "800": "baloo-2-latin-800-normal.woff2"
+  },
+  "Poppins": {
+    "700": "poppins-latin-700-normal.woff2",
+    "800": "poppins-latin-800-normal.woff2",
+    "900": "poppins-latin-900-normal.woff2"
+  },
+  "Nunito": {
+    "800": "nunito-latin-800-normal.woff2",
+    "900": "nunito-latin-900-normal.woff2"
+  },
+  "Rubik": {
+    "700": "rubik-latin-700-normal.woff2",
+    "800": "rubik-latin-800-normal.woff2",
+    "900": "rubik-latin-900-normal.woff2"
+  },
+  "Luckiest Guy": {
+    "400": "luckiest-guy-latin-400-normal.woff2"
+  },
+  "Bebas Neue": {
+    "400": "bebas-neue-latin-400-normal.woff2"
+  },
+  "Bangers": {
+    "400": "bangers-latin-400-normal.woff2"
+  },
+  "Orbitron": {
+    "700": "orbitron-latin-700-normal.woff2",
+    "900": "orbitron-latin-900-normal.woff2"
+  },
+  "JetBrains Mono": {
+    "700": "jetbrains-mono-latin-700-normal.woff2",
+    "800": "jetbrains-mono-latin-800-normal.woff2"
+  },
+  "Permanent Marker": {
+    "400": "permanent-marker-latin-400-normal.woff2"
+  },
+  "Pixelify Sans": {
+    "600": "pixelify-sans-latin-600-normal.woff2",
+    "700": "pixelify-sans-latin-700-normal.woff2"
+  },
+  "Lilita One": {
+    "400": "lilita-one-latin-400-normal.woff2"
+  },
+  "Chewy": {
+    "400": "chewy-latin-400-normal.woff2"
+  },
+  "Press Start 2P": {
+    "400": "press-start-2p-latin-400-normal.woff2"
+  }
+}

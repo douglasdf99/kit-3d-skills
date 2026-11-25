@@ -1,0 +1,9 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Bangers
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+bangers-latin-400-normal.woff2
+SHA-256: 04f54ff42ea2b8fc50b4259c29c60b1e05e606b769c2fb541c98624346c9767c
+Copyright: Copyright 2010 The Bangers Project Authors (https://github.com/googlefonts/bangers)
+URL de licença: https://scripts.sil.org/OFL

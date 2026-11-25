@@ -1,0 +1,19 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Rubik
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+rubik-latin-700-normal.woff2
+SHA-256: e423f8ae1668156addf5e32f1056d5b22b5b113a9a23afd364df84a6fa88602d
+Copyright: Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)
+URL de licença: https://scripts.sil.org/OFL
+
+rubik-latin-800-normal.woff2
+SHA-256: 8329d791ea5bc0ec67b2a01465a751e37f6699fc14ef45baac618c0b7c0789b3
+Copyright: Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)
+URL de licença: https://scripts.sil.org/OFL
+
+rubik-latin-900-normal.woff2
+SHA-256: 9ab80489aea97335ef86ea6d7386e5ffbf57a2abeeaea8da6f84c694c87792ad
+Copyright: Copyright 2015 The Rubik Project Authors (https://github.com/googlefonts/rubik)
+URL de licença: https://scripts.sil.org/OFL

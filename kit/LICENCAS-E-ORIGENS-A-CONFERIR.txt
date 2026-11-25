@@ -1,0 +1,10 @@
+LICENÇAS E ORIGENS A CONFERIR
+Esta cópia preserva as licenças incluídas no material original:
+sistema/motor/vendor/LICENSE-three.txt
+sistema/motor/vendor/LICENSE-mp4-muxer.txt
+sistema/motor/fontes/LICENCA-fontes-OFL.txt
+
+Não foi localizado no ZIP um registro individual de origem/licença de redistribuição dos áudios. O fato de um arquivo estar no projeto ou poder ser usado em um vídeo não comprova que possa ser entregue como biblioteca a terceiros.
+As 16 famílias de fontes foram identificadas também pelos metadados dos WOFF2. Os avisos oficiais e incorporados nos binários estão em sistema/motor/fontes/licencas, com URLs oficiais e hashes no fontes-manifest.json. São 13 famílias OFL-1.1 e três Apache-2.0: Luckiest Guy, Permanent Marker e Chewy. A classificação no catálogo foi corrigida nesta cópia. Os binários não foram modificados; o manifesto registra o limite de não reconstruir a origem exata do empacotamento WOFF2.
+
+As bibliotecas foram preservadas para revisão interna; a auditoria não declara sua liberação comercial. Não foram incluídas credenciais, exports técnicos dos testes ou projetos particulares do aluno.

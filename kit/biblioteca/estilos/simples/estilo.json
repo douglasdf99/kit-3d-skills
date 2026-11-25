@@ -1,0 +1,98 @@
+{
+ "nome": "Simples",
+ "ordem": 4,
+ "modulo": "estilo.js",
+ "tipo": "3d",
+ "descricao": "3D bem básico e colorido, estilo vídeo \"E SE…?\": bonequinhos de cápsula com cabeça redonda grande e olhinhos de bolinha, praça clara, árvores de bolinha, céu azul limpo. Bom pra multidão reagindo junto. Manchete amarela grande no topo, legenda branca grossa com contorno preto.",
+ "edicao": {
+  "resumo": "Abre com uma manchete no topo (ex.: E SE…?); a multidão reage junto (emotes em várias pessoas); socos de zoom nas revelações; transição de círculo; ritmo rápido.",
+  "transicao": "circulo",
+  "corTransicao": "#1a1a1a",
+  "rebobinar": "vhs",
+  "emote": "padrao",
+  "piscar": "#ffd21f"
+ },
+ "letreiro": {
+  "tipo": "contorno",
+  "fonte": "Lilita One",
+  "peso": 400,
+  "cor": "#ffd21f",
+  "contorno": "#1f1f1f",
+  "espessura": 0.2,
+  "sombra": "rgba(0,0,0,0.3)",
+  "sombraY": 8,
+  "inclinacao": 1,
+  "maiusculas": true,
+  "espacamento": 0.01,
+  "escala": 1.05
+ },
+ "plaquinha": {
+  "tipo": "solida",
+  "fonte": "Montserrat",
+  "peso": 900,
+  "escala": 1.0
+ },
+ "legenda": {
+  "fonte": "Montserrat",
+  "peso": 900,
+  "tamanho": 86,
+  "y": 1330,
+  "cor": "#ffffff",
+  "destaque": "#ffd21f",
+  "contorno": "#111111",
+  "espessura": 17,
+  "sombra": null,
+  "caixa": null,
+  "maiusculas": false,
+  "pulo": 0.14,
+  "animacao": "pulo"
+ },
+ "fala": {
+  "fonte": "Montserrat",
+  "peso": 900,
+  "contorno": "#111111",
+  "alegre": {
+   "fundo": "#fff36b",
+   "texto": "#e8590c"
+  },
+  "triste": {
+   "fundo": "#dfe7f2",
+   "texto": "#3d4a5c"
+  }
+ },
+ "assinatura": {
+  "fonte": "Montserrat",
+  "peso": 800,
+  "tamanho": 72,
+  "y": 1120,
+  "fundo": "rgba(0,0,0,0.42)",
+  "cor": "#ffffff"
+ },
+ "vinheta": 0.12,
+ "ceu": {
+  "cores": [
+   "#5fb1ee",
+   "#8ccaf5",
+   "#d8eefc"
+  ],
+  "sempre": false
+ },
+ "textura": null,
+ "boneco": {
+  "camiseta": "#f5f5f2",
+  "cabelo": "#141416",
+  "penteado": "curto",
+  "pele": "#f3c29a",
+  "bermuda": "#1f3462",
+  "calca": true,
+  "tenis": "#2a2a2e"
+ },
+ "custo": {
+  "nota": 35,
+  "creditos": "baixo",
+  "tempo_claude": "20–30 min",
+  "render_2min": "4–5 min",
+  "correcoes": "1–2",
+  "obs": "O mais leve: bonecos e objetos com pouco detalhe."
+ }
+}

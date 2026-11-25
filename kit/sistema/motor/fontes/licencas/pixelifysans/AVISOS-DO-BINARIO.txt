@@ -1,0 +1,14 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Pixelify Sans
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+pixelify-sans-latin-600-normal.woff2
+SHA-256: 9ee47c039a991caea6072eecfe03cf36debf4f70bb2566bd602b9eada1ab1112
+Copyright: Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)
+URL de licença: https://scripts.sil.org/OFL
+
+pixelify-sans-latin-700-normal.woff2
+SHA-256: c836cfa5c0e9d62ea9b890e0418d52a6004149090a521cd198a8c09f5d5ab893
+Copyright: Copyright 2021 The Pixelify Sans Project Authors (https://github.com/eifetx/Pixelify-Sans)
+URL de licença: https://scripts.sil.org/OFL

@@ -1,0 +1,9 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Chewy
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+chewy-latin-400-normal.woff2
+SHA-256: 5fb894030e4ade4d9f76ede985bc96d468bcb923fcd4b908a5d8e38178819dc4
+Copyright: Copyright (c) 2010 by Font Diner, Inc DBA Sideshow. All rights reserved.
+URL de licença: http://www.apache.org/licenses/LICENSE-2.0

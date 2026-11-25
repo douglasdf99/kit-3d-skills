@@ -1,0 +1,50 @@
+DESMONTANDO O VÍDEO — KIT
+Versão preparada para validação em 31/10/2026.
+
+COMEÇAR COM O CLAUDE
+O fluxo ensinado é entregar o kit ao Claude: ele prepara o ambiente com você, e você dirige o vídeo e revisa o resultado.
+1. Abra o app do Claude no computador e comece uma conversa nova.
+2. Selecione uma pasta do computador para a conversa, como mostrado na aula Preparar.
+3. Entregue o arquivo do kit ao Claude, como na demonstração. Ele conduz a instalação e a configuração; responda às perguntas que aparecerem.
+Não é necessário instalar as ferramentas manualmente nem renderizar a Lâmpada antes de começar. O exemplo está disponível para explorar quando quiser.
+
+SOBRE OS DOIS ZIPs DESTA ENTREGA
+O download foi dividido em duas partes para caber no limite de anexos. Essa divisão é uma forma de distribuir os arquivos, não uma etapa nova do método. Nenhuma parte contém o kit completo sozinha.
+O envio direto dessas duas partes ao Claude ainda não foi validado. Não confunda o teste local dos arquivos com uma confirmação desse percurso de instalação.
+
+SE VOCÊ JÁ DESCOMPACTOU OU PREFERIR ESSA ALTERNATIVA
+Para reunir esta embalagem, extraia os dois ZIPs comuns para a mesma pasta de destino. Ambos se unem dentro de “Desmontando o Video - Kit”; confirme a mesclagem se o Windows perguntar e espere as duas extrações terminarem. Não são arquivos .zip.001.
+Selecione a pasta do kit na conversa com o Claude e diga:
+“Leia o CLAUDE.md da pasta do kit e comece a configuração comigo.”
+
+REFERÊNCIA TÉCNICA — CONFIGURAÇÃO CONDUZIDA PELO CLAUDE
+Use o ambiente demonstrado na aula Preparar, com acesso à pasta e execução de ferramentas. Um chat sem acesso aos arquivos não executa este processo sozinho.
+As ferramentas do kit usam Python, NumPy, Node.js e FFmpeg. Esta é uma referência para a configuração conduzida pelo agente, não uma lista de instalações manuais para o aluno. O navegador é usado para assistir e exportar; não há promessa de tempo fixo de instalação.
+Para gerar novas narrações, o fluxo atual usa uma conta e uma chave próprias da ElevenLabs. Confira a disponibilidade do modelo, os custos e os direitos de uso da sua conta. Os exemplos já incluem áudio, sem precisar gerar nova voz para reproduzi-los.
+Coloque sua chave SOMENTE no arquivo local config/chave_elevenlabs.txt. Não envie a chave em chats ou capturas de tela e não compartilhe a pasta configurada com outras pessoas.
+
+DEPOIS DE CONFIGURAR
+Selecione a pasta do kit no ambiente de trabalho do Claude e envie:
+“Leia o CLAUDE.md da pasta do kit e vamos fazer um vídeo novo sobre [tema].”
+Aprove o roteiro antes de gerar narração ou iniciar a produção. Revise a prévia, peça mudanças específicas e confira o arquivo final.
+
+AS SEIS ETAPAS DO CURSO
+1. PREPARAR — organizar ferramentas e kit.
+2. ESCOLHER — definir tema e gancho.
+3. ROTEIRIZAR — desenvolver a sequência do vídeo.
+4. PRODUZIR — construir voz, cenas e edição.
+5. REFINAR — comparar versões e corrigir o resultado.
+6. PUBLICAR — preparar a entrega e publicar.
+Os sete estados do painel são apenas controles do projeto: Ideia, Roteiro para aprovar, Em produção, Pronto para renderizar, Em revisão, Pronto para postar e Postado. Eles não substituem as seis etapas das aulas.
+
+ONDE ESTÃO OS MATERIAIS
+Painel.html: projetos e seus estados.
+Estilos.html: sete estilos, imagens e demonstrações.
+Biblioteca de Sons.html: 816 efeitos e 30 trilhas do material fornecido.
+Exemplo - Lampada: projeto completo para testar a reprodução e o render.
+Exemplos: projetos de demonstração dos estilos.
+Meus Videos: pasta para os seus projetos.
+
+VALIDAÇÃO
+Os testes locais feitos em uma cópia estão descritos em ESTADO-DE-VALIDACAO.txt, incluindo o render integral da Lâmpada. Ainda faltam o percurso em computador limpo, teste com iniciante e validação da conta/API. Os tempos e custos apresentados na galeria de estilos são estimativas do material original, não medições garantidas.
+Esta cópia está preparada para validar o kit. Não equivale a aprovação comercial da biblioteca ou do curso.

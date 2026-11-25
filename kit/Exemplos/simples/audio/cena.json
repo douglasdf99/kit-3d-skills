@@ -1,0 +1,220 @@
+{
+  "ok": true,
+  "erro": null,
+  "avisos": [],
+  "duracao": 9.999,
+  "ancoras": {
+    "liga": 0.536,
+    "mangueira": 0.821,
+    "ceu": 1.643,
+    "meio": 2.143,
+    "praca": 2.571,
+    "cai": 3.286,
+    "todo": 4.107,
+    "entao": 5.18,
+    "bacia": 5.867,
+    "volta": 6.377,
+    "segura": 6.855,
+    "fonte": 8.099,
+    "nome": 8.545,
+    "end": 9.999
+  },
+  "sons": [
+    {
+      "nome": "rewind",
+      "t": 4.43,
+      "ganho": -8,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "hose",
+      "t": 0.536,
+      "ganho": -14,
+      "pan": 0,
+      "dur": 3.8939999999999997,
+      "fadeIn": 0,
+      "fadeOut": 0.3
+    },
+    {
+      "nome": "waterup",
+      "t": 1.543,
+      "ganho": -12,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "multidao_murmurio",
+      "t": 0,
+      "ganho": -24,
+      "pan": 0,
+      "dur": 3.286,
+      "fadeIn": 0,
+      "fadeOut": 0.4
+    },
+    {
+      "nome": "crowdpanic",
+      "t": 3.386,
+      "ganho": -12,
+      "pan": 0,
+      "dur": 1.1439999999999997,
+      "fadeIn": 0,
+      "fadeOut": 0.3
+    },
+    {
+      "nome": "splash",
+      "t": 3.586,
+      "ganho": -16,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "spray",
+      "t": 6.655,
+      "ganho": -18,
+      "pan": 0,
+      "dur": 3.144,
+      "fadeIn": 0,
+      "fadeOut": 0.5
+    },
+    {
+      "nome": "rockslide",
+      "t": 5.817,
+      "ganho": -14,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "multidao_oooh",
+      "t": 7.055000000000001,
+      "ganho": -16,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "aplausos_grandes",
+      "t": 8.349,
+      "ganho": -12,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    },
+    {
+      "nome": "pop2",
+      "t": 8.079,
+      "ganho": -19,
+      "pan": 0,
+      "dur": null,
+      "fadeIn": 0,
+      "fadeOut": 0
+    }
+  ],
+  "ambientes": [
+    {
+      "nome": "birds",
+      "t0": 0,
+      "t1": 9.999,
+      "ganho": -30,
+      "pan": 0,
+      "fade": 0.5,
+      "env": null
+    }
+  ],
+  "letreiros": [
+    {
+      "texto": "MOLHOU GERAL",
+      "t0": 4.007000000000001,
+      "t1": 4.43,
+      "tipo": "chip"
+    },
+    {
+      "texto": "FONTE",
+      "t0": 8.099,
+      "t1": 9.849,
+      "tipo": "label"
+    }
+  ],
+  "tomadas": [
+    {
+      "t": 0,
+      "dur": 0,
+      "alvo": [
+        0,
+        1.05,
+        0
+      ],
+      "fov": 40
+    },
+    {
+      "t": 1.443,
+      "dur": 0.9,
+      "alvo": [
+        0,
+        2.4,
+        0
+      ],
+      "fov": 42
+    },
+    {
+      "t": 2.2710000000000004,
+      "dur": 1,
+      "alvo": [
+        0,
+        0.6,
+        0
+      ],
+      "fov": 42
+    },
+    {
+      "t": 3.486,
+      "dur": 0.8,
+      "alvo": [
+        1.4,
+        0.9,
+        1.4
+      ],
+      "fov": 40
+    },
+    {
+      "t": 5.13,
+      "dur": 0,
+      "alvo": [
+        0,
+        0.7,
+        0
+      ],
+      "fov": 42
+    },
+    {
+      "t": 5.767,
+      "dur": 0.9,
+      "alvo": [
+        -0.3,
+        0.45,
+        0
+      ],
+      "fov": 40
+    },
+    {
+      "t": 7.899,
+      "dur": 1,
+      "alvo": [
+        0,
+        1,
+        0
+      ],
+      "fov": 42
+    }
+  ]
+}

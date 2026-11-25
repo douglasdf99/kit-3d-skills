@@ -1,0 +1,3 @@
+# Demo de 10 s do estilo (mostrado na galeria de estilos)
+Se você tenta subir num muro alto, escorrega e cai de cara no chão.
+Então você empilha blocos, cada um um pouco mais alto que o outro. Essa é a escada.

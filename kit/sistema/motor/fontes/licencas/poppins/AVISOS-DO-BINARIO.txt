@@ -1,0 +1,19 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Poppins
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+poppins-latin-700-normal.woff2
+SHA-256: 9338e65fc077355c7a87ae0d64cc101e23b9bf8ad78ae65f0f319c857311b526
+Copyright: Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
+URL de licença: https://scripts.sil.org/OFL
+
+poppins-latin-800-normal.woff2
+SHA-256: 60bf0aba6526436f3930c58c12047687fbb6bff4dd180cce4613458ed3439ea2
+Copyright: Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
+URL de licença: https://scripts.sil.org/OFL
+
+poppins-latin-900-normal.woff2
+SHA-256: 17ea10196a490a8d3b8da162c7d4af9c301c5229f70af90dad6fa33eb951d83f
+Copyright: Copyright 2020 The Poppins Project Authors (https://github.com/itfoundry/Poppins)
+URL de licença: https://scripts.sil.org/OFL

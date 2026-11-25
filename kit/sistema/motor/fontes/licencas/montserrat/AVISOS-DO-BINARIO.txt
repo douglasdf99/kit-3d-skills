@@ -1,0 +1,19 @@
+AVISOS EXTRAÍDOS DOS ARQUIVOS WOFF2 DO KIT
+Montserrat
+
+Estes registros foram lidos da tabela name, sem alterar os binários. A licença oficial da família acompanha esta pasta.
+
+montserrat-latin-700-normal.woff2
+SHA-256: a60b1ba9daa11468bf1b846e8515e51b97023f341f2962a9623b9d8aaa7904ad
+Copyright: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+URL de licença: http://scripts.sil.org/OFL
+
+montserrat-latin-800-normal.woff2
+SHA-256: 5b29b79dd01adcb93488636b8f0c85014d788a3e2e9ce12715c434123f552d24
+Copyright: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+URL de licença: http://scripts.sil.org/OFL
+
+montserrat-latin-900-normal.woff2
+SHA-256: 09d39f49d4cdbed981f59d7c21ce058f68777b7b25f6d60e2f07a0ad1d8b68ac
+Copyright: Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
+URL de licença: http://scripts.sil.org/OFL
