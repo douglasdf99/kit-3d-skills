@@ -171,3 +171,6 @@ Se a pessoa chegou com uma **copy de anúncio aprovada** (problema-solução, 25
 não use o formato da série: siga `sistema/instrucoes/09_criativo_anuncio.md`. Ferramentas extras desta skill:
 `chave.py` (salva a chave da ElevenLabs pelo Ctrl+C), `rascunho.py` (narração grátis pra montar a cena) e
 `abrir.py "Meus Videos/<x>"` (abre a página do vídeo no Chrome da pessoa; use no fim de toda entrega).
+
+<!-- complementos-criativo-fotos -->
+`fotos.py "Meus Videos/<x>"` tira fotos do vídeo sem abrir janela (fotos/folha.jpg): olhe a folha antes de toda entrega.

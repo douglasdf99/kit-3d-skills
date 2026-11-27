@@ -5,11 +5,11 @@ Ajusta a página do vídeo (pagina.js), baixa a logo do evento, avisa o manual d
 """
 import json, os, shutil, subprocess, sys, urllib.request
 KIT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-VERSAO = '2026-11-26'
+VERSAO = '2026-11-26.2'
 LOGO_URL = 'https://vendatodosantodia.com.br/_next/static/media/logo.d6b19741.svg'
 PRECISA = ['sistema/ferramentas/chave.py', 'sistema/ferramentas/abrir.py', 'sistema/ferramentas/rascunho.py',
            'sistema/modelos/cena_anuncio.js', 'sistema/motor/pagina/pagina.html', 'sistema/motor/pagina/pagina.css',
-           'sistema/instrucoes/09_criativo_anuncio.md']
+           'sistema/instrucoes/09_criativo_anuncio.md', 'sistema/ferramentas/fotos.py', 'sistema/ferramentas/quadros.mjs']
 SECAO = """
 <!-- complementos-criativo -->
 ## Criativo de anúncio (skill criativo-video-reels)
@@ -18,6 +18,10 @@ Se a pessoa chegou com uma **copy de anúncio aprovada** (problema-solução, 25
 não use o formato da série: siga `sistema/instrucoes/09_criativo_anuncio.md`. Ferramentas extras desta skill:
 `chave.py` (salva a chave da ElevenLabs pelo Ctrl+C), `rascunho.py` (narração grátis pra montar a cena) e
 `abrir.py "Meus Videos/<x>"` (abre a página do vídeo no Chrome da pessoa; use no fim de toda entrega).
+"""
+SECAO_FOTOS = """
+<!-- complementos-criativo-fotos -->
+`fotos.py "Meus Videos/<x>"` tira fotos do vídeo sem abrir janela (fotos/folha.jpg): olhe a folha antes de toda entrega.
 """
 TROCAS = [
     ('  const INFO = window.__INFO__ || {};\n',
@@ -65,6 +69,8 @@ def main():
     manual = os.path.join(KIT, 'CLAUDE.md')
     if '<!-- complementos-criativo -->' not in open(manual, encoding='utf-8').read():
         with open(manual, 'a', encoding='utf-8') as f: f.write(SECAO)
+    if '<!-- complementos-criativo-fotos -->' not in open(manual, encoding='utf-8').read():
+        with open(manual, 'a', encoding='utf-8') as f: f.write(SECAO_FOTOS)
     chave = os.path.join(KIT, 'config', 'chave_elevenlabs.txt')
     if not os.path.exists(chave):
         os.makedirs(os.path.dirname(chave), exist_ok=True); open(chave, 'w', encoding='utf-8').close()

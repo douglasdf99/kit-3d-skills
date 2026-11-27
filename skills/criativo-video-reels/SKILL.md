@@ -157,7 +157,7 @@ Se faltar algo, diga **só o que falta**, com o link e o passo a passo de mãos,
 | Programa | Pra quê | Se faltar |
 |---|---|---|
 | **Python 3.10 ou mais novo** | as ferramentas do kit (voz, áudio, montar a página) | https://www.python.org/downloads/ · **Windows:** na 1ª tela do instalador, marque **"Add python.exe to PATH"**. **Mac:** depois de instalar, abra Aplicativos → Python 3.x e dê dois cliques em **"Install Certificates.command"** |
-| **Node.js 18+ (versão LTS)** | confere a cena 3D antes de virar vídeo | https://nodejs.org/pt → botão LTS → instalador → "Next" até o fim |
+| **Node.js 22+ (versão LTS)** | confere a cena 3D e tira as fotos de conferência | https://nodejs.org/pt → botão LTS → instalador → "Next" até o fim |
 | **Google Chrome** (ou Microsoft Edge) | gera o MP4 (Safari e Firefox não geram) | https://www.google.com/chrome/ |
 | NumPy e FFmpeg | o áudio | não precisa baixar: o `verificar.py` do kit instala sozinho (`python3 -m pip install numpy imageio-ffmpeg`) |
 
@@ -184,8 +184,8 @@ Depois apague o `baixar.py` solto.) Rode `python3 "Desmontando o Video - Kit/sis
 Além do que ele mostra, confira você mesmo os pontos da 5a (Chrome/Edge instalado e, no Windows, pasta do kit num caminho curto).
 
 ### 5c. Instalar os complementos (Anexo B)
-Se o kit **já tem** `sistema/complementos_skill.json` com `"versao": "2026-11-26"`, pule esta parte.
-Se não tem, crie **cada arquivo do Anexo B** dentro da pasta `Desmontando o Video - Kit/`, no caminho indicado no título do
+Se o kit **já tem** `sistema/complementos_skill.json` com `"versao": "2026-11-26.2"`, pule esta parte (versão diferente ou sem o arquivo: instale de novo por cima, os vídeos da pessoa não são tocados).
+Se não tem (ou a versão é outra), crie **cada arquivo do Anexo B** dentro da pasta `Desmontando o Video - Kit/`, no caminho indicado no título do
 bloco, **copiando o conteúdo do bloco exatamente como está** (sem resumir, sem "melhorar", sem trocar nada). Depois rode:
 ```bash
 python3 "Desmontando o Video - Kit/sistema/ferramentas/instalar_complementos.py"
@@ -370,14 +370,14 @@ Leia o `CLAUDE.md` do kit e o `GUIA.md` do estilo antes da primeira cena. Depois
 4. **Cena 3D:** comece do modelo de anúncio do kit, `sistema/modelos/cena_anuncio.js` (copie pra `Meus Videos/<x>/cena/cena.js`
    no lugar da cena de partida; se não existir, refaça a Etapa 5c). **O modelo já vem no estilo Quadradinhos:** `E.caixa`, `E.cilindro` e
    `E.esfera` viram peças de quadradinhos sozinhas, e `E.cabeloComprido(boneco, cor)` põe cabelo comprido com coque numa personagem
-   mulher. O boneco do Quadradinhos é maior que o dos outros estilos: deixe as câmeras **uns 30% mais longe** (PERTO 2,2–2,6;
-   LONGE 5–6,5) e confira no `GUIA.md` do quadradinhos as chaves de `E.sala` e `E.boneco` (cores, roupa). Ele já roda com qualquer
+   mulher. O boneco do Quadradinhos é maior que o dos outros estilos: o modelo **já vem com as câmeras abertas** (distâncias na
+   seção 6 abaixo; não aproxime mais que isso) e confira no `GUIA.md` do quadradinhos as chaves de `E.sala` e `E.boneco` (cores, roupa). Ele já roda com qualquer
    copy de 5 a 8 linhas e tem os 5 blocos com câmera, letreiros, sons e a CTA na área segura. Troque o que está marcado com
    **TROQUE**, nesta ordem: `PRODUTO` e cores da embalagem → `TEXTOS` das plaquinhas → as frases das âncoras (palavras da copy)
    → a cena do problema e a maquete da causa (o exemplo é pele em camadas; mude pro que a copy explica).
    Regras de cena pra anúncio:
    - **Gancho visual no primeiro segundo:** o problema já acontecendo na tela, com o boneco reagindo.
-   - **Uma imagem por frase**, câmera sempre andando, uma tomada nova a cada 2 a 3 s (vídeo curto é mais rápido que o da série).
+   - **Uma imagem por frase**, câmera sempre andando devagar, uma tomada nova a cada 2 a 3 s (ritmo calmo: veja a seção 6).
    - **Causa = maquete simples** (camadas, partículas, algo que não entra/vaza/seca), com plaquinhas curtas.
    - **Produto = herói:** embalagem genérica do kit com o **nome real** escrito nela, entrando com brilho; letreiro com o nome
      na hora em que a narração fala o produto. O nome do produto da pessoa pode aparecer (a regra "sem marcas" do kit vale pra
@@ -385,12 +385,43 @@ Leia o `CLAUDE.md` do kit e o `GUIA.md` do estilo antes da primeira cena. Depois
    - **CTA:** faixa "CLIQUE NO LINK ABAIXO" com seta pra baixo, **acima de y = 1500** (área segura), na última frase.
    - Textos longe das bordas: nada importante a menos de 60 px da esquerda e 140 px da direita.
 5. **Montar:** `python3 sistema/ferramentas/fazer_tudo.py "Meus Videos/<x>"` (confere a cena, baixa os sons que faltam, monta o áudio e a página).
-   Trate todos os avisos do `conferir.py` antes de entregar.
+   Trate todos os avisos do `conferir.py` antes de entregar. Depois, **confira com fotos** (item 8) antes de abrir a página pra pessoa.
 6. **Abrir a página pra pessoa:** `python3 sistema/ferramentas/abrir.py "Meus Videos/<x>"` abre a página do vídeo no Chrome
    (ou Edge) dela, sem precisar de extensão. Ela assiste, pode ligar **Ver área segura do Reels** e clica em **Gerar vídeo final (MP4)**;
    o MP4 vai pra pasta Downloads. Se o `abrir.py` avisar que abriu no navegador padrão, peça pra instalar o Chrome.
 7. **Revisão:** peça a folha de revisão (botão na página) e confira o primeiro segundo, a legibilidade dos letreiros, a área segura
-   e a CTA. Mude só o que a pessoa pedir (nova versão v2, sem sobrescrever a v1).
+   e a CTA. Mude só o que a pessoa pedir (nova versão v2, sem sobrescrever a v1: guarde `cena/cena.js` e `video.json` em
+   `versoes/v1/` e aumente `"versao"` no `video.json`). Se a pessoa não gostar de uma versão nova, volte os arquivos da anterior.
+8. **Conferir com fotos antes de entregar (obrigatório):** `python3 sistema/ferramentas/fotos.py "Meus Videos/<x>"` tira uma foto a
+   cada 2,5 s, sem abrir janela, e junta todas em `Meus Videos/<x>/fotos/folha.jpg`. **Abra a folha e olhe** procurando: texto
+   cortado na borda, câmera perto demais, braço ou cabeça do boneco tapando a cena, peça atravessando outra, cor errada, objeto
+   cobrindo o produto. Corrija e tire de novo (pode passar só os segundos: `fotos.py "Meus Videos/<x>" 12 18.5`). Só abra a
+   página pra pessoa depois de olhar. O som não dá pra conferir por foto: diga isso à pessoa.
+
+### 6. O que já aprendemos nos testes (vale pra todo vídeo)
+- **Trilha audível:** ponha `"volume_musica": 10` no `video.json`. Sem isso a trilha fica uns 26 dB abaixo da voz e ninguém ouve.
+- **Voz só deste vídeo:** se a pessoa escolher uma voz diferente da do canal, ponha `"voz_id"` e `"voz_nome"` no `video.json`
+  (o `narrar.py` usa esses); o `config/canal.json` continua com a voz padrão. Cada amostra (`vozes.py amostra`) gasta uns 50 créditos.
+- **Ritmo calmo:** uma tomada a cada 2 a 3 s, câmera passeando devagar, zoom soco só em 2 ou 3 momentos (gancho, problema
+  travando, nome do produto). Testamos uma versão "dinâmica" (corte a cada 1,5 s, zoom soco em toda palavra forte, balões
+  "TUM!/PSSS!", linhas de velocidade, círculo vermelho, voz mais rápida) e ela ficou pior. Não use esse pacote, a não ser que
+  a pessoa peça.
+- **Distâncias de câmera:** objeto pequeno ou maquete: 2 a 2,5 m · personagem de corpo inteiro: 3,3 m ou mais · cena aberta:
+  3,5 a 4 m. Mais perto que isso corta texto e enche a tela de quadradinho.
+- **O boneco não pode tapar a cena:** ponha a personagem ao lado do objeto, a ~1 m dele, e a câmera do lado oposto ao braço que
+  aponta ou segura (perto da câmera, o braço vira um bloco enorme na frente). No final, prefira a pose `segura` à `aponta`.
+- **Texto que cabe:** manchete com `size` até 62 · plaquinhas (`chip`) com `size` 50 a 56 · textos pintados na cena (rótulo da
+  embalagem, visor de balança, tela de celular) com letra que ocupe no máximo ~85% da largura (meça com `measureText` e encolha).
+- **Final igual em todos os vídeos:** faixa "CLIQUE NO LINK ABAIXO" em `screen: [W / 2, 330]`, `size: 74` · nome do produto
+  (`label`) em `screen: [W / 2, 640]`, `size: 92` · seta amarela em y = 1150. Não mude essas alturas: a pessoa compara os vídeos.
+- **O produto precisa de espaço livre:** reserve um canto vazio pra o produto entrar; nada da maquete pode ficar na frente dele
+  (esconda ou encolha o que estiver no caminho quando ele entrar).
+- **Pegadinhas do motor:** `E.cilindro` nasce da **base** (y = 0), não do centro: um pé de mesa posicionado pelo meio atravessa o
+  tampo. Peça que muda de cor durante o vídeo: crie **branca** (`'#ffffff'`) e pinte por `material.color` (a cor de partida fica
+  na textura e escurece a nova). Barra dentro de moldura: a barra tem que ser mais funda que a moldura, senão some.
+- **Duração:** com a voz em 1,12, ~105 palavras dão ~40 s. Se passar de 40 s, encurte a copy em vez de acelerar a voz.
+- **Créditos:** mudar velocidade da voz, volume, cena ou trilha não gasta crédito (a voz fica guardada); só texto novo ou voz
+  nova gasta. Narrar uma copy de ~600 caracteres no modo econômico gasta uns 300 créditos.
 
 Entrega final:
 > Seu criativo está pronto! 🎬 [nome do arquivo] (~[X] s, 9:16). Gastou uns [C] créditos da ElevenLabs.
@@ -637,7 +668,16 @@ def mudo(texto):
         for k in range(i, i + len(w)): ini[k], fim[k] = t, t + d * 0.85
         if i + len(w) < len(texto): ini[i + len(w)] = fim[i + len(w)] = t + d
         t += d; i += len(w) + 1
-    return np.zeros(int((t + 0.2) * SR), np.float32), list(texto), [x or 0 for x in ini], [x or 0 for x in fim]
+    a = np.zeros(int((t + 0.2) * SR), np.float32)
+    # um zumbido baixinho em cada palavra: sem ele o narrar.py acha que o áudio é só silêncio e corta tudo (a chamada final caía no começo)
+    ws, k = [], 0
+    for w in texto.split(' '):
+        if w: ws.append((ini[k], fim[k]))
+        k += len(w) + 1
+    for s0, s1 in ws:
+        i0, i1 = int(s0 * SR), min(len(a), int(s1 * SR))
+        a[i0:i1] = 0.03 * np.sin(2 * np.pi * 180 * np.arange(i1 - i0) / SR)
+    return a, list(texto), [x or 0 for x in ini], [x or 0 for x in fim]
 
 
 def tts_rascunho(texto, cfg, cache_dir, nome, forcar=False):
@@ -729,7 +769,7 @@ const espelho = E.grupo(E.em(E.cilindro(0.44, 0.04, '#d9b38c'), 0, 0, 0), E.em(E
 espelho.rotation.x = Math.PI / 2; espelho.position.set(TX, 1.55, -2.43); scene.add(espelho);
 // mesinha redonda da maquete e do produto
 const MX = 1.25, MZ = -0.85, MY = 0.74;
-scene.add(E.grupo(E.em(E.cilindro(0.75, 0.05, '#ffffff'), 0, MY - 0.025, 0), E.em(E.cilindro(0.06, MY - 0.05, '#d9b38c'), 0, (MY - 0.05) / 2, 0), E.em(E.cilindro(0.3, 0.03, '#d9b38c'), 0, 0.015, 0)));
+scene.add(E.grupo(E.em(E.cilindro(0.75, 0.05, '#ffffff'), 0, MY - 0.025, 0), E.em(E.cilindro(0.06, MY - 0.08, '#d9b38c'), 0, 0.02, 0), E.em(E.cilindro(0.3, 0.03, '#d9b38c'), 0, 0.015, 0)));
 scene.children[scene.children.length - 1].position.set(MX + 0.2, 0, MZ);
 
 /* ------------------------------------------------------------------ a boneca (50+) e as amigas */
@@ -771,7 +811,9 @@ const rotulo = canvasPlane(0.27, 0.075, 540, 150); rotulo.position.set(0, 0.075,
 function pintarRotulo() {
   const c = rotulo.userData.ctx; if (!c || !c.fillRect) return;
   c.clearRect(0, 0, 540, 150); c.fillStyle = '#ffffff'; c.beginPath(); c.roundRect?.(8, 18, 524, 114, 40); c.fill?.();
-  c.fillStyle = COR_TEXTO; c.font = `900 84px ${FT}`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(PRODUTO, 270, 78);
+  c.fillStyle = COR_TEXTO; c.textAlign = 'center'; c.textBaseline = 'middle';
+  let fs = 84; do { c.font = `900 ${fs}px ${FT}`; fs -= 4; } while (fs > 30 && c.measureText?.(PRODUTO)?.width > 470);   // nome comprido: a letra encolhe pra caber no rótulo
+  c.fillText(PRODUTO, 270, 78);
   rotulo.userData.tex.needsUpdate = true;
 }
 pintarRotulo(); globalThis.document?.fonts?.ready?.then?.(pintarRotulo);
@@ -786,44 +828,45 @@ const MAQ = V(MX, MY + 0.2, MZ), FRENTE = V(MX, MY + 0.09, MZ + DP / 2), MESA = 
 const FINAL = V(1.12, 0.86, -0.42);
 const POS_H = V();   // posição do herói no quadro (calculada no update)
 
-/* ------------------------------------------------------------------ câmera: tomada nova a cada 2–3 s */
-orb(0, CAB1.clone().add(V(0.05, -0.35, 0)), 16, 6, 3.0, 40, 0, 0.05);
-orb(A.quarenta - 0.15, CAB1.clone().add(V(0.1, -0.4, 0.12)), -16, 8, 2.4, 40, 0.7);
-orb(A.cinquenta - 0.2, CAB1.clone().add(V(0, -0.3, 0)), 26, 4, 2.7, 40, 0.6);
+/* ------------------------------------------------------------------ câmera: tomada nova a cada 2–3 s (ritmo calmo; as pessoas preferiram assim)
+   Distâncias já abertas: objeto ≥ 2 m, boneco ≥ 3 m. Mais perto que isso corta texto e o braço do boneco tapa a cena. */
+orb(0, CAB1.clone().add(V(0.05, -0.35, 0)), 16, 6, 3.6, 40, 0, 0.05);
+orb(A.quarenta - 0.15, CAB1.clone().add(V(0.1, -0.4, 0.12)), -16, 8, 3, 40, 0.7);
+orb(A.cinquenta - 0.2, CAB1.clone().add(V(0, -0.3, 0)), 26, 4, 3.3, 40, 0.6);
 orb(A.muita - 0.15, V(0.5, 0.8, -1.6), -6, 8, 4.8, 44, 0.8);
-orb(A.compra - 0.25, MESA.clone(), 14, 18, 1.7, 40, 0.7);
-orb(A.seca - 0.1, CAB1.clone().add(V(0, -0.3, 0)), -22, 6, 2.7, 40, 0.7);
+orb(A.compra - 0.25, MESA.clone(), 14, 18, 2.8, 40, 0.7);
+orb(A.seca - 0.1, CAB1.clone().add(V(0, -0.3, 0)), -22, 6, 3.3, 40, 0.7);
 transicao(A.causa - 0.35, 'circulo', 0.6);
-orb(A.causa - 0.05, MAQ.clone(), 16, 18, 1.8, 40, 0);
-orb(A.trinta - 0.25, FRENTE.clone(), 6, 6, 1.25, 40, 0.7);
-orb(A.barreira - 0.15, MAQ.clone(), -20, 36, 1.4, 40, 0.7);
-orb(A.escapa - 0.25, MAQ.clone().add(V(0, 0.25, 0)), 12, 8, 1.8, 40, 0.7);
-orb(A.porIsso - 0.1, MAQ.clone().add(V(0, 0.18, 0)), -12, 16, 1.8, 40, 0.7);
+orb(A.causa - 0.05, MAQ.clone(), 16, 18, 2.9, 40, 0);
+orb(A.trinta - 0.25, FRENTE.clone(), 6, 6, 2.5, 40, 0.7);
+orb(A.barreira - 0.15, MAQ.clone(), -20, 36, 2.5, 40, 0.7);
+orb(A.escapa - 0.25, MAQ.clone().add(V(0, 0.25, 0)), 12, 8, 2.9, 40, 0.7);
+orb(A.porIsso - 0.1, MAQ.clone().add(V(0, 0.18, 0)), -12, 16, 2.9, 40, 0.7);
 transicao(A.virada - 0.35, 'circulo', 0.6);
-orb(A.virada - 0.05, HEROI.clone().add(V(0, 0.13, 0)), 18, 8, 1.3, 40, 0);
-orb(A.regeneracao - 0.25, FRENTE.clone(), -8, 8, 1.3, 40, 0.7);
-orb(A.fundo - 0.25, MAQ.clone(), 14, 26, 1.5, 40, 0.7);
-orb(A.produto - 0.3, FINAL.clone(), 16, 10, 2.8, 42, 0.8);
-orb(A.cta - 0.1, FINAL.clone().add(V(0, 0.06, 0)), 24, 10, 3.0, 42, 0.8, 0.03, { spin: -0.05, bob: 0.4 });
+orb(A.virada - 0.05, HEROI.clone().add(V(0, 0.13, 0)), 18, 8, 2.5, 40, 0);
+orb(A.regeneracao - 0.25, FRENTE.clone(), -8, 8, 2.5, 40, 0.7);
+orb(A.fundo - 0.25, MAQ.clone(), 14, 26, 2.6, 40, 0.7);
+orb(A.produto - 0.3, FINAL.clone(), 16, 10, 3.4, 42, 0.8);
+orb(A.cta - 0.1, FINAL.clone().add(V(0, 0.06, 0)), 24, 10, 3.6, 42, 0.8, 0.03, { spin: -0.05, bob: 0.4 });
 fecharCameras({ duracao: DURATION, aberturaAte: L(0).e, finalDesde: A.cta - 0.5 });
 
 /* ------------------------------------------------------------------ letreiros, plaquinhas e edição (nada fora da área segura do Reels) */
 const VERM = '#ff3b2f', VERDE = '#22b35e', AZUL = '#2f8cff', CINZA = '#6b7280', ROXO = '#8b5cf6';
 const naMao = () => poteVelho.localToWorld(V(0, 0.12, 0));
-manchete(TEXTOS.manchete, 0.05, A.muita - 0.3, { size: 104 });
+manchete(TEXTOS.manchete, 0.05, A.muita - 0.3, { size: 62 });           // maior que 62 corta nas bordas
 chip(TEXTOS.antes, A.quarenta + 0.05, A.nada - 0.05, naMao, VERDE, { dy: -110 });
 chip(TEXTOS.depois, A.cinquenta, A.muita - 0.2, naMao, VERM, { dy: -110 });
 emote('?', A.nada, A.muita, ze);
 amigas.forEach((p, i) => emote('?', A.muita + 0.2 + i * 0.08, A.seca + 0.9, p));
 chip(TEXTOS.compra, A.compra + 0.05, A.seca - 0.05, () => MESA.clone().add(V(0, 0.15, 0)), CINZA, { dy: -140 });
 chip(TEXTOS.continua, A.seca + 0.05, A.causa - 0.4, () => CAB.localToWorld(V(0, 0.2, 0)), VERM, { dy: -120 });
-chip(TEXTOS.tempo, A.anos - 0.05, A.trinta - 0.05, () => MAQ.clone().add(V(0, 0.1, 0)), ROXO, { dy: -160, size: 42 });
+chip(TEXTOS.tempo, A.anos - 0.05, A.trinta - 0.05, () => MAQ.clone().add(V(0, 0.1, 0)), ROXO, { dy: -160, size: 50 });
 chip(TEXTOS.perda, A.trinta + 0.1, A.estrogenio - 0.1, () => FRENTE.clone().add(V(0, 0.1, 0)), VERM, { dy: -150 });
 chip(TEXTOS.fraca, A.fraca, A.escapa - 0.05, () => MAQ.clone().add(V(0, 0.05, 0)), VERM, { dy: -150 });
 chip(TEXTOS.escapa, A.escapa + 0.05, A.porIsso - 0.1, () => MAQ.clone().add(V(0, 0.4, 0)), AZUL, { dy: -60 });
 chip(TEXTOS.porCima, A.maisCreme + 0.3, A.virada - 0.4, () => MAQ.clone().add(V(0, 0.08, 0)), VERM, { dy: -150 });
-chip(TEXTOS.ajuda1, A.regeneracao + 0.05, A.fundo - 0.1, () => FRENTE.clone().add(V(0, 0.1, 0)), VERDE, { dy: -150, size: 42 });
-chip(TEXTOS.ajuda2, A.fundo + 0.1, A.produto - 0.2, () => MAQ.clone().add(V(0, 0.05, 0)), VERDE, { dy: -160, size: 42 });
+chip(TEXTOS.ajuda1, A.regeneracao + 0.05, A.fundo - 0.1, () => FRENTE.clone().add(V(0, 0.1, 0)), VERDE, { dy: -150, size: 50 });
+chip(TEXTOS.ajuda2, A.fundo + 0.1, A.produto - 0.2, () => MAQ.clone().add(V(0, 0.05, 0)), VERDE, { dy: -160, size: 50 });
 label(PRODUTO, A.produto, A.cta + 0.2, () => heroi.localToWorld(V(0, 0.32, 0)), { screen: [W / 2, 640], size: 92 });
 piscar(heroi, A.produto); zoomSoco(A.produto + 0.05, 0.12); zoomSoco(A.cinquenta + 0.05, 0.1);
 amigas.forEach((p, i) => emote(i % 2 ? 'coracao' : 'estrelas', A.produto + 0.1 + i * 0.07, A.cta + 0.6, p));
@@ -1150,7 +1193,102 @@ O passo a passo do criativo está no **Anexo A** do documento da skill criativo-
 Se ele não estiver na conversa, peça pra pessoa subir o arquivo de novo.
 ````
 
-### B8. `sistema/ferramentas/instalar_complementos.py` (termina a instalação (rode por último))
+### B8. `sistema/ferramentas/fotos.py` (tira fotos do vídeo pra conferir antes de entregar)
+
+````python
+"""Tira fotos de momentos do vídeo (sem abrir janela nenhuma) pro Claude conferir o enquadramento ANTES de entregar.
+
+Uso:  python3 sistema/ferramentas/fotos.py "Meus Videos/<tema>"              (uma foto a cada ~2,5 s)
+      python3 sistema/ferramentas/fotos.py "Meus Videos/<tema>" 3 12.5 30    (só esses segundos)
+Salva em Meus Videos/<tema>/fotos/ (q_012.5s.jpg …) e junta todas numa folha: fotos/folha.jpg.
+Usa o Google Chrome (ou o Edge) e o Node que o kit já usa. Não instala nada.
+Olhe a folha procurando: texto cortado na borda, câmera perto demais, braço/cabeça tapando a cena, peça atravessando outra.
+"""
+import glob, json, math, os, random, shutil, subprocess, sys, tempfile
+sys.dont_write_bytecode = True; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from kit import *
+from abrir import pagina_de
+
+
+def navegador():
+    if os.name == 'nt':
+        cands = [os.path.expandvars(c) for c in (r'%ProgramFiles%\Google\Chrome\Application\chrome.exe', r'%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe',
+                 r'%LocalAppData%\Google\Chrome\Application\chrome.exe', r'%ProgramFiles(x86)%\Microsoft\Edge\Application\msedge.exe', r'%ProgramFiles%\Microsoft\Edge\Application\msedge.exe')]
+    elif sys.platform == 'darwin':
+        cands = ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge']
+    else:
+        cands = [shutil.which(x) or '' for x in ('google-chrome', 'google-chrome-stable', 'chromium', 'chromium-browser', 'microsoft-edge')]
+    for c in cands:
+        if c and os.path.exists(c): return c
+    raise Erro('não achei o Google Chrome nem o Microsoft Edge neste computador (instale o Chrome: https://www.google.com/chrome/).')
+
+
+def main():
+    if len(sys.argv) < 2: raise Erro('uso: python3 sistema/ferramentas/fotos.py "Meus Videos/<tema>" [segundos …]')
+    pasta = pasta_video(sys.argv[1]); pagina = pagina_de(sys.argv[1])
+    ts = [float(x.replace(',', '.')) for x in sys.argv[2:]]
+    if not ts:
+        dur = (ler_json(os.path.join(pasta, 'audio', 'timeline.json'), {}) or {}).get('duration') or 30
+        ts = [round(0.8 + k * 2.5, 1) for k in range(int((dur - 1) / 2.5) + 1)] + [round(dur - 1.5, 1)]
+        ts = sorted(set(ts))
+    saida = os.path.join(pasta, 'fotos'); os.makedirs(saida, exist_ok=True)
+    for f in glob.glob(os.path.join(saida, 'q_*.jpg')): os.remove(f)
+    with tempfile.TemporaryDirectory(prefix='fotos_kit_', ignore_cleanup_errors=True) as perfil:
+        r = subprocess.run([node(), os.path.join(os.path.dirname(os.path.abspath(__file__)), 'quadros.mjs'), navegador(), pagina, saida, perfil,
+                            str(random.randint(9300, 9899)), *[str(t) for t in ts]], capture_output=True, text=True, timeout=300)
+    fs = sorted(glob.glob(os.path.join(saida, 'q_*.jpg')))
+    if not fs: raise Erro('não saiu nenhuma foto. ' + (r.stderr or '').strip()[-300:])
+    cols = min(8, len(fs)); lin = math.ceil(len(fs) / cols)
+    lista = os.path.join(saida, '_lista.txt')
+    with open(lista, 'w', encoding='utf-8') as f: f.write(''.join(f"file '{os.path.basename(x)}'\n" for x in fs))
+    rodar([ffmpeg(), '-v', 'error', '-y', '-f', 'concat', '-safe', '0', '-i', lista, '-vf', f'scale=300:533,tile={cols}x{lin}', '-frames:v', '1',
+           os.path.join(saida, 'folha.jpg')])
+    os.remove(lista)
+    print(f'OK — {len(fs)} fotos em {rel(saida)} · folha com todas: {rel(os.path.join(saida, "folha.jpg"))}')
+    print('  segundos: ' + ', '.join(f'{t:g}' for t in ts))
+
+
+if __name__ == '__main__':
+    principal(main)
+````
+
+### B9. `sistema/ferramentas/quadros.mjs` (usado pelo fotos.py: abre a página no Chrome sem janela)
+
+````javascript
+// Tira fotos de momentos do vídeo com o Chrome/Edge sem janela (usado pelo fotos.py; não rode direto).
+// uso: node quadros.mjs <navegador> <pagina.html> <pasta_saida> <pasta_perfil> <porta> t1 t2 ...
+import { spawn } from 'node:child_process';
+import { writeFileSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
+const [, , NAV, PAGINA, SAIDA, PERFIL, PORTA, ...TS] = process.argv;
+const ch = spawn(NAV, ['--headless=new', `--remote-debugging-port=${PORTA}`, `--user-data-dir=${PERFIL}`, '--allow-file-access-from-files',
+  '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--hide-scrollbars', '--window-size=1200,1000', pathToFileURL(PAGINA).href], { stdio: 'ignore' });
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const sair = (msg, cod = 1) => { if (msg) console.error(msg); try { ch.kill(); } catch (e) {} process.exit(cod); };
+setTimeout(() => sair('ERRO: demorou demais pra tirar as fotos'), 240000);
+if (typeof WebSocket === 'undefined') sair('ERRO: este Node é antigo; as fotos precisam do Node 22 ou mais novo (https://nodejs.org/pt, botão LTS)');
+let alvo;
+for (let i = 0; i < 60 && !alvo; i++) { await sleep(500); try { alvo = (await (await fetch(`http://127.0.0.1:${PORTA}/json`)).json()).find((x) => x.type === 'page'); } catch (e) {} }
+if (!alvo) sair('ERRO: o navegador não abriu a página');
+const ws = new WebSocket(alvo.webSocketDebuggerUrl);
+await new Promise((r, j) => { ws.onopen = r; ws.onerror = j; });
+let id = 0; const pend = new Map();
+ws.onmessage = (m) => { const d = JSON.parse(m.data); if (d.id && pend.has(d.id)) { pend.get(d.id)(d); pend.delete(d.id); } };
+const avaliar = (expr) => new Promise((r) => { const i = ++id; pend.set(i, r); ws.send(JSON.stringify({ id: i, method: 'Runtime.evaluate', params: { expression: expr, awaitPromise: true, returnByValue: true } })); });
+let pronto = false;
+for (let i = 0; i < 120 && !pronto; i++) { pronto = (await avaliar('!!(window.__KIT__ && window.OV && window.composeFrame)')).result?.result?.value; if (!pronto) await sleep(500); }
+if (!pronto) sair('ERRO: a página do vídeo não carregou (rode o fazer_tudo.py antes)');
+await sleep(1500);
+for (const t of TS) {
+  const r = await avaliar(`(async()=>{ window.__KIT__.quadro(${+t}); window.composeFrame(${+t}); await new Promise(r=>setTimeout(r,200)); window.composeFrame(${+t}); return window.OV.toDataURL('image/jpeg',0.82); })()`);
+  const v = r.result?.result?.value;
+  if (!v) { console.error('  não consegui a foto do segundo ' + t); continue; }
+  writeFileSync(`${SAIDA}/q_${(+t).toFixed(1).padStart(5, '0')}s.jpg`, Buffer.from(v.split(',')[1], 'base64'));
+}
+ws.close(); sair('', 0);
+````
+
+### B10. `sistema/ferramentas/instalar_complementos.py` (termina a instalação (rode por último))
 
 ````python
 """Termina a instalação dos complementos da skill criativo-video-reels (rode da pasta do kit, depois de criar os arquivos).
@@ -1160,11 +1298,11 @@ Ajusta a página do vídeo (pagina.js), baixa a logo do evento, avisa o manual d
 """
 import json, os, shutil, subprocess, sys, urllib.request
 KIT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-VERSAO = '2026-11-26'
+VERSAO = '2026-11-26.2'
 LOGO_URL = 'https://vendatodosantodia.com.br/_next/static/media/logo.d6b19741.svg'
 PRECISA = ['sistema/ferramentas/chave.py', 'sistema/ferramentas/abrir.py', 'sistema/ferramentas/rascunho.py',
            'sistema/modelos/cena_anuncio.js', 'sistema/motor/pagina/pagina.html', 'sistema/motor/pagina/pagina.css',
-           'sistema/instrucoes/09_criativo_anuncio.md']
+           'sistema/instrucoes/09_criativo_anuncio.md', 'sistema/ferramentas/fotos.py', 'sistema/ferramentas/quadros.mjs']
 SECAO = """
 <!-- complementos-criativo -->
 ## Criativo de anúncio (skill criativo-video-reels)
@@ -1173,6 +1311,10 @@ Se a pessoa chegou com uma **copy de anúncio aprovada** (problema-solução, 25
 não use o formato da série: siga `sistema/instrucoes/09_criativo_anuncio.md`. Ferramentas extras desta skill:
 `chave.py` (salva a chave da ElevenLabs pelo Ctrl+C), `rascunho.py` (narração grátis pra montar a cena) e
 `abrir.py "Meus Videos/<x>"` (abre a página do vídeo no Chrome da pessoa; use no fim de toda entrega).
+"""
+SECAO_FOTOS = """
+<!-- complementos-criativo-fotos -->
+`fotos.py "Meus Videos/<x>"` tira fotos do vídeo sem abrir janela (fotos/folha.jpg): olhe a folha antes de toda entrega.
 """
 TROCAS = [
     ('  const INFO = window.__INFO__ || {};\n',
@@ -1220,6 +1362,8 @@ def main():
     manual = os.path.join(KIT, 'CLAUDE.md')
     if '<!-- complementos-criativo -->' not in open(manual, encoding='utf-8').read():
         with open(manual, 'a', encoding='utf-8') as f: f.write(SECAO)
+    if '<!-- complementos-criativo-fotos -->' not in open(manual, encoding='utf-8').read():
+        with open(manual, 'a', encoding='utf-8') as f: f.write(SECAO_FOTOS)
     chave = os.path.join(KIT, 'config', 'chave_elevenlabs.txt')
     if not os.path.exists(chave):
         os.makedirs(os.path.dirname(chave), exist_ok=True); open(chave, 'w', encoding='utf-8').close()

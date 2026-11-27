@@ -31,3 +31,4 @@ Depois abra o Claude Code e peça: "quero um vídeo criativo para o meu produto"
   pago com licença comercial.
 - Internet na primeira vez: o motor que monta o vídeo é baixado na hora.
 - Google Chrome ou Edge, para gerar o MP4.
+- Python 3.10+ e Node.js 22+ (a skill confere e mostra como instalar se faltar).

@@ -75,7 +75,16 @@ def mudo(texto):
         for k in range(i, i + len(w)): ini[k], fim[k] = t, t + d * 0.85
         if i + len(w) < len(texto): ini[i + len(w)] = fim[i + len(w)] = t + d
         t += d; i += len(w) + 1
-    return np.zeros(int((t + 0.2) * SR), np.float32), list(texto), [x or 0 for x in ini], [x or 0 for x in fim]
+    a = np.zeros(int((t + 0.2) * SR), np.float32)
+    # um zumbido baixinho em cada palavra: sem ele o narrar.py acha que o áudio é só silêncio e corta tudo (a chamada final caía no começo)
+    ws, k = [], 0
+    for w in texto.split(' '):
+        if w: ws.append((ini[k], fim[k]))
+        k += len(w) + 1
+    for s0, s1 in ws:
+        i0, i1 = int(s0 * SR), min(len(a), int(s1 * SR))
+        a[i0:i1] = 0.03 * np.sin(2 * np.pi * 180 * np.arange(i1 - i0) / SR)
+    return a, list(texto), [x or 0 for x in ini], [x or 0 for x in fim]
 
 
 def tts_rascunho(texto, cfg, cache_dir, nome, forcar=False):

@@ -64,7 +64,7 @@ const espelho = E.grupo(E.em(E.cilindro(0.44, 0.04, '#d9b38c'), 0, 0, 0), E.em(E
 espelho.rotation.x = Math.PI / 2; espelho.position.set(TX, 1.55, -2.43); scene.add(espelho);
 // mesinha redonda da maquete e do produto
 const MX = 1.25, MZ = -0.85, MY = 0.74;
-scene.add(E.grupo(E.em(E.cilindro(0.75, 0.05, '#ffffff'), 0, MY - 0.025, 0), E.em(E.cilindro(0.06, MY - 0.05, '#d9b38c'), 0, (MY - 0.05) / 2, 0), E.em(E.cilindro(0.3, 0.03, '#d9b38c'), 0, 0.015, 0)));
+scene.add(E.grupo(E.em(E.cilindro(0.75, 0.05, '#ffffff'), 0, MY - 0.025, 0), E.em(E.cilindro(0.06, MY - 0.08, '#d9b38c'), 0, 0.02, 0), E.em(E.cilindro(0.3, 0.03, '#d9b38c'), 0, 0.015, 0)));
 scene.children[scene.children.length - 1].position.set(MX + 0.2, 0, MZ);
 
 /* ------------------------------------------------------------------ a boneca (50+) e as amigas */
@@ -106,7 +106,9 @@ const rotulo = canvasPlane(0.27, 0.075, 540, 150); rotulo.position.set(0, 0.075,
 function pintarRotulo() {
   const c = rotulo.userData.ctx; if (!c || !c.fillRect) return;
   c.clearRect(0, 0, 540, 150); c.fillStyle = '#ffffff'; c.beginPath(); c.roundRect?.(8, 18, 524, 114, 40); c.fill?.();
-  c.fillStyle = COR_TEXTO; c.font = `900 84px ${FT}`; c.textAlign = 'center'; c.textBaseline = 'middle'; c.fillText(PRODUTO, 270, 78);
+  c.fillStyle = COR_TEXTO; c.textAlign = 'center'; c.textBaseline = 'middle';
+  let fs = 84; do { c.font = `900 ${fs}px ${FT}`; fs -= 4; } while (fs > 30 && c.measureText?.(PRODUTO)?.width > 470);   // nome comprido: a letra encolhe pra caber no rótulo
+  c.fillText(PRODUTO, 270, 78);
   rotulo.userData.tex.needsUpdate = true;
 }
 pintarRotulo(); globalThis.document?.fonts?.ready?.then?.(pintarRotulo);
@@ -121,44 +123,45 @@ const MAQ = V(MX, MY + 0.2, MZ), FRENTE = V(MX, MY + 0.09, MZ + DP / 2), MESA = 
 const FINAL = V(1.12, 0.86, -0.42);
 const POS_H = V();   // posição do herói no quadro (calculada no update)
 
-/* ------------------------------------------------------------------ câmera: tomada nova a cada 2–3 s */
-orb(0, CAB1.clone().add(V(0.05, -0.35, 0)), 16, 6, 3.0, 40, 0, 0.05);
-orb(A.quarenta - 0.15, CAB1.clone().add(V(0.1, -0.4, 0.12)), -16, 8, 2.4, 40, 0.7);
-orb(A.cinquenta - 0.2, CAB1.clone().add(V(0, -0.3, 0)), 26, 4, 2.7, 40, 0.6);
+/* ------------------------------------------------------------------ câmera: tomada nova a cada 2–3 s (ritmo calmo; as pessoas preferiram assim)
+   Distâncias já abertas: objeto ≥ 2 m, boneco ≥ 3 m. Mais perto que isso corta texto e o braço do boneco tapa a cena. */
+orb(0, CAB1.clone().add(V(0.05, -0.35, 0)), 16, 6, 3.6, 40, 0, 0.05);
+orb(A.quarenta - 0.15, CAB1.clone().add(V(0.1, -0.4, 0.12)), -16, 8, 3, 40, 0.7);
+orb(A.cinquenta - 0.2, CAB1.clone().add(V(0, -0.3, 0)), 26, 4, 3.3, 40, 0.6);
 orb(A.muita - 0.15, V(0.5, 0.8, -1.6), -6, 8, 4.8, 44, 0.8);
-orb(A.compra - 0.25, MESA.clone(), 14, 18, 1.7, 40, 0.7);
-orb(A.seca - 0.1, CAB1.clone().add(V(0, -0.3, 0)), -22, 6, 2.7, 40, 0.7);
+orb(A.compra - 0.25, MESA.clone(), 14, 18, 2.8, 40, 0.7);
+orb(A.seca - 0.1, CAB1.clone().add(V(0, -0.3, 0)), -22, 6, 3.3, 40, 0.7);
 transicao(A.causa - 0.35, 'circulo', 0.6);
-orb(A.causa - 0.05, MAQ.clone(), 16, 18, 1.8, 40, 0);
-orb(A.trinta - 0.25, FRENTE.clone(), 6, 6, 1.25, 40, 0.7);
-orb(A.barreira - 0.15, MAQ.clone(), -20, 36, 1.4, 40, 0.7);
-orb(A.escapa - 0.25, MAQ.clone().add(V(0, 0.25, 0)), 12, 8, 1.8, 40, 0.7);
-orb(A.porIsso - 0.1, MAQ.clone().add(V(0, 0.18, 0)), -12, 16, 1.8, 40, 0.7);
+orb(A.causa - 0.05, MAQ.clone(), 16, 18, 2.9, 40, 0);
+orb(A.trinta - 0.25, FRENTE.clone(), 6, 6, 2.5, 40, 0.7);
+orb(A.barreira - 0.15, MAQ.clone(), -20, 36, 2.5, 40, 0.7);
+orb(A.escapa - 0.25, MAQ.clone().add(V(0, 0.25, 0)), 12, 8, 2.9, 40, 0.7);
+orb(A.porIsso - 0.1, MAQ.clone().add(V(0, 0.18, 0)), -12, 16, 2.9, 40, 0.7);
 transicao(A.virada - 0.35, 'circulo', 0.6);
-orb(A.virada - 0.05, HEROI.clone().add(V(0, 0.13, 0)), 18, 8, 1.3, 40, 0);
-orb(A.regeneracao - 0.25, FRENTE.clone(), -8, 8, 1.3, 40, 0.7);
-orb(A.fundo - 0.25, MAQ.clone(), 14, 26, 1.5, 40, 0.7);
-orb(A.produto - 0.3, FINAL.clone(), 16, 10, 2.8, 42, 0.8);
-orb(A.cta - 0.1, FINAL.clone().add(V(0, 0.06, 0)), 24, 10, 3.0, 42, 0.8, 0.03, { spin: -0.05, bob: 0.4 });
+orb(A.virada - 0.05, HEROI.clone().add(V(0, 0.13, 0)), 18, 8, 2.5, 40, 0);
+orb(A.regeneracao - 0.25, FRENTE.clone(), -8, 8, 2.5, 40, 0.7);
+orb(A.fundo - 0.25, MAQ.clone(), 14, 26, 2.6, 40, 0.7);
+orb(A.produto - 0.3, FINAL.clone(), 16, 10, 3.4, 42, 0.8);
+orb(A.cta - 0.1, FINAL.clone().add(V(0, 0.06, 0)), 24, 10, 3.6, 42, 0.8, 0.03, { spin: -0.05, bob: 0.4 });
 fecharCameras({ duracao: DURATION, aberturaAte: L(0).e, finalDesde: A.cta - 0.5 });
 
 /* ------------------------------------------------------------------ letreiros, plaquinhas e edição (nada fora da área segura do Reels) */
 const VERM = '#ff3b2f', VERDE = '#22b35e', AZUL = '#2f8cff', CINZA = '#6b7280', ROXO = '#8b5cf6';
 const naMao = () => poteVelho.localToWorld(V(0, 0.12, 0));
-manchete(TEXTOS.manchete, 0.05, A.muita - 0.3, { size: 104 });
+manchete(TEXTOS.manchete, 0.05, A.muita - 0.3, { size: 62 });           // maior que 62 corta nas bordas
 chip(TEXTOS.antes, A.quarenta + 0.05, A.nada - 0.05, naMao, VERDE, { dy: -110 });
 chip(TEXTOS.depois, A.cinquenta, A.muita - 0.2, naMao, VERM, { dy: -110 });
 emote('?', A.nada, A.muita, ze);
 amigas.forEach((p, i) => emote('?', A.muita + 0.2 + i * 0.08, A.seca + 0.9, p));
 chip(TEXTOS.compra, A.compra + 0.05, A.seca - 0.05, () => MESA.clone().add(V(0, 0.15, 0)), CINZA, { dy: -140 });
 chip(TEXTOS.continua, A.seca + 0.05, A.causa - 0.4, () => CAB.localToWorld(V(0, 0.2, 0)), VERM, { dy: -120 });
-chip(TEXTOS.tempo, A.anos - 0.05, A.trinta - 0.05, () => MAQ.clone().add(V(0, 0.1, 0)), ROXO, { dy: -160, size: 42 });
+chip(TEXTOS.tempo, A.anos - 0.05, A.trinta - 0.05, () => MAQ.clone().add(V(0, 0.1, 0)), ROXO, { dy: -160, size: 50 });
 chip(TEXTOS.perda, A.trinta + 0.1, A.estrogenio - 0.1, () => FRENTE.clone().add(V(0, 0.1, 0)), VERM, { dy: -150 });
 chip(TEXTOS.fraca, A.fraca, A.escapa - 0.05, () => MAQ.clone().add(V(0, 0.05, 0)), VERM, { dy: -150 });
 chip(TEXTOS.escapa, A.escapa + 0.05, A.porIsso - 0.1, () => MAQ.clone().add(V(0, 0.4, 0)), AZUL, { dy: -60 });
 chip(TEXTOS.porCima, A.maisCreme + 0.3, A.virada - 0.4, () => MAQ.clone().add(V(0, 0.08, 0)), VERM, { dy: -150 });
-chip(TEXTOS.ajuda1, A.regeneracao + 0.05, A.fundo - 0.1, () => FRENTE.clone().add(V(0, 0.1, 0)), VERDE, { dy: -150, size: 42 });
-chip(TEXTOS.ajuda2, A.fundo + 0.1, A.produto - 0.2, () => MAQ.clone().add(V(0, 0.05, 0)), VERDE, { dy: -160, size: 42 });
+chip(TEXTOS.ajuda1, A.regeneracao + 0.05, A.fundo - 0.1, () => FRENTE.clone().add(V(0, 0.1, 0)), VERDE, { dy: -150, size: 50 });
+chip(TEXTOS.ajuda2, A.fundo + 0.1, A.produto - 0.2, () => MAQ.clone().add(V(0, 0.05, 0)), VERDE, { dy: -160, size: 50 });
 label(PRODUTO, A.produto, A.cta + 0.2, () => heroi.localToWorld(V(0, 0.32, 0)), { screen: [W / 2, 640], size: 92 });
 piscar(heroi, A.produto); zoomSoco(A.produto + 0.05, 0.12); zoomSoco(A.cinquenta + 0.05, 0.1);
 amigas.forEach((p, i) => emote(i % 2 ? 'coracao' : 'estrelas', A.produto + 0.1 + i * 0.07, A.cta + 0.6, p));
