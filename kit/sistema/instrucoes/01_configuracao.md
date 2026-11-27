@@ -9,7 +9,7 @@ Confira cada passo antes de ir pro próximo. Ao final, anote as escolhas em `con
 ## Passo 0: Boas-vindas (1 mensagem curta)
 Se o kit acabou de ser instalado a partir do zip, você já mostrou o resumo do que vem nele: não repita, vá direto pro "vou deixar tudo
 configurado". Se a pessoa começou com a pasta já descompactada, abra com o mesmo resumo rápido do kit (o da instalação no `CLAUDE.md`:
-7 estilos, 30 trilhas, 816 efeitos, exemplo e demos, painel) e depois a mensagem abaixo.
+estilo Quadradinhos, 10 trilhas, 46 efeitos, painel) e depois a mensagem abaixo.
 Algo como:
 > Oi! Eu sou o Claude e vou te ajudar a fazer seus vídeos 3D. Primeiro vou deixar tudo configurado com você, conferindo cada etapa antes de avançar.
 > Vou te fazer umas perguntas rápidas, uma de cada vez. Só um instante enquanto eu confiro se está tudo instalado aqui…
@@ -19,16 +19,9 @@ Em seguida, **sem esperar resposta**, rode `python3 sistema/ferramentas/verifica
   `pip install numpy imageio-ffmpeg --break-system-packages`, `sudo apt-get install -y nodejs`). Só fale disso com a pessoa se não conseguir.
 - Os itens de voz, nome e chave vão aparecer como faltando. É normal, você configura nos passos abaixo.
 
-## Passo 1: Ver um vídeo pronto (vitória rápida)
-Antes de qualquer cadastro, mostre o exemplo. Assim a pessoa vê que funciona e entende onde vai chegar:
-> Antes de configurar, olha como fica um vídeo pronto:
-> 1. Abra a pasta do kit, depois a pasta **Exemplo - Lampada**.
-> 2. Dê dois cliques em **ABRIR NO CHROME - Lampada v1.html**.
->    (Se abrir em outro navegador, clique com o botão direito no arquivo → **Abrir com** → **Google Chrome**.)
-> 3. Clique em ▶ pra assistir com som. Se quiser, clique em **🎬 Renderizar vídeo final**: o MP4 vai pra sua pasta Downloads.
-
-Pergunte se abriu e se apareceu o vídeo. Se der problema, veja `08_problemas.md` ("a página não abre / tela em branco").
-Não fique preso aqui: se a pessoa quiser pular, pule.
+## Passo 1: Mostrar como fica (vitória rápida)
+Mostre a imagem `biblioteca/estilos/quadradinhos/cena.jpg` (uma cena pronta do estilo) e diga em uma frase como o vídeo vai
+ser: tudo feito de quadradinhos, com narração, legenda, letreiros, efeitos e trilha. Não precisa esperar resposta.
 
 ## Passo 2: Nome do canal
 Pergunte o nome do canal (ou do perfil) onde os vídeos vão ser postados. Ele aparece no fim de cada vídeo, numa plaquinha.
@@ -88,40 +81,9 @@ Botões: **Quero usar a minha voz (clone)** · **Quero escolher uma voz pronta**
   pra pessoa ouvir como fica no estilo do canal, e então `vozes.py escolher <id>`.
 - Se a pessoa já tem um clone na conta, é só listar e escolher.
 
-## Passo 6: O estilo (o boneco, o cenário e a edição)
-> Agora a parte mais legal: o estilo dos seus vídeos. Abra o arquivo **Estilos.html** (na pasta do kit, dois cliques).
-> Lá em cima tem uma tabela com os 7 estilos: clique no ▶ de cada um pra ver 10 segundos de vídeo (tem som).
-> Muda tudo junto: o boneco, o lugar e o jeito de editar. A tabela também mostra o **peso** de cada estilo,
-> ou seja, quanto um vídeo costuma custar pra fazer.
-
-Logo depois, mostre a mesma tabela **aqui na conversa**, montada com o `"custo"` do `estilo.json` de cada estilo
-(na ordem do número, sem inventar valores). Exemplo de como fica:
-
-| # | Estilo | Peso (0–100) | Créditos do Claude | Claude montando | Render de 2 min | Correções previstas |
-|---|---|---|---|---|---|---|
-| 1 | Padrão | 60 · médio | médio | 35–50 min | 6–8 min | 2–3 |
-| 2 | Ilustrado 2D | 70 · pesado | médio-alto | 45–60 min | 4 min | 2–3 |
-| 3 | Cubinhos | 75 · pesado | alto | 45–60 min | 5 min | 2–3 |
-| 4 | Brinquedo | 55 · médio | médio | 35–45 min | 6 min | 2 |
-| 5 | Simples | 35 · leve | baixo | 20–30 min | 4–5 min | 1–2 |
-| 6 | Desenho | 60 · médio | médio | 35–45 min | 6–7 min | 2 |
-| 7 | Avatar de jogo | 45 · médio | baixo | 25–35 min | 7–8 min | 1–2 |
-
-Explique em 2 ou 3 frases simples, sem números demais:
-- **Peso** junta tudo: créditos do Claude, tempo montando a cena, tempo de render e quantas rodadas de correção costumam aparecer.
-  Quanto menor, mais leve. É uma estimativa pra um vídeo de 1min30 a 2min30 com 5 a 7 peças.
-- Num notebook sem placa de vídeo, o render leva 2 a 3 vezes mais. O primeiro vídeo pesa um pouco mais em qualquer estilo.
-- A narração custa o mesmo em todos. Nenhum estilo é "melhor": vale escolher pelo jeito de vídeo que a pessoa quer postar.
-  Se ela está com pouco crédito ou pouco tempo, sugira começar por um leve (Simples ou Avatar) e testar outro depois.
-
-Botões (AskUserQuestion aceita até 4 opções por pergunta: faça em duas perguntas, ou peça o número):
-**1 Padrão (o da série)** · **2 Ilustrado 2D** · **3 Cubinhos** · **4 Brinquedo** · **5 Simples** · **6 Desenho** · **7 Avatar de jogo** · **Criar o meu estilo**
-- Grave `"estilo"` em `config/canal.json` (`padrao`, `ilustrado`, `cubinhos`, `brinquedo`, `simples`, `desenho`, `avatar` ou o nome do estilo novo)
-  e rode `estilos.py` pra marcar "em uso".
-- Se a pessoa não souber: pergunte que tipo de vídeo ela gosta de ver e sugira dois ou três pra ela assistir na tabela; na dúvida, o Padrão.
-- **Criar o meu:** peça uma imagem de referência (print de vídeo) ou uma descrição, e siga `07_personalizar.md` → "Criar um estilo novo".
-  Sugira fazer depois do primeiro vídeo, pra não cansar.
-- O estilo pode mudar a qualquer hora (pra todos os vídeos ou só pra um).
+## Passo 6: O estilo
+O kit tem **um estilo só: o Quadradinhos** (boneco, cenário e objetos feitos de quadradinhos, letreiros e sons de videogame).
+Não pergunte: grave `"estilo": "quadradinhos"` em `config/canal.json` e siga.
 
 ## Passo 6b: O boneco (opcional)
 > O boneco de todos os estilos vem de camisa branca, calça azul-escura e cabelo preto. Quer mudar alguma coisa nele?

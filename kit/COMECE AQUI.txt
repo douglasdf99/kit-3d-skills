@@ -39,10 +39,7 @@ Os sete estados do painel são apenas controles do projeto: Ideia, Roteiro para 
 
 ONDE ESTÃO OS MATERIAIS
 Painel.html: projetos e seus estados.
-Estilos.html: sete estilos, imagens e demonstrações.
-Biblioteca de Sons.html: 816 efeitos e 30 trilhas do material fornecido.
-Exemplo - Lampada: projeto completo para testar a reprodução e o render.
-Exemplos: projetos de demonstração dos estilos.
+Biblioteca de Sons.html: 46 efeitos e 10 trilhas próprias (estilo Quadradinhos).
 Meus Videos: pasta para os seus projetos.
 
 VALIDAÇÃO

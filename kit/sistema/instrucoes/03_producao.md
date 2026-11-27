@@ -24,7 +24,7 @@ Escreva `notas.md` na pasta do vídeo com uma tabela curta, uma linha por fala d
 |---|---|---|---|---|
 
 Pense como no gabarito: **cada frase tem uma imagem**. O problema acontece na tela (fio queimando, gelo derretendo,
-água pingando) e depois a solução entra. Use o gabarito (`Exemplo - Lampada/cena/cena.js`) como referência de quanta
+água pingando) e depois a solução entra. Use o gabarito (`biblioteca/estilos/quadradinhos/cena_modelo.js`) como referência de quanta
 coisa acontece por segundo. Não precisa mostrar esse plano pra pessoa, a não ser que ela peça.
 
 ## 3. Cena 3D

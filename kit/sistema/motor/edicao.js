@@ -19,7 +19,7 @@ const corCSS = (c) => (typeof c === 'number' ? '#' + c.toString(16).padStart(6, 
 
 /* ------------------------------------------------------------------ "Esse é o X": a peça pisca 2× em amarelo
    piscar(objeto, A.helice)   → nos próximos 1,0 s a peça (e tudo dentro dela) acende 2 vezes.
-   Chame aplicarPiscadas(t) no update. Funciona em qualquer material (3D, desenho, cubinhos, 2D).        */
+   Chame aplicarPiscadas(t) no update. Funciona em qualquer material (3D, desenho, quadradinhos, 2D).        */
 const PISC = [];
 function prepMat(obj) {
   const out = [];
@@ -89,7 +89,7 @@ export function emote(tipo, t0, t1, quem, o = {}) { FX.push({ k: 'emote', tipo, 
 export function linhas(t0, t1, o = {}) { FX.push({ k: 'linhas', t0, t1, cor: o.cor ?? '#ffffff', centro: o.centro || null }); }
 /** círculo vermelho + seta apontando um objeto (estilo meme/Avatar) */
 export function circulo(t0, t1, anchor, o = {}) { FX.push({ k: 'circulo', t0, t1, anchor, r: o.r ?? 130, cor: o.cor ?? '#ff2a2a', seta: o.seta ?? true }); }
-/** aviso de "conquista" no topo da tela (estilo Cubinhos): conquista('PEÇA NOVA: HÉLICE', t) */
+/** aviso de "conquista" no topo da tela (estilo Quadradinhos): conquista('NOVIDADE: PRODUTO', t) */
 export function conquista(texto, t0, o = {}) { FX.push({ k: 'conquista', texto, t0, t1: t0 + (o.dur ?? 2.2), sub: o.sub ?? ED().conquistaTitulo ?? 'PEÇA NOVA!', icone: o.icone ?? null }); }
 /** manchete grande no topo (ex.: 'E SE...?' no estilo Simples) */
 export function manchete(texto, t0, t1, o = {}) { FX.push({ k: 'manchete', texto, t0, t1, y: o.y ?? 330, size: o.size ?? 120 }); }

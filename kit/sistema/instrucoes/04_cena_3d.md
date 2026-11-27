@@ -7,7 +7,7 @@
 > Este arquivo traz as regras gerais da série (valem pra todos) e a referência do motor.
 
 A cena é um arquivo JavaScript (`Meus Videos/<x>/cena/cena.js`) que usa o motor do kit (`sistema/motor/`) e three.js.
-**Antes de escrever a primeira cena, leia o gabarito inteiro:** `Exemplo - Lampada/cena/cena.js` (vídeo real da série).
+**Antes de escrever a primeira cena, leia o gabarito inteiro:** `biblioteca/estilos/quadradinhos/cena_modelo.js` (vídeo real da série).
 O fim deste arquivo explica o gabarito fala por fala.
 
 ---
@@ -219,7 +219,7 @@ Sons de voz prontos: categoria "Vozes do boneco" em `biblioteca/efeitos/efeitos.
 
 ---
 
-## 17. O gabarito fala por fala (`Exemplo - Lampada/cena/cena.js`)
+## 17. O gabarito fala por fala (`biblioteca/estilos/quadradinhos/cena_modelo.js`)
 
 | Fala | O que aparece | Como é feito |
 |---|---|---|

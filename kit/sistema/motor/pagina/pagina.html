@@ -1,49 +1,89 @@
-<main>
-  <header>
-    <h1 id="titulo">Carregando…</h1>
-    <p class="sub" id="info"></p>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<div class="app" data-etapa="1">
+  <nav class="topo">
+    <span class="marca"><img class="logo" src="../../sistema/motor/pagina/logo.svg" alt="Mergulhando na IA" onerror="this.outerHTML='<b>Vídeo 3D</b>'"></span>
+    <span class="topo-info" id="info"></span>
+  </nav>
+
+  <header class="hero">
+    <h1><span id="titulo">Carregando…</span><span class="h1-azul" id="titulo2">preparando a cena</span></h1>
+    <ol class="funil" aria-label="Etapas">
+      <li class="etapa" data-n="1"><span class="bola b1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg></span><b>Assista</b><small>a prévia com som</small></li>
+      <li class="seta" aria-hidden="true"><i></i></li>
+      <li class="etapa" data-n="2"><span class="bola b2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v11a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zM4 8l2-4h3l-2 4m4 0 2-4h3l-2 4m4 0 2-4h1a1 1 0 0 1 1 1v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><b>Gere o MP4</b><small>vai pra Downloads</small></li>
+      <li class="seta" aria-hidden="true"><i></i></li>
+      <li class="etapa" data-n="3"><span class="bola b3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-8l-4 3.5V16H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><b>Ajuste</b><small>se quiser mudar algo</small></li>
+    </ol>
   </header>
+
   <section class="erro" id="erro" hidden aria-live="assertive">
     <b id="erro-t">Deu um erro na cena</b>
     <span>Copie o texto abaixo e mande pro Claude (ou tire um print desta caixa).</span>
     <pre id="erro-d"></pre>
-    <div class="linha"><button id="erro-copiar">Copiar o erro</button></div>
+    <div class="linha"><button class="pill" id="erro-copiar">Copiar o erro</button></div>
   </section>
-  <section class="tela" aria-label="Prévia do vídeo">
-    <canvas id="prev" width="540" height="960"></canvas>
-    <div class="barra">
-      <button id="play" aria-label="Assistir">▶</button>
-      <input id="pos" type="range" min="0" max="1000" value="0" step="1" aria-label="Posição no vídeo">
-      <span id="tempo">0:00 / 0:00</span>
-    </div>
-    <label class="ck"><input type="checkbox" id="leve"> Prévia leve (se a prévia estiver travando)</label>
-  </section>
-  <section class="painel">
-    <div class="card">
-      <h2><span class="passo">1</span>Assista à prévia</h2>
-      <p>Clique em ▶ pra ver o vídeo com som. A prévia pode engasgar um pouco num computador mais simples — o vídeo final não engasga.</p>
-    </div>
-    <div class="card">
-      <h2><span class="passo">2</span>Gerar o vídeo final</h2>
-      <p>Clique no botão e espere a barra encher. O vídeo (com som) vai pra sua pasta <b>Downloads</b>. Deixe esta aba aberta enquanto renderiza.</p>
-      <div class="linha"><button class="pri" id="go" disabled>🎬 Renderizar vídeo final</button><button id="save" hidden>Baixar de novo</button></div>
-      <div id="track"><div id="bar"></div></div>
-      <div id="status">Carregando a cena…</div>
-    </div>
-    <div class="card">
-      <h2><span class="passo">3</span>Quer mudar alguma coisa?</h2>
-      <p>Diga pro Claude o que mudar, com o segundo do vídeo (ex.: “aos 0:42 o letreiro tampa o boneco”). Se ajudar, mande também uma destas imagens:</p>
-      <div class="linha"><button id="folha" disabled>🖼️ Folha de revisão</button><button id="quadro" disabled>📷 Foto deste momento</button></div>
-    </div>
-    <details>
-      <summary>Avançado</summary>
-      <div class="linha">
-        <label class="num">Começar em (s)<input id="t0" value="0"></label>
-        <label class="num">Terminar em (s)<input id="t1" value=""></label>
-        <label class="num">Qualidade (Mbps)<input id="mbps" value="16"></label>
+
+  <section class="palco">
+    <div class="lado-video">
+      <div class="celular">
+        <div class="tela-cel">
+          <canvas id="prev" width="540" height="960" aria-label="Prévia do vídeo"></canvas>
+          <div class="seguro" id="seguro" aria-hidden="true">
+            <div class="faixa topo-f"><span>nome do perfil</span></div>
+            <div class="faixa base-f"><span>legenda, CTA e botões do anúncio</span></div>
+            <div class="faixa dir-f"><span>curtir · comentar</span></div>
+            <div class="faixa esq-f"></div>
+          </div>
+        </div>
       </div>
-      <pre id="log"></pre>
-    </details>
+      <div class="controles">
+        <button class="redondo" id="play" aria-label="Assistir">▶</button>
+        <input id="pos" type="range" min="0" max="1000" value="0" step="1" aria-label="Posição no vídeo">
+        <span id="tempo">0:00 / 0:00</span>
+      </div>
+      <div class="chaves">
+        <label class="chave"><input type="checkbox" id="ver-seguro"><span>Ver área segura do Reels</span></label>
+        <label class="chave"><input type="checkbox" id="leve"><span>Prévia leve</span></label>
+      </div>
+    </div>
+
+    <div class="lado-acoes">
+      <div class="resumo">
+        <div class="kpi"><small>Duração</small><b id="k-dur">–</b></div>
+        <div class="kpi"><small>Formato</small><b>9:16 · 1080×1920</b></div>
+        <div class="kpi k-ciano"><small>Estilo</small><b id="k-estilo">–</b></div>
+        <div class="kpi k-verde"><small>Trilha</small><b id="k-musica">–</b></div>
+      </div>
+
+      <div class="cartao render">
+        <h2>Gerar o vídeo final</h2>
+        <p>Clique e espere a barra encher. O MP4 com som vai pra sua pasta <b>Downloads</b>. Deixe esta aba aberta enquanto gera.</p>
+        <button class="principal" id="go" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Gerar vídeo final (MP4)</button>
+        <div id="track"><div id="bar"></div></div>
+        <div id="status" role="status">Carregando a cena…</div>
+        <button class="pill" id="save" hidden>Baixar de novo</button>
+      </div>
+
+      <div class="cartao ajuste">
+        <h2>Quer mudar alguma coisa?</h2>
+        <p>Diga pro Claude o que mudar, com o segundo do vídeo (ex.: “aos 0:12 o letreiro tampa o rosto”). Se ajudar, mande também uma destas imagens:</p>
+        <div class="linha">
+          <button class="pill" id="folha" disabled>Folha de revisão</button>
+          <button class="pill" id="quadro" disabled>Foto deste momento</button>
+        </div>
+      </div>
+
+      <details class="avancado">
+        <summary>Avançado</summary>
+        <div class="linha">
+          <label class="num">Começar em (s)<input id="t0" value="0"></label>
+          <label class="num">Terminar em (s)<input id="t1" value=""></label>
+          <label class="num">Qualidade (Mbps)<input id="mbps" value="16"></label>
+        </div>
+        <pre id="log"></pre>
+      </details>
+    </div>
   </section>
-</main>
+</div>
 <div id="webgl" aria-hidden="true"></div>

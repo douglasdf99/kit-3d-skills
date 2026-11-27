@@ -3,6 +3,9 @@
 (() => {
   const $ = (id) => document.getElementById(id);
   const INFO = window.__INFO__ || {};
+  const APP = document.querySelector('.app');
+  const etapa = (n) => { if (APP) APP.dataset.etapa = String(n); };   // funil do topo: 1 assistir · 2 gerar · 3 ajustar
+  const pôr = (id, txt) => { const el = $(id); if (el) el.textContent = txt; };
   const W = 1080, H = 1920, FPS = 30;
   const log = (s) => { const el = $('log'); if (el) el.textContent = s + '\n' + el.textContent.slice(0, 8000); console.log('[kit] ' + s); };
   const URLS = {};
@@ -96,7 +99,7 @@
   }
   async function renderizar() {
     if (ocupado || parado) return;
-    pausar(); ocupado = true; blobOut = null; $('save').hidden = true; $('go').disabled = true; $('status').className = '';
+    pausar(); ocupado = true; blobOut = null; $('save').hidden = true; $('go').disabled = true; $('status').className = ''; etapa(2);
     const wasLeve = $('leve').checked; window.setEscala(1);
     try {
       if (!('VideoEncoder' in window)) throw new Error('Este navegador não consegue gerar vídeo. Abra este arquivo no Google Chrome (ou no Microsoft Edge).');
@@ -148,7 +151,7 @@
       nomeOut = parcial ? (INFO.arquivo || 'video.mp4').replace(/\.mp4$/, ` (trecho ${Math.round(t0)}-${Math.round(t1)}s).mp4`) : (INFO.arquivo || 'video.mp4');
       baixar(blobOut, nomeOut);
       $('status').textContent = `Pronto! “${nomeOut}” foi pra sua pasta Downloads (${(blobOut.size / 1e6).toFixed(0)} MB, ${Math.round(el)} s pra renderizar).` + (AAC ? '' : ' Atenção: sem som.');
-      $('status').className = 'ok'; $('save').hidden = false;
+      $('status').className = 'ok'; $('save').hidden = false; etapa(3);
       log(`render ok: ${n} quadros em ${el.toFixed(1)} s (${(n / el).toFixed(1)} q/s), vídeo ${vcodec}, áudio ${AAC ? 'aac' : 'nenhum'}`);
       proximoDaFila();
       window.__KIT_RENDER__ = { ok: true, bytes: blobOut.size, segundos: el, vcodec };
@@ -203,16 +206,21 @@
   /* ---------- começar */
   (async () => {
     document.title = `${INFO.titulo || 'Vídeo'} v${INFO.versao || 1}`;
-    $('titulo').textContent = `${INFO.tema || INFO.titulo || 'Vídeo'} — versão ${INFO.versao || 1}`;
+    $('titulo').textContent = INFO.tema || INFO.titulo || 'Vídeo';
+    pôr('titulo2', `versão ${INFO.versao || 1} · carregando a cena…`);
+    const vs = $('ver-seguro'); if (vs && APP) vs.onchange = () => APP.classList.toggle('com-seguro', vs.checked);
     if (!window.WebGLRenderingContext) { mostrarErro('Este navegador não mostra 3D', 'Abra este arquivo no Google Chrome (ou no Microsoft Edge).'); return; }
     prepararAudio();
     try { await carregarModulos(); } catch (e) { mostrarErro('Não consegui carregar a cena', (e && e.stack) || String(e)); return; }
     D = window.DURATION;
     $('t1').value = D.toFixed(2);
-    $('info').textContent = [INFO.canal, 'duração ' + fmt(D).replace(/\.\d$/, ''), INFO.estilo && ('estilo ' + INFO.estilo), INFO.musica && ('música ' + INFO.musica), INFO.gerado && ('montado em ' + INFO.gerado)].filter(Boolean).join(' · ');
+    $('info').textContent = [INFO.canal, INFO.gerado && ('montado em ' + INFO.gerado)].filter(Boolean).join(' · ');
+    pôr('titulo2', `versão ${INFO.versao || 1} · pronta pra virar MP4`);
+    pôr('k-dur', fmt(D).replace(/\.\d$/, '')); pôr('k-estilo', INFO.estilo || '–'); pôr('k-musica', INFO.musica && INFO.musica !== 'nenhuma' ? INFO.musica : 'sem trilha');
+    etapa(1);
     quadro(0);
     $('go').disabled = false; $('folha').disabled = false; $('quadro').disabled = false;
-    $('status').textContent = 'Tudo pronto. Assista à prévia ou clique em Renderizar.';
+    $('status').textContent = 'Tudo pronto. Assista à prévia ou clique em Gerar vídeo final.';
     window.__KIT__ = { renderizar, folha, fotoQuadro, quadro: (t) => { tNow = t; quadro(t); } };
     // #auto = renderiza sozinho ao abrir · #auto|outra.html|mais.html = depois do download abre a próxima da fila (uma de cada vez)
     if (fila()[0] === 'auto') { await sleep(800); renderizar(); }

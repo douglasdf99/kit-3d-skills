@@ -1,0 +1,327 @@
+{
+ "nota": "Efeitos sonoros próprios da skill, criados na ElevenLabs (sound effects) e equalizados no mesmo volume. Os nomes são os mesmos que o kit usa: instalar = trocar os do kit por estes.",
+ "efeitos": [
+  {
+   "nome": "whoosh",
+   "momento": "transicao",
+   "seg": 0.8,
+   "pt": "whoosh limpo de transição",
+   "en": "Clean modern cinematic whoosh transition, a smooth airy swish passing by, polished commercial sound design. No music, no voice."
+  },
+  {
+   "nome": "whoosh_suave",
+   "momento": "transicao",
+   "seg": 0.6,
+   "pt": "swish suave e elegante",
+   "en": "Very soft subtle airy swish, gentle and elegant, short UI transition, clean and polished. No music, no voice."
+  },
+  {
+   "nome": "fallwhoosh",
+   "momento": "transicao",
+   "seg": 1.2,
+   "pt": "whoosh descendo, de queda",
+   "en": "Smooth descending whoosh with a soft low tail, cinematic drop transition, clean and polished. No music, no voice."
+  },
+  {
+   "nome": "rewind",
+   "momento": "transicao",
+   "seg": 0.9,
+   "pt": "volta da fita, rápida e limpa",
+   "en": "Quick tape rewind effect: a fast reverse swoosh with a subtle digital stutter, modern, clean and polished. No music, no voice."
+  },
+  {
+   "nome": "record_scratch",
+   "momento": "transicao",
+   "seg": 0.7,
+   "pt": "arranhão de disco, pausa cômica",
+   "en": "One short crisp vinyl record scratch stop, punchy and modern, for a comedic pause. No music, no voice."
+  },
+  {
+   "nome": "slide",
+   "momento": "transicao",
+   "seg": 0.6,
+   "pt": "cartão deslizando",
+   "en": "Smooth soft slide swoosh of a card sliding into place, clean modern UI motion sound. No music, no voice."
+  },
+  {
+   "nome": "pop",
+   "momento": "aparecer",
+   "seg": 0.5,
+   "pt": "pop de bolha, satisfatório",
+   "en": "Clean soft bubble pop, modern satisfying UI pop-in sound, crisp. No music, no voice."
+  },
+  {
+   "nome": "pop2",
+   "momento": "aparecer",
+   "seg": 0.5,
+   "pt": "pop leve de plaquinha",
+   "en": "Light bright playful pop click for a label appearing on screen, crisp and short. No music, no voice."
+  },
+  {
+   "nome": "ding",
+   "momento": "aparecer",
+   "seg": 1.0,
+   "pt": "sininho de acerto",
+   "en": "Bright clean bell ding, positive confirmation chime, polished and pleasant. No music, no voice."
+  },
+  {
+   "nome": "sparkle",
+   "momento": "aparecer",
+   "seg": 1.2,
+   "pt": "brilho cintilante",
+   "en": "Short magical sparkle shimmer, glittering high chimes, bright and clean. No music, no voice."
+  },
+  {
+   "nome": "magic",
+   "momento": "produto",
+   "seg": 1.8,
+   "pt": "revelação do produto, premium",
+   "en": "Premium product reveal sound: rising shimmering chimes blooming into a soft bright swell, high-end commercial feel. No music, no voice."
+  },
+  {
+   "nome": "tada",
+   "momento": "produto",
+   "seg": 1.5,
+   "pt": "vinheta curta de sucesso",
+   "en": "Short cheerful success sting, bright modern celebratory chime flourish. No voice."
+  },
+  {
+   "nome": "powerup",
+   "momento": "energia",
+   "seg": 1.2,
+   "pt": "energia subindo",
+   "en": "Uplifting rising synth power up, energy charging up, clean and modern. No music, no voice."
+  },
+  {
+   "nome": "powerdown",
+   "momento": "problema",
+   "seg": 1.2,
+   "pt": "energia acabando",
+   "en": "Descending synth power down, energy draining out, soft and clean. No music, no voice."
+  },
+  {
+   "nome": "barfill",
+   "momento": "energia",
+   "seg": 1.2,
+   "pt": "barra enchendo",
+   "en": "Progress bar filling up with quick rising tick tones ending in a bright ping, clean UI sound. No music, no voice."
+  },
+  {
+   "nome": "nope",
+   "momento": "problema",
+   "seg": 0.5,
+   "pt": "erro suave",
+   "en": "Soft gentle wrong-answer error tone, modern two-note buzz, not harsh. No music, no voice."
+  },
+  {
+   "nome": "sad",
+   "momento": "problema",
+   "seg": 1.2,
+   "pt": "decepção, notas descendo",
+   "en": "Short sad descending tones, a soft disappointment sting, gentle and clean. No voice."
+  },
+  {
+   "nome": "clockfast",
+   "momento": "problema",
+   "seg": 1.5,
+   "pt": "relógio rápido, urgência",
+   "en": "Clock ticking fast, crisp clean ticks building urgency. No music, no voice."
+  },
+  {
+   "nome": "coracao",
+   "momento": "problema",
+   "seg": 1.2,
+   "pt": "coração batendo",
+   "en": "Two deep heartbeats thumping, clean and close, tense. No music, no voice."
+  },
+  {
+   "nome": "gulp",
+   "momento": "problema",
+   "seg": 0.5,
+   "pt": "engolir em seco",
+   "en": "A single nervous gulp swallow, clean and close. No music."
+  },
+  {
+   "nome": "bocejo",
+   "momento": "problema",
+   "seg": 1.5,
+   "pt": "mulher bocejando de cansaço",
+   "en": "A tired woman yawning, short and natural, close microphone. No music."
+  },
+  {
+   "nome": "gasp",
+   "momento": "gancho",
+   "seg": 0.7,
+   "pt": "mulher surpresa (gasp)",
+   "en": "A woman gasping in surprise, a short natural sharp breath in. No music."
+  },
+  {
+   "nome": "notificacao",
+   "momento": "gancho",
+   "seg": 0.8,
+   "pt": "notificação de celular",
+   "en": "Modern smartphone notification ping, pleasant clean two-tone alert. No music, no voice."
+  },
+  {
+   "nome": "impacto",
+   "momento": "gancho",
+   "seg": 1.5,
+   "pt": "tum grave de impacto",
+   "en": "Deep cinematic boom hit, punchy low impact for emphasis with a clean short tail. No music, no voice."
+  },
+  {
+   "nome": "rise",
+   "momento": "gancho",
+   "seg": 1.5,
+   "pt": "subida de tensão curta",
+   "en": "Short cinematic tension riser swelling up quickly and ending abruptly. No music, no voice."
+  },
+  {
+   "nome": "crowd_wow",
+   "momento": "produto",
+   "seg": 1.5,
+   "pt": "plateia dizendo 'uau'",
+   "en": "A small audience saying 'wow' impressed, warm and short. No music."
+  },
+  {
+   "nome": "applause_short",
+   "momento": "produto",
+   "seg": 2.0,
+   "pt": "aplausos curtos",
+   "en": "Short warm applause from a small audience, clean. No music."
+  },
+  {
+   "nome": "coins",
+   "momento": "produto",
+   "seg": 0.8,
+   "pt": "moedas, recompensa",
+   "en": "Coins clinking, short reward cash sound, clean and bright. No music, no voice."
+  },
+  {
+   "nome": "click_ui",
+   "momento": "cta",
+   "seg": 0.5,
+   "pt": "clique de botão",
+   "en": "One crisp clean button click, modern UI tap. No music, no voice."
+  },
+  {
+   "nome": "seta",
+   "momento": "cta",
+   "seg": 0.7,
+   "pt": "swoosh pra baixo da seta do link",
+   "en": "Quick downward swoosh ending with a soft pop, call-to-action arrow sound, clean and modern. No music, no voice."
+  },
+  {
+   "nome": "pulo_8bit",
+   "momento": "videogame",
+   "seg": 0.5,
+   "pt": "pulo de videogame",
+   "en": "Retro 8-bit video game jump sound, clean chiptune blip. No music, no voice."
+  },
+  {
+   "nome": "powerup_8bit",
+   "momento": "videogame",
+   "seg": 1.0,
+   "pt": "power-up de videogame",
+   "en": "Retro 8-bit video game power-up arpeggio, bright chiptune. No voice."
+  },
+  {
+   "nome": "levelup_8bit",
+   "momento": "videogame",
+   "seg": 1.5,
+   "pt": "subiu de nível",
+   "en": "Retro 8-bit level up victory jingle, short cheerful chiptune. No voice."
+  },
+  {
+   "nome": "gameover_8bit",
+   "momento": "videogame",
+   "seg": 1.2,
+   "pt": "erro de videogame",
+   "en": "Retro 8-bit game over descending blips, short and playful chiptune. No voice."
+  },
+  {
+   "nome": "boom",
+   "momento": "gancho",
+   "seg": 1.5,
+   "pt": "estrondo grave",
+   "en": "Deep powerful cinematic boom with a short rumble tail, clean low end. No music, no voice."
+  },
+  {
+   "nome": "susto_impacto",
+   "momento": "problema",
+   "seg": 1.0,
+   "pt": "impacto de susto",
+   "en": "Sharp sudden cartoon-ish impact hit for a surprise moment, punchy and clean. No music, no voice."
+  },
+  {
+   "nome": "uhul",
+   "momento": "produto",
+   "seg": 1.0,
+   "pt": "mulher comemorando 'uhul!'",
+   "en": "A happy woman cheering 'uhuul!' joyfully, short, natural. No music."
+  },
+  {
+   "nome": "cheer",
+   "momento": "produto",
+   "seg": 1.8,
+   "pt": "pessoas comemorando",
+   "en": "A small group of people cheering happily, short and warm. No music."
+  },
+  {
+   "nome": "confused",
+   "momento": "problema",
+   "seg": 1.0,
+   "pt": "dúvida, 'hã?'",
+   "en": "Short quirky questioning musical sting, two bouncy notes suggesting confusion, light and clean. No voice."
+  },
+  {
+   "nome": "correct",
+   "momento": "solucao",
+   "seg": 0.8,
+   "pt": "acerto, resposta certa",
+   "en": "Bright pleasant correct-answer chime, two rising notes, clean and modern. No voice."
+  },
+  {
+   "nome": "failtrombone",
+   "momento": "problema",
+   "seg": 1.6,
+   "pt": "trombone de fracasso (wah wah)",
+   "en": "Short comedic sad trombone 'wah wah wah', clean and playful. No voice."
+  },
+  {
+   "nome": "plim",
+   "momento": "solucao",
+   "seg": 0.6,
+   "pt": "plim de ideia",
+   "en": "A single bright 'plim' twinkle for an idea, clean high chime. No music, no voice."
+  },
+  {
+   "nome": "bubbles",
+   "momento": "produto",
+   "seg": 1.2,
+   "pt": "bolhinhas",
+   "en": "Soft bubbling with small bubbles rising, clean and pleasant. No music, no voice."
+  },
+  {
+   "nome": "crack",
+   "momento": "problema",
+   "seg": 0.8,
+   "pt": "rachadura",
+   "en": "A sharp crack of something breaking, short and clean. No music, no voice."
+  },
+  {
+   "nome": "splash",
+   "momento": "produto",
+   "seg": 0.9,
+   "pt": "respingo de água",
+   "en": "A small clean water splash, short and fresh. No music, no voice."
+  },
+  {
+   "nome": "steam",
+   "momento": "produto",
+   "seg": 1.2,
+   "pt": "vapor saindo",
+   "en": "A short soft hiss of steam releasing, clean. No music, no voice."
+  }
+ ]
+}

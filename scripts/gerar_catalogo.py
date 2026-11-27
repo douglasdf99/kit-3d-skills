@@ -12,14 +12,14 @@ SAIDA = 'sistema/catalogo.json'
 
 NUCLEO = [
     'CLAUDE.md', 'COMECE AQUI.txt', 'ESTADO-DE-VALIDACAO.txt', 'LICENCAS-E-ORIGENS-A-CONFERIR.txt',
-    'Painel.html', 'Estilos.html', 'Biblioteca de Sons.html', 'Estilos - visao geral.jpg', 'package.json',
+    'Painel.html', 'Biblioteca de Sons.html', 'package.json',
     'config/', 'sistema/',
     'biblioteca/efeitos/efeitos.json', 'biblioteca/efeitos/efeitos.md', 'biblioteca/musicas/musicas.json',
-    'Exemplo - Lampada/video.json', 'Exemplo - Lampada/roteiro.txt', 'Exemplo - Lampada/cena/',
     'Meus Videos/.gitkeep',
 ]
 
 CATEGORIAS = {
+    'skill': 'efeitos próprios, todos no mesmo volume (gancho, problema, transição, produto, CTA, videogame)',
     'vozes_do_boneco': 'falas curtas em português, gritos, risadas, multidão', 'transicoes': 'whoosh, subidas, rebobinar, zoom, glitch',
     'aparecer_e_brilho': 'pop, brilho, tada, acerto', 'interface_e_eletronicos': 'cliques, bipes, alarmes, relógios, celular, erro',
     'eletricidade': 'choque, faísca, zumbido elétrico', 'agua': 'água, chuva e mar', 'fogo_e_calor': 'fogo, calor e frio',
@@ -71,8 +71,7 @@ def main():
     for n in sorted(os.listdir(est_dir), key=lambda n: (json.load(open(os.path.join(est_dir, n, 'estilo.json'), encoding='utf-8')).get('ordem', 99), n)):
         e = json.load(open(os.path.join(est_dir, n, 'estilo.json'), encoding='utf-8'))
         estilos[n] = {'mb': mb(arqs, f'biblioteca/estilos/{n}/'), 'titulo': e.get('nome', n), 'descricao': e.get('nome', n) + ': ' + e.get('descricao', '')}
-    exemplos = {n: {'mb': mb(arqs, f'Exemplos/{n}/'), 'descricao': 'demo de 10 s do estilo ' + n} for n in sorted(os.listdir(os.path.join(KIT, 'Exemplos'))) if os.path.isdir(os.path.join(KIT, 'Exemplos', n))}
-    exemplos['lampada'] = {'mb': mb(arqs, 'Exemplo - Lampada/'), 'descricao': 'vídeo de exemplo completo (2 min), o gabarito'}
+    exemplos = {n: {'mb': mb(arqs, f'Exemplos/{n}/'), 'descricao': 'demo de 10 s do estilo ' + n} for n in (sorted(os.listdir(os.path.join(KIT, 'Exemplos'))) if os.path.isdir(os.path.join(KIT, 'Exemplos')) else []) if os.path.isdir(os.path.join(KIT, 'Exemplos', n))}
     ef = json.load(open(os.path.join(KIT, 'biblioteca', 'efeitos', 'efeitos.json'), encoding='utf-8'))['efeitos']
     efeitos = {}
     for c in sorted({x['categoria'] for x in ef}):

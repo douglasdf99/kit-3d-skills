@@ -1,0 +1,65 @@
+{
+  "nota": "Trilhas próprias da skill, criadas na ElevenLabs (Eleven Music) com musica_nova.py, 60 s cada. Pra recriar: python3 sistema/ferramentas/musica_nova.py <id> \"<ingles>\" 60 \"<portugues>\"",
+  "trilhas": [
+    {
+      "id": "suave",
+      "nome": "Suave",
+      "ingles": "Gentle acoustic fingerpicked guitar with soft felt piano, light shaker and brushed percussion, warm, reassuring and tender",
+      "portugues": "Suave: violão dedilhado e piano macio, acolhedora. Pra dicas, passo a passo e saúde."
+    },
+    {
+      "id": "calma",
+      "nome": "Calma",
+      "ingles": "Calm lo-fi chillhop: dusty soft drums, warm Rhodes electric piano chords, mellow bass, gentle kalimba melody, cozy and caring mood",
+      "portugues": "Calma: lo-fi tranquilo e aconchegante, piano elétrico e kalimba. Pra explicações calmas, bem-estar e maternidade."
+    },
+    {
+      "id": "alegre",
+      "nome": "Alegre",
+      "ingles": "Bright happy pop: ukulele strums, hand claps, whistled melody, glockenspiel accents and bouncy acoustic bass, sunny and optimistic",
+      "portugues": "Alegre: ukulele, palmas e assobio, ensolarada. Pra produtos do dia a dia e temas leves."
+    },
+    {
+      "id": "emocao",
+      "nome": "Emoção",
+      "ingles": "Emotional cinematic piano that starts delicate and builds with warm strings and soft swelling percussion, hopeful and touching",
+      "portugues": "Emoção: piano que começa delicado e cresce com cordas. Pra histórias reais, superação, antes e depois."
+    },
+    {
+      "id": "brasileira",
+      "nome": "Brasileira",
+      "ingles": "Upbeat Brazilian samba-pop: nylon guitar, cavaquinho, pandeiro, shaker, light surdo and flute melody, joyful and warm",
+      "portugues": "Brasileira: violão, cavaquinho e pandeiro, alegre. Pra público brasileiro, comida e alegria."
+    },
+    {
+      "id": "energia",
+      "nome": "Energia",
+      "ingles": "Energetic electronic dance pop: punchy four-on-the-floor kick, bright synth stabs, plucky arpeggios, motivational workout vibe",
+      "portugues": "Energia: batida forte e synth brilhante. Pra fitness, desafios e ritmo rápido."
+    },
+    {
+      "id": "moderna",
+      "nome": "Moderna",
+      "ingles": "Modern trap beat with a steady continuous groove: deep 808 bass, crisp rolling hi-hats on every bar, snappy snare, catchy bell and pluck melody, confident and trendy, no breaks or pauses",
+      "portugues": "Moderna: trap com grave forte e melodia marcante. Pra tecnologia, tendência e público jovem."
+    },
+    {
+      "id": "verao",
+      "nome": "Verão",
+      "ingles": "Tropical summer house: steel drums, marimba, light island percussion, soft plucked synth and relaxed groove, bright and breezy",
+      "portugues": "Verão: steel drum e marimba, leve e solar. Pra beleza, verão, viagem e comida."
+    },
+    {
+      "id": "curiosa",
+      "nome": "Curiosa",
+      "ingles": "Playful curious orchestral: pizzicato strings, marimba, bassoon and light woodwinds, tiptoe rhythm, clever discovery mood",
+      "portugues": "Curiosa: pizzicato e marimba, clima de descoberta. Pra 'como funciona' e curiosidades."
+    },
+    {
+      "id": "suspense",
+      "nome": "Suspense",
+      "ingles": "Tense suspense underscore: ticking clock percussion, nervous staccato string ostinato, low pulsing synth, building urgency, not scary",
+      "portugues": "Suspense: relógio e cordas nervosas, urgência. Pra 'o erro que ninguém vê' e ganchos de problema."
+    }
+  ]
+}

@@ -3,8 +3,8 @@
 Uso (de qualquer pasta):
   python baixar.py lista                              mostra os pacotes e o tamanho de cada um
   python baixar.py nucleo                             motor 3D + ferramentas + instruções + catálogos (~4 MB)
-  python baixar.py estilo:cubinhos                    um estilo (boneco, cenário, guia de edição, demo de 10 s)
-  python baixar.py exemplo:cubinhos                   a demo pronta de um estilo   (exemplo:lampada = vídeo completo)
+  python baixar.py estilo:quadradinhos                    um estilo (boneco, cenário, guia de edição, demo de 10 s)
+  python baixar.py exemplo:quadradinhos                   a demo pronta de um estilo   (exemplo:lampada = vídeo completo)
   python baixar.py efeitos:agua                       uma categoria inteira de efeitos sonoros
   python baixar.py efeito:vaca_mugindo efeito:pop     efeitos soltos, pelo nome
   python baixar.py musica:oficina_curiosa             uma trilha     (musicas = as 30)

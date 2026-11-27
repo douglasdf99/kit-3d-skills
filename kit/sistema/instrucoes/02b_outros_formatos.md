@@ -42,7 +42,7 @@ Gancho: um detalhe estranho e concreto ("Toda noite, às três da manhã, a luz 
 Narração em "você" ou em primeira pessoa. Frases ainda mais curtas perto do fim. O susto vem **depois de uma pausa**.
 Edição: `noite()` + `feixe()` (lanterna), `chuva()`, `tremor()` no susto, `zoomSoco()` lento, cortes de som (silêncio antes
 do susto), efeitos de `suspense_e_terror`. Trilha: `terror_sombrio`, `suspense_relogio` ou `misterio_noturno`.
-Estilos que combinam: Desenho, Simples, Cubinhos e Ilustrado 2D (com `clima: 'noite'`).
+Estilos que combinam: Desenho, Simples, Quadradinhos e Ilustrado 2D (com `clima: 'noite'`).
 
 ### 4. "E se…?"
 Uma premissa absurda e as consequências **escalando**: "E se a Lua sumisse hoje à noite?" → 1ª consequência →
@@ -95,7 +95,7 @@ efeitos de `humor`. O boneco nunca fala palavras: a narração conta, ele reage 
 ## Na produção
 - A cena de partida do estilo (`cena_modelo.js`) roda com qualquer roteiro, mas ela foi pensada pra construção
   (peças que entram e piscam). Pra outros formatos, **reescreva a parte das ações**: crie as âncoras com `T('palavra')`
-  pra cada momento (veja as demos em `Exemplos/<estilo>/cena/cena.js`: elas usam âncoras assim, sem `estrutura()`),
+  pra cada momento (veja as demos em `biblioteca/estilos/quadradinhos/cena_modelo.js`: elas usam âncoras assim, sem `estrutura()`),
   monte um cenário por momento se precisar e mantenha a câmera sempre em movimento.
 - Os efeitos de `sistema/motor/edicao.js` servem pra tudo: `noite`, `chuva`, `feixe`, `brilho`, `tremor`, `zoomSoco`,
   `emote`, `manchete`, `impacto`, `linhas`, `circulo`, `conquista`, `transicao`, `rebobinar`.

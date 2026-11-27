@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modelos da skill: estilos e trilhas</title>
+<style>
+  :root { --bg:#f6f5f2; --card:#fff; --ink:#1d1d1f; --mute:#6b6b70; --line:#e4e2dc; --acc:#2f7d5b; --acc2:#e8f3ee; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--ink); }
+  header, main { max-width:1180px; margin:0 auto; padding:0 24px; }
+  header { padding-top:32px; }
+  h1 { margin:0 0 6px; font-size:26px; }
+  header p { margin:0; color:var(--mute); max-width:760px; }
+  h2 { margin:36px 0 4px; font-size:20px; }
+  .sub { color:var(--mute); margin:0 0 16px; }
+  .estilos { display:grid; grid-template-columns:minmax(320px, 620px); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .prints { display:grid; grid-template-columns:2fr 1fr; gap:4px; background:#222; }
+  .prints img { width:100%; display:block; aspect-ratio:9/16; object-fit:cover; cursor:zoom-in; }
+  .prints .lado { display:grid; grid-template-rows:1fr 1fr; gap:4px; }
+  .prints .lado img { height:100%; aspect-ratio:auto; }
+  .corpo { padding:12px 14px 16px; }
+  .corpo b { font-size:18px; }
+  .num { display:inline-block; background:var(--acc2); color:var(--acc); font-weight:700; border-radius:99px; padding:0 9px; margin-right:6px; }
+  .corpo p { margin:4px 0 0; color:var(--mute); }
+  .trilhas { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .linha { display:grid; grid-template-columns:150px 1fr 260px; gap:14px; align-items:center; padding:12px 16px; border-top:1px solid var(--line); }
+  .linha:first-child { border-top:none; }
+  .linha b { font-size:16px; }
+  .linha span { color:var(--mute); }
+  .linha audio { width:100%; height:34px; }
+.sons { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:10px; margin-bottom:60px; }
+  .som { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 12px; display:flex; align-items:center; gap:10px; cursor:pointer; }
+  .som:hover { border-color:var(--acc); }
+  .som .bt { width:34px; height:34px; border-radius:50%; background:var(--acc); color:#fff; display:grid; place-items:center; flex:none; font-size:13px; }
+  .som b { display:block; font-size:14px; } .som small { color:var(--mute); }
+  .grupo { margin:18px 0 8px; font-weight:700; color:var(--acc); text-transform:uppercase; font-size:12px; letter-spacing:.05em; }
+  #zoom { position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:9; cursor:zoom-out; }
+  #zoom img { max-height:94vh; max-width:94vw; border-radius:12px; }
+  @media (max-width:760px) { .linha { grid-template-columns:1fr; gap:6px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Modelos da skill: estilos e trilhas</h1>
+  <p>O estilo Quadradinhos, as 10 trilhas e os efeitos sonoros da skill. Clique num print pra ver grande e dê play nas trilhas pra ouvir.</p>
+</header>
+<main>
+  <h2>Estilo de animação</h2>
+  <p class="sub">Três momentos de uma cena: a mãe na cozinha e o pote do produto.</p>
+  <section class="estilos" id="estilos"></section>
+
+  <h2>Trilhas</h2>
+  <p class="sub">Trilhas próprias, criadas na ElevenLabs. A skill sugere 3 que combinam com a copy; estas são todas as opções.</p>
+  <section class="trilhas" id="trilhas"></section>
+
+  <h2>Efeitos sonoros</h2>
+  <p class="sub">Efeitos próprios, todos no mesmo volume. Clique pra ouvir.</p>
+  <div id="sons"></div>
+</main>
+<div id="zoom" onclick="this.style.display='none'"><img alt=""></div>
+<script>
+const ARQ = '';
+const ESTILOS = [
+  { id: 'quadradinhos', nome: 'Quadradinhos', desc: 'O estilo da skill: tudo feito de quadradinhos, com letreiros e sons de videogame e luz de fim de tarde. Chama atenção no feed e combina com qualquer produto.' },
+];
+const TRILHAS = [
+  ['suave', 'Suave', 'violão dedilhado e piano suave · dicas, passo a passo, saúde'],
+  ['calma', 'Calma', 'lo-fi aconchegante, piano elétrico e kalimba · explicações calmas, bem-estar, maternidade'],
+  ['alegre', 'Alegre', 'ukulele, palmas e assobio · produtos do dia a dia, temas leves'],
+  ['emocao', 'Emoção', 'piano e cordas que crescem · histórias reais, superação, antes e depois'],
+  ['brasileira', 'Brasileira', 'violão, cavaquinho e pandeiro · público brasileiro, comida, alegria'],
+  ['energia', 'Energia', 'batida forte e synth brilhante · fitness, desafios, ritmo rápido'],
+  ['moderna', 'Moderna', 'trap com grave forte · tecnologia, tendência, público jovem'],
+  ['verao', 'Verão', 'steel drum e marimba, leve e solar · beleza, verão, viagem, comida'],
+  ['curiosa', 'Curiosa', 'pizzicato e marimba, clima de descoberta · "como funciona", curiosidades'],
+  ['suspense', 'Suspense', 'relógio e cordas nervosas · urgência, "o erro que ninguém vê"'],
+];
+ESTILOS.forEach((e, i) => {
+  const c = document.createElement('article'); c.className = 'card';
+  c.innerHTML = `<div class="prints"><img src="${ARQ}estilos/${e.id}.jpg" alt="${e.nome}"><div class="lado"><img src="${ARQ}estilos/${e.id}_3.jpg" alt=""><img src="${ARQ}estilos/${e.id}_2.jpg" alt=""></div></div>
+    <div class="corpo"><b>${e.nome}</b><p>${e.desc}</p></div>`;
+  document.getElementById('estilos').appendChild(c);
+});
+TRILHAS.forEach(([arq, nome, desc]) => {
+  const l = document.createElement('div'); l.className = 'linha';
+  l.innerHTML = `<b>${nome}</b><span>${desc}</span><audio src="${ARQ}trilhas/${arq}.mp3" controls preload="none"></audio>`;
+  document.getElementById('trilhas').appendChild(l);
+});
+document.addEventListener('play', ev => document.querySelectorAll('audio').forEach(x => x !== ev.target && x.pause()), true);
+document.addEventListener('click', ev => { if (ev.target.matches('.prints img')) { const z = document.getElementById('zoom'); z.querySelector('img').src = ev.target.src; z.style.display = 'flex'; } });
+
+const SONS = [["whoosh", "whoosh limpo de transição", "transicao"], ["whoosh_suave", "swish suave e elegante", "transicao"], ["fallwhoosh", "whoosh descendo, de queda", "transicao"], ["rewind", "volta da fita, rápida e limpa", "transicao"], ["record_scratch", "arranhão de disco, pausa cômica", "transicao"], ["slide", "cartão deslizando", "transicao"], ["pop", "pop de bolha, satisfatório", "aparecer"], ["pop2", "pop leve de plaquinha", "aparecer"], ["ding", "sininho de acerto", "aparecer"], ["sparkle", "brilho cintilante", "aparecer"], ["magic", "revelação do produto, premium", "produto"], ["tada", "vinheta curta de sucesso", "produto"], ["powerup", "energia subindo", "energia"], ["powerdown", "energia acabando", "problema"], ["barfill", "barra enchendo", "energia"], ["nope", "erro suave", "problema"], ["sad", "decepção, notas descendo", "problema"], ["clockfast", "relógio rápido, urgência", "problema"], ["coracao", "coração batendo", "problema"], ["gulp", "engolir em seco", "problema"], ["bocejo", "mulher bocejando de cansaço", "problema"], ["gasp", "mulher surpresa (gasp)", "gancho"], ["notificacao", "notificação de celular", "gancho"], ["impacto", "tum grave de impacto", "gancho"], ["rise", "subida de tensão curta", "gancho"], ["crowd_wow", "plateia dizendo 'uau'", "produto"], ["applause_short", "aplausos curtos", "produto"], ["coins", "moedas, recompensa", "produto"], ["click_ui", "clique de botão", "cta"], ["seta", "swoosh pra baixo da seta do link", "cta"], ["pulo_8bit", "pulo de videogame", "videogame"], ["powerup_8bit", "power-up de videogame", "videogame"], ["levelup_8bit", "subiu de nível", "videogame"], ["gameover_8bit", "erro de videogame", "videogame"], ["boom", "estrondo grave", "gancho"], ["susto_impacto", "impacto de susto", "problema"], ["uhul", "mulher comemorando 'uhul!'", "produto"], ["cheer", "pessoas comemorando", "produto"], ["confused", "dúvida, 'hã?'", "problema"], ["correct", "acerto, resposta certa", "solucao"], ["failtrombone", "trombone de fracasso (wah wah)", "problema"], ["plim", "plim de ideia", "solucao"], ["bubbles", "bolhinhas", "produto"], ["crack", "rachadura", "problema"], ["splash", "respingo de água", "produto"], ["steam", "vapor saindo", "produto"]];
+const GRUPOS = [['gancho','Gancho / atenção'],['problema','Problema'],['transicao','Transição'],['aparecer','Plaquinha aparecendo'],['solucao','Virada / solução'],['energia','Energia'],['produto','Produto / revelação'],['cta','CTA'],['videogame','Sons de videogame']];
+const toca = new Audio();
+GRUPOS.forEach(([k, t]) => {
+  const itens = SONS.filter(x => x[2] === k); if (!itens.length) return;
+  const h = document.createElement('div'); h.className = 'grupo'; h.textContent = t; document.getElementById('sons').appendChild(h);
+  const g = document.createElement('div'); g.className = 'sons';
+  itens.forEach(([n, d]) => { const b = document.createElement('div'); b.className = 'som'; b.innerHTML = `<span class="bt">▶</span><span><b>${n}</b><small>${d}</small></span>`; b.onclick = () => { document.querySelectorAll('audio').forEach(a => a.pause()); toca.src = ARQ + 'efeitos/' + n + '.mp3'; toca.play(); }; g.appendChild(b); });
+  document.getElementById('sons').appendChild(g);
+});
+</script>
+</body>
+</html>

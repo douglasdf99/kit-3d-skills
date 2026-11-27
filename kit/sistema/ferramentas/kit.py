@@ -68,7 +68,7 @@ def garantir(caminho):
 
 
 def garantir_pasta(prefixo):
-    """baixa uma pasta inteira do kit (ex.: 'biblioteca/estilos/cubinhos/') se ela existir no repositório; devolve True se baixou"""
+    """baixa uma pasta inteira do kit (ex.: 'biblioteca/estilos/quadradinhos/') se ela existir no repositório; devolve True se baixou"""
     try:
         import baixar
         if not baixar.existe_no_repositorio(KIT, prefixo): return False

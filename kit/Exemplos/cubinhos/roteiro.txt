@@ -1,3 +1,0 @@
-# Demo de 10 s do estilo (mostrado na galeria de estilos)
-Se você joga uma tábua por cima do rio, ela enverga no meio e você cai na água.
-Então você põe colunas de pedra no fundo do rio. Esses são os pilares.

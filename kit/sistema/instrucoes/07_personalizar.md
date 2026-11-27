@@ -13,7 +13,7 @@ Tudo o que vem no kit é o **padrão**. A pessoa pode mudar qualquer coisa, e vo
 ## Os estilos que já vêm no kit
 `Estilos.html` mostra todos: no topo, uma tabela com 10 s de vídeo de cada estilo e o **peso** dele (o `"custo"` do `estilo.json`: nota de 0 a 100, créditos, tempo do Claude, render de 2 min e correções previstas); depois, cada um com **duas imagens**: o boneco modelo e uma cena com a edição do estilo. São **7 jeitos diferentes
 de vídeo** — boneco, cenário e edição mudam juntos:
-**Padrão** (o da série: low-poly, casa em corte) · **Ilustrado 2D** (desenho plano de lado) · **Cubinhos** (tudo de blocos) ·
+**Padrão** (o da série: low-poly, casa em corte) · **Ilustrado 2D** (desenho plano de lado) · **Quadradinhos** (tudo de blocos) ·
 **Brinquedo** (bonequinho de plástico brilhante, cenário realista) · **Simples** (bem básico, estilo "E SE…?", multidão) ·
 **Desenho** (desenho japonês com contorno preto) · **Avatar de jogo** (avatar de blocos, edição de meme).
 Cada estilo é uma pasta `biblioteca/estilos/<nome>/` com:
@@ -36,10 +36,10 @@ a cena de um estilo não serve pra outro), e `estilos.py` pra marcar "em uso".
 4. No `estilo.json` novo: `nome`, `ordem` (posição na galeria), `descricao`, `edicao` (`resumo` + `transicao`, `rebobinar`, `emote`,
    `piscar`) e os textos (abaixo). Tudo é opcional: o que faltar vem do Padrão.
 5. No `cena_modelo.js` novo: troque o import `biblioteca/estilos/<parecido>/` pelo nome novo. No `GUIA.md`: reescreva o que mudou.
-6. Pra ver: `novo_video.py "Teste do estilo" --estilo <nome>`, copie `Exemplo - Lampada/audio/` (timeline, mix) pra pasta do teste,
+6. Pra ver: `novo_video.py "Teste do estilo" --estilo <nome>`, escreva um roteiro curto e rode `rascunho.py` (narração grátis),
    rode `conferir.py` e `montar_pagina.py`, e peça pra pessoa abrir a página e tirar duas **📷 Fotos deste momento** (um quadro do boneco e um
    da cena com letreiro). Ajuste até ela gostar. Salve as fotos como `personagem.jpg` e `cena.jpg` na pasta do estilo e rode `estilos.py`.
-   Se quiser, faça também uma demo de 10 s (como as de `Exemplos/`) e salve o vídeo como `demo.mp4` na pasta do estilo, e ponha no
+   Se quiser, faça também uma demo de 10 s e salve o vídeo como `demo.mp4` na pasta do estilo, e ponha no
    `estilo.json` um `"custo"` estimado (compare com os estilos parecidos: `nota` 0–100, `creditos`, `tempo_claude`, `render_2min`, `correcoes`, `obs`),
    pra ele aparecer na tabela de comparação.
    Depois mova o vídeo de teste pra `_descartar/`.

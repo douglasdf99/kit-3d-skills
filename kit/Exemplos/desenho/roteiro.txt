@@ -1,3 +1,0 @@
-# Demo de 10 s do estilo (mostrado na galeria de estilos)
-Se você joga a bola numa caixa no chão, ela quica pra fora.
-Então você pendura um aro lá no alto, com uma rede embaixo. Essa é a cesta.

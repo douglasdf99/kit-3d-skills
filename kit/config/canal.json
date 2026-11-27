@@ -10,7 +10,7 @@
   "velocidade": 1.12,
   "velocidade_cta": 1.2,
   "pausa_max": 0.3,
-  "estilo": "padrao",
+  "estilo": "quadradinhos",
   "personagem": null,
-  "musica_padrao": "oficina_curiosa"
+  "musica_padrao": "calma"
 }
